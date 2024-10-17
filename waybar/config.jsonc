@@ -10,28 +10,27 @@
         "hyprland/workspaces",
         "hyprland/mode",
         "hyprland/scratchpad",
-        "mpd",
         "custom/media"
     ],
     "modules-center": [
-        // "hyprland/window"
-        "temperature",
-        "cpu",
-        "memory",
-        "disk"
+        "hyprland/window"
     ],
     "modules-right": [
+        "mpd",
+        "idle_inhibitor",
         "pulseaudio",
-//        "idle_inhibitor",
         "network",
         "power-profiles-daemon",
-//        "backlight",
+        "cpu",
+        "memory",
+        "temperature",
+        "backlight",
         "keyboard-state",
+        "hyprland/language",
         "battery",
-//        "battery#bat2",
+        "battery#bat2",
         "clock",
         "tray",
-//        "hyprland/language",
         "custom/power"
     ],
     // Modules configuration
@@ -71,10 +70,9 @@
         "tooltip-format": "{app}: {title}"
     },
     "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})  ",
-        // ORIGINAL: "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}%  ",
-        "format-disconnected": "Disconnected  ",
-        "format-stopped": "{consumeIcon} {randomIcon} {repeatIcon} {singleIcon} Stopped  ",
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
         "unknown-tag": "N/A",
         "interval": 5,
         "consume-icons": {
@@ -95,8 +93,7 @@
             "playing": ""
         },
         "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)",
-        "on-click":"alacritty -e ncmpcpp"
+        "tooltip-format-disconnected": "MPD (disconnected)"
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -109,74 +106,31 @@
         // "icon-size": 21,
         "spacing": 10
     },
-
-    // **************************************
-    // **************************************
-    // Disk, Memory and CPU
-    // **************************************
-    // **************************************
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""]
     },
-    "cpu": {
-        "format": "{usage}%  ",
-        "tooltip": false,
-        "on-click": "alacritty -e top"
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
-    "memory": {
-        "on-click": "exec free -h",
-        "format": "{}%  "
-    },
-    "disk": {
-        "format":"{used}/{total}  ",
-        "on-click": "baobab",
-        "interval": 600
-    },
-    // **************************************
-    // **************************************
-    // Right modules
-    // **************************************
-    // **************************************
-
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon}  {volume}%  ",
-        "format-bluetooth-muted": "󰖁 ",
-        "format-muted": "󰖁 ",
-      //  "format-source": "{volume}%  , ",
-       // "format-source-muted": " ",
-        "format-icons": {
-            "headphone": " ",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid}({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr}  CONFIGURAR 1 WAYBAR",
-        "tooltip-format": "{ifname} via {gwaddr}",
-        "format-linked": "{ifname} (No IP)  CONFIGURAR 3 WAYBAR",
-        "format-disconnected": "Disconnected ⚠ ",
-        "format-alt": "{ifname}: {ipaddr}/{cidr} CONFIG 4",
-        "on-click": "nmtui"
-    },
-//    "backlight": {
-//        // "device": "acpi_video1",
-//        "format": "{percent}% {icon}",
-//        "format-icons": ["", "", "", "", "", "", "", "", ""]
-//    },
     "battery": {
         "states": {
             // "good": 95,
@@ -185,18 +139,15 @@
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 󱐋",
+        "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}",
-        "interval" : 60,
+    "battery#bat2": {
+        "bat": "BAT2"
     },
     "power-profiles-daemon": {
       "format": "{icon}",
@@ -208,6 +159,34 @@
         "balanced": "",
         "power-saver": ""
       }
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
     },
     "custom/media": {
         "format": "{icon} {text}",
