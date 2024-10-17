@@ -1,0 +1,26 @@
+set {
+    $wallpaper ./wallpapers/lava.jpg
+    
+    # colors
+    $border_focused #e63427cc
+    $border_unfocused #e6342722
+    $bg_focused #00ffff
+    $bg_unfocused #ffff00
+    $none #00000000
+    $white #ffffff
+    $black #000000
+}
+
+output * bg $wallpaper fill
+
+bindsym $mod+e layout toggle split, border pixel 3
+bindsym $mod+w layout tabbed, border normal
+
+default_border pixel 2
+
+# class        border  background text  indicator  child border 
+client.focused $border_focused $black $border_focused $border_focused $border_focused 
+client.unfocused $border_unfocused $border_unfocused $white $border_unfocused
+
+# Gaps
+gaps inner 10

@@ -1,0 +1,14 @@
+
+# *************************************
+# *************************************
+#            STYLE / STYLING
+# *************************************
+# *************************************
+# MUST USE CLIENT PROPERTYS EXPLAINED HERE: https://man.archlinux.org/man/sway.5
+# # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+
+
+# Each file inside themes has a specific config. To change the system theme, change the following path
+for_window [title="Calculadora"] floating enable
+
+include ~/.config/sway/config.d/themes/berserk

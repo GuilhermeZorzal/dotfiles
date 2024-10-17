@@ -1,0 +1,34 @@
+bindsym { 
+
+    #
+    # Sound
+    # 
+    # The keycodes can change depending on the machine. To test use the xev command
+
+    XF86AudioMute exec amixer sset Master toggle
+    XF86AudioLowerVolume exec amixer sset Master 5%-
+    XF86AudioRaiseVolume exec amixer sset Master 5%+
+    # ============================================================ 
+    #
+    # Screen Brightness
+    # 
+    # To make brightnessctl executable without root permissions, its needed to run: 
+    #       <sudo chmod +s $which brightnessctl)
+    # To deactivate, run the sabe but with -s 
+
+    XF86MonBrightnessDown exec brightnessctl set 3%-
+    XF86MonBrightnessUp exec brightnessctl set +3%
+    
+    # ============================================================ 
+    #
+    # Media Player controls
+    # 
+
+    XF86AudioPlay exec playerctl play-pause
+    XF86AudioPrev exec playerctl previous && 
+    XF86AudioNext exec playerctl next
+}
+
+
+# Screenshots
+bindcode 107 exec grim - | wl-copy

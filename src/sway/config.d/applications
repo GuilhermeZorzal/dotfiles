@@ -1,0 +1,48 @@
+
+# ***********************************************************
+# ***********************************************************
+###                         VARIABLES
+# ***********************************************************
+# ***********************************************************
+
+set {
+
+    #SUPER KEY CONFIG. Mod4 is the superkey, Mod1 is Alt and Mod5 is AltGr
+    $mod Mod4 
+    $modAlt Mod1
+    $modAltGr Mod5
+
+    # Home row direction keys, like vim
+    $left h
+    $down j
+    $up k
+    $right l
+
+    # Your preferred terminal emulator
+    $term alacritty
+
+    # Default Browser
+    $browser opera
+
+    # Your preferred application launcher (other option is dmenu)
+    $menu rofi -show run
+}
+
+### Key bindings
+#
+# Basics:
+#
+bindsym {
+    # Start Opera
+    $mod+$modAltGr+f exec $browser
+
+    # Start your launcher
+    $mod+d exec $menu
+    $mod+Shift+c reload
+
+    # Start mpd
+    $mod+$modAltGr+m exec bash -e ~/.config/sway/config.d/scripts/mpd.sh
+    $mod+$modAltGr+q exec pkill mpd
+    $modAlt+p exec bash ~/.config/sway/config.d/scripts/play_pause_behavior.sh
+}
+

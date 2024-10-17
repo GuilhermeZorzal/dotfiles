@@ -1,0 +1,77 @@
+# Default config for sway
+# TODO: 
+# - Config the on-clicks functionalitys
+#   - Wifi
+#   - Bluetooth
+
+# Read `man 5 sway` for a complete reference.
+
+# ***********************************************************
+# ***********************************************************
+###                         VARIABLES
+# ***********************************************************
+# ***********************************************************
+
+set {
+
+    #SUPER KEY CONFIG. Mod4 is the superkey, Mod1 is Alt and Mod5 is AltGr
+    $mod Mod4 
+    $modAlt Mod1
+    $modAltGr Mod5
+
+    # Home row direction keys, like vim
+    $left h
+    $down j
+    $up k
+    $right l
+
+    # Your preferred terminal emulator
+    $term alacritty
+
+    # Default Browser
+    $browser opera
+
+    # Your preferred application launcher (other option is dmenu)
+    $dmenu exec dmenu_run -nb '#2e3440' -nf '#d8dee9' -sb '#5e81ac' -sf '#eceff4'
+    $menu exec wofi --show drun
+}
+
+### Key bindings
+# Basics:
+#
+bindsym {
+    # Start a terminal. If waybar is running, just opens a new terminal. If not, starts waybar and the terminal
+    $mod+Return exec bash ~/.config/sway/config.d/scripts/waybarBehavior.sh
+
+    # Kill focused window
+    $mod+Shift+q kill
+
+    # Exit sway (logs you out of your Wayland session)
+    $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    
+    $mod+$modAlt+BackSpace exec shutdown -h now
+}
+
+### Idle configuration
+#
+# Example configuration:
+# swaylock = logout (go to login screen) WITHOUT turn off screen 
+# swaylock power off = turn of screen 
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 601 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock -f -c 000000'
+# This will lock your screen after 600 seconds of inactivity, then turn off
+# your displays after another 600 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+
+
+# Applets
+exec blueman-applet &
+exec swaytray &
+exec nm-applet &
+
+# Other includes (the etc includes came by default)
+include /etc/sway/config.d/*
+include /etc/sway/config-vars.d/*
+include ~/.config/sway/config.d/*

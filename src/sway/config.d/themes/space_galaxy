@@ -1,0 +1,26 @@
+set {
+    $wallpaper ~/.config/sway/config.d/themes/wallpapers/space_galaxy.jpg
+    
+    # colors
+    $border_focused #2e90f2
+    $border_unfocused #657c9422
+    $bg_focused #00ffff
+    $bg_unfocused #ffff00
+    $none #00000000
+    $white #ffffff
+    $black #000000
+}
+
+output * bg $wallpaper fill
+
+bindsym $mod+e layout toggle split, border pixel 3
+bindsym $mod+w layout tabbed, border normal
+
+default_border pixel 2
+
+# class        border  background text  indicator  child border 
+client.focused $border_focused $black $border_focused $border_focused $border_focused 
+client.unfocused $border_unfocused $border_unfocused $white $border_unfocused
+
+# Gaps
+gaps inner 10
