@@ -1,4 +1,4 @@
-@import "./global.css";
+@import "../myGlobal.css";
 
 * {
     font-family: SauceCodePro, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -261,14 +261,19 @@ button:hover {
     background-color: rgba(0,0,0,0);
     color: @font_color ;
 }
-#memory:hover {
-    background-color: @wb_hvr_bg;
-    box-shadow: inset 0 -3px #ffffff;
-}
+/*#memory:hover {*/
+/*    background-color: @wb_hvr_bg;*/
+/*    box-shadow: inset 0 -3px @text;*/
+/*}*/
 
 #disk {
     background-color: rgba(0,0,0,0);
     color: @font_color ;
+}
+
+#disk:hover {
+    background-color: @wb_hvr_bg;
+    box-shadow: inset 0 -3px @text;
 }
 
 #backlight {
@@ -355,14 +360,6 @@ label:focus {
     background-color: #000000;
 }
 
-#wireplumber {
-    background-color: rgba(0,0,0,0);
-    color: @font_color ;
-}
-
-#wireplumber.muted {
-    background-color: #f53c3c;
-}
 
 #custom-media {
     background-color: #66cc99;
@@ -389,6 +386,7 @@ label:focus {
 
 #tray {
     background-color: #2980b9;
+    padding: 0px 3px;
 }
 
 #tray > .passive {
@@ -462,3 +460,11 @@ label:focus {
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
 } 
+#wireplumber {
+    background-color: transparent;
+    color: @font_color ;
+}
+
+#wireplumber.muted {
+    background-color: #f53c3c;
+}

@@ -17,6 +17,7 @@
         // "hyprland/window"
         "cpu",
         "memory",
+        "disk",
         "temperature",
         "idle_inhibitor",
         "power-profiles-daemon"
@@ -108,6 +109,7 @@
     },
     "clock": {
         // "timezone": "America/New_York",
+        "format":"{:%Y/%m/%d - %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -118,6 +120,11 @@
     },
     "memory": {
         "format": "{}%  "
+    },
+    "disk": {
+        "interval": 30,
+	"format": "{percentage_used}%  ",
+        "on-click" : "baobab",
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -139,14 +146,14 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+        "format": "{capacity}% {icon}  ",
+        "format-full": "{capacity}% {icon} ",
+        "format-charging": "{capacity}% 󱐋 ",
+        "format-plugged": "{capacity}%  ",
+        "format-alt": "{time} {icon} ",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [" ", " ", " ", " ", " "]
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -173,20 +180,20 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}  {format_source}",
+        "format": "{volume}% {icon}  -  {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": "󰖁 {icon} {format_source}",
         "format-muted": "󰖁  {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "  " ,
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "headphone": " ",
+            "hands-free": "󰋎 ",
+            "headset": "󰋎 ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": ["", " ", " "]
         },
         "on-click": "pavucontrol"
     },
