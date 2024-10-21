@@ -1,4 +1,6 @@
 @import "../myGlobal.css";
+@import "/home/guizo/.cache/wal/colors-waybar.css";
+
 
 * {
     font-family: SauceCodePro, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -10,13 +12,12 @@ window#waybar {
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
-    background-color: @wb_bg;
+    background-color: transparent;
 }
 
 window#waybar.hidden {
     opacity: 0.2;
 }
-
 /*
 window#waybar.empty {
     background-color: transparent;
@@ -133,7 +134,7 @@ button:hover {
 #workspaces button {
     background-color: rgba(0,0,0,0);
     color: @font_color ;
-    padding: 3px;
+    padding: 0px 5px;
 }
 
 #workspaces button:hover {
@@ -206,6 +207,11 @@ button:hover {
     color: #ffffff;
     padding: 0px 15px 0px 5px;
 }
+#power-profiles-daemon:hover {
+    background-color: @wb_hvr_bg;
+    box-shadow: inset 0 -3px #ffffff;
+    padding: 0px 15px 0px 5px;
+}
 
 #power-profiles-daemon.performance {
     background-color: @important;
@@ -229,6 +235,10 @@ button:hover {
     background-color: rgba(0,0,0,0);
     padding: 0px 5px;
     color: @font_color ;
+}
+#idle_inhibitor:hover {
+    background-color: @wb_hvr_bg;
+    box-shadow: inset 0 -3px #ffffff;
 }
 
 #idle_inhibitor.activated {
@@ -467,4 +477,13 @@ label:focus {
 
 #wireplumber.muted {
     background-color: #f53c3c;
+}
+
+#custom-wallpaperNext {
+    padding: 3px;
+    background-color: @color4;
+}
+#custom-wallpaperPrev {
+    padding: 3px;
+    background-color: @color4;
 }

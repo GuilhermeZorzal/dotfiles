@@ -15,6 +15,8 @@
     ],
     "modules-center": [
         // "hyprland/window"
+        "custom/wallpaperPrev",
+        "custom/wallpaperNext",
         "cpu",
         "memory",
         "disk",
@@ -171,7 +173,8 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+/*        "format-wifi": "{essid} ({signalStrength}%) ",*/
+        "format-wifi": "({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
@@ -180,7 +183,8 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}  -  {format_source}",
+        "format": "{volume}% {icon}",
+/*        "format": "{volume}% {icon}  -  {format_source}",*/
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": "󰖁 {icon} {format_source}",
         "format-muted": "󰖁  {format_source}",
@@ -209,16 +213,27 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
+    "custom/wallpaperPrev": {
+        "format" : "  ",
+		"tooltip": false,
+		"on-click": "sh $HOME/.config/waybar/scripts/wallchange.sh -b", // Menu file in resources folder
+    },
+    "custom/wallpaperNext": {
+        "format" : "  ",
+		"tooltip": false,
+		"on-click": "sh $HOME/.config/waybar/scripts/wallchange.sh -n", // Menu file in resources folder
+    },
     "custom/power": {
         "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
+        "tooltip": false,
+        "on-click"  : "wlogout"
+/*		"menu": "on-click",*/
+/*		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder*/
+/*		"menu-actions": {*/
+/*			"shutdown": "shutdown",*/
+/*			"reboot": "reboot",*/
+/*			"suspend": "systemctl suspend",*/
+/*			"hibernate": "systemctl hibernate"*/
+/*		}*/
     }
 }
