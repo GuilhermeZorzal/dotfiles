@@ -11,7 +11,9 @@
         "mpd",
         "hyprland/mode",
         "hyprland/scratchpad",
-        "custom/media"
+        "custom/media",
+ //       "custom/rhythmbox" 
+        "custom/chatgpt"
     ],
     "modules-center": [
         // "hyprland/window"
@@ -222,6 +224,19 @@
         "format" : "  ",
 		"tooltip": false,
 		"on-click": "sh $HOME/.config/waybar/scripts/wallchange.sh -n", // Menu file in resources folder
+    },
+    "custom/rhythmbox":{ 
+        "format": " ♪  {}", 
+        "max-length": 50, 
+        // "interval": 10, 
+        "tooltip": false, 
+        "exec": "rhythmbox-client --print-playing-format=\"%tt:  %aa\"", 
+        "on-click": "rhythmbox-client --play-pause" //"exec-if": "pgrep spotify" }
+    },
+    "custom/chatgpt":{ 
+        "format": " ", 
+        "tooltip": false, 
+        "on-click": "brave-browser --app='https://chatgpt.com/?temporary-chat=true'" //"exec-if": "pgrep spotify" }
     },
     "custom/power": {
         "format" : "⏻ ",

@@ -70,9 +70,16 @@ next_image_full_path="$folder_path$next_image"
 echo "Full path: $next_image_full_path"
 
 # Set the background and update wallpaper
-kitty -e wal -i "$next_image_full_path" &
-swaybg -i "$next_image_full_path" -m fill &
-wal -i "$next_image_full_path" --backend wal &
-sleep 1
-pkill waybar 
-waybar &
+# kitty -e wal -i "$next_image_full_path" --backend colorthief &
+# sleep 1
+# swaybg -i "$next_image_full_path" -m fill &
+# pkill waybar 
+#waybar &
+
+echo 'kitty color'
+kitty -e wal -i $next_image_full_path --backend colorthief && \
+echo 'waybg'
+swaybg -i $next_image_full_path -m fill  &
+echo 'waybar'
+pkill waybar
+waybar & 
