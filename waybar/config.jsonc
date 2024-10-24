@@ -13,7 +13,9 @@
         "hyprland/scratchpad",
         "custom/media",
  //       "custom/rhythmbox" 
-        "custom/chatgpt"
+        "custom/chatgpt",
+        "custom/brave",
+        "custom/localhost"
     ],
     "modules-center": [
         // "hyprland/window"
@@ -234,9 +236,17 @@
         "on-click": "rhythmbox-client --play-pause" //"exec-if": "pgrep spotify" }
     },
     "custom/chatgpt":{ 
-        "format": " ", 
+        "format": " ", 
         "tooltip": false, 
         "on-click": "brave-browser --app='https://chatgpt.com/?temporary-chat=true'" //"exec-if": "pgrep spotify" }
+    },
+    "custom/localhost" : {
+        "format": "󰜈 ",
+        "on-click": "brave-browser --app='http://localhost:3000/'" //"exec-if": "pgrep spotify" }
+   },
+    "custom/brave" : {
+        "format": "󰊯 ",
+        "on-click": "brave-browser --app=' https://search.brave.com/'" //"exec-if": "pgrep spotify" }
     },
     "custom/power": {
         "format" : "⏻ ",

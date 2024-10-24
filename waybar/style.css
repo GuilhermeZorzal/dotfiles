@@ -88,9 +88,9 @@ window#waybar.chromium {
     padding-left: 5px;
 }
 .modules-left {
-    background-color: @color1; 
+    background-color: transparent; 
     color: @foreground ;
-    margin: 5px 5px 5px 15px;
+    margin: 5px 15px 5px 15px;
 }
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
@@ -154,7 +154,10 @@ button:hover {
 #workspaces button.active {
     background-color: @color4;
 }
-#workspaces,
+#workspaces {
+    background-color: #ff0000;
+    
+}
 
 /*
 ======================================================================
@@ -500,3 +503,37 @@ label:focus {
     color: @font_color;
     background-color: @color4;
 }
+
+#custom-chatgpt {
+    padding: 3px 10px 3px 13px;
+    margin: 0px 0px 0px 12px;
+        font-size:18px;
+    color: @font_color;
+    background-color: @color1;
+    }
+#custom-chatgpt:hover {
+    color: @font_color;
+    background-color: @color4;
+}
+#custom-localhost {
+    padding: 3px 10px 3px 13px;
+    margin: 0px;
+    font-size:18px;
+    color: @font_color;
+    background-color: @color1;
+}
+#custom-localhost:hover {
+    background-color: @color4;
+}
+#custom-brave {
+    padding: 3px 10px 3px 13px;
+    margin: 0px;
+        font-size:18px;
+    color: @font_color;
+    background-color: @color1;
+}
+#custom-brave:hover {
+    background-color: @color4;
+}
+    
+    

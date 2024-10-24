@@ -24,7 +24,9 @@ return {
 			    ["gx"] = "actions.open_external",
 			    ["g."] = "actions.toggle_hidden",
 			    ["g\\"] = "actions.toggle_trash",
-			  },		-- vim.keymap.set("n", "<C-p>", "<cmd>Oil<CR>"),
+			  },
+			vim.keymap.set("n", "<C-p>", "<cmd>Oil<CR>"),
+			vim.api.nvim_set_keymap('n', '<C-Space>', ':vsplit<CR> :Oil<CR>', { noremap = true, silent = true })
 		}
 
 	end,
