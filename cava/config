@@ -181,8 +181,8 @@
 # Gradient mode, only hex defined colors are supported,
 # background must also be defined in hex or remain commented out. 1 = on, 0 = off.
 # You can define as many as 8 different colors. They range from bottom to top of screen
- gradient = 1
- gradient_count = 8
+gradient = 1
+gradient_count = 2
 #gradient_color_1 = '#59cc33'
 #gradient_color_2 = '#80cc33'
 #gradient_color_3 = '#a6cc33'
@@ -192,14 +192,16 @@
 #gradient_color_7 = '#cc5933'
 #gradient_color_8 = '#cc3333'
 
+
   gradient_color_1 = '#2b005e'
-  gradient_color_2 = '#3c0066'
-  gradient_color_3 = '#4e006e'
-  gradient_color_4 = '#5f0076'
-  gradient_color_5 = '#71017e'
-  gradient_color_6 = '#820186'
-  gradient_color_7 = '#94018e'
-  gradient_color_8 = '#a50196'
+  gradient_color_2 = '#2b005e'
+#    gradient_color_2 = '#3c0066'
+#   gradient_color_3 = '#4e006e'
+#   gradient_color_4 = '#5f0076'
+#   gradient_color_5 = '#71017e'
+#   gradient_color_6 = '#820186'
+#   gradient_color_7 = '#94018e'
+#   gradient_color_2 = '#a50196'
 [smoothing]
 
 # Percentage value for integral smoothing. Takes values from 0 - 100.

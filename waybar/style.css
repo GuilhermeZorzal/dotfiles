@@ -535,5 +535,14 @@ label:focus {
 #custom-brave:hover {
     background-color: @color4;
 }
-    
+#custom-whatsapp {
+    padding: 3px 10px 3px 13px;
+    margin: 0px;
+        font-size:18px;
+    color: @font_color;
+    background-color: @color1;
+}
+#custom-whatsapp:hover {
+    background-color: @color4;
+}
     

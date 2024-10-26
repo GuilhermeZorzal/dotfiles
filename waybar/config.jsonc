@@ -16,6 +16,7 @@
         "custom/chatgpt",
         "custom/brave",
         "custom/localhost"
+//         "custom/whatsapp"
     ],
     "modules-center": [
         // "hyprland/window"
@@ -247,6 +248,10 @@
     "custom/brave" : {
         "format": "󰊯 ",
         "on-click": "brave-browser --app=' https://search.brave.com/'" //"exec-if": "pgrep spotify" }
+    },
+    "custom/whatsapp" : {
+        "format": " ",
+        "on-click": "brave-browser --app='https://web.whatsapp.com/'" //"exec-if": "pgrep spotify" }
     },
     "custom/power": {
         "format" : "⏻ ",
