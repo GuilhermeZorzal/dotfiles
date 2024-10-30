@@ -12,7 +12,15 @@ echo $file
 # Check if a PDF was selected
 if [[ -n "$file" ]]; then
     # Close the terminal and open the selected PDF with zathura
-	setsid zathura "$file"
+	# setsid zathura "$file" > 
+
+	setsid zathura "$file" >/dev/null 2>&1 < /dev/null &
+
+	# Capture the terminal's process ID (PPID of the script)
+	TERMINAL_PID=$(ps -o ppid= -p $$ | tail -1 | tr -d ' ')
+
+	# Kill the terminal process
+	kill "$TERMINAL_PID"
 
     exit
 else
