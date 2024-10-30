@@ -19,6 +19,3 @@ btop
 kitty
 fzf
 
-# TODO:
-
-Fazer o fuzzy finder do zathura abrir em floating mode
