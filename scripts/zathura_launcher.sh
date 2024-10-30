@@ -1,11 +1,20 @@
 #!/bin/bash
 
-# Description: This script searches for PDF files in the specified directory (or current directory if none is given)
-#              using fzf, and opens the selected PDF with zathura.
+# Find all PDF files in the home directory
+file=$(find ~ -type f -name "*.pdf" | fzf --prompt="Select a PDF: "
+#    --preview 'pdftotext -l 3 -nopgbrk {} - | head -n 30'
+)
+# Define the directory where PDF files are located
+# PDF_DIR="$HOME/Documents"  # Change this to the directory containing your PDFs
 
-# Set directory to search in (default to current directory if not provided)
-SEARCH_DIR="${1:-.}"
+echo $file
 
-# Search for PDFs and open with zathura
-find "$SEARCH_DIR" -type f -name "*.pdf" | fzf --preview 'pdftotext {} - | head -20' | xargs -r zathura
+# Check if a PDF was selected
+if [[ -n "$file" ]]; then
+    # Close the terminal and open the selected PDF with zathura
+	setsid zathura "$file"
 
+    exit
+else
+    echo "No PDF selected."
+fi

@@ -32,11 +32,14 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 -- 
 -- Buffers
 vim.keymap.set("n", "<leader>bs", "<CMD>vsp<CR>", { desc = "[S]plit Windows" })
-vim.keymap.set("n", "<leader>bo", "<CMD>enew<CR>", { desc = "[O]pen new buffer" })
+vim.keymap.set("n", "<leader>bo", "<CMD>enew<CR><CMD>Oil<CR>", { desc = "[O]pen new buffer" })
 vim.keymap.set("n", "<leader>bn", "<CMD>bnext<CR>", { desc = "[N]ext buffer" })
 vim.keymap.set("n", "<leader>bp", "<CMD>bprev<CR>", { desc = "[P]revious buffer" })
 vim.keymap.set("n", "<leader>bd", "<CMD>bd<CR>", { desc = "[D]elete current buffer" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "" })
 vim.keymap.set("n", "<C-f>", "<C-f>zz", { desc = "" })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "" })
+vim.keymap.set("n", "<leader>p", "\"+p<CR>", { desc = "" })
+vim.keymap.set("n", "<leader>y", "\"+y<CR>", { desc = "" })
+vim.keymap.set("v", "<leader>y", "\"+y <CR>", { desc = "" })
 
