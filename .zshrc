@@ -117,7 +117,7 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias neo="fastfetch"
 alias v="nvim ."
-alias vf="nvim"
+alias va="nvim"
 alias wmconf="cd ~/.config/hypr/"
 alias waybarconf="cd ~/.config/waybar/"
 alias nvimconf="cd ~/.config/nvim/"
@@ -378,6 +378,7 @@ alias which-command=whence
 alias change_version_java='update-alternatives --config java'
 alias clock="tty-clock -sc"
 
-fastfetch
 alias fv='nvim $(fzf --preview "bat {}")'
 alias conf="cd ~/Documentos/git/dotfiles/"
+alias Sdocker='sudo service docker start'
+

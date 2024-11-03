@@ -81,5 +81,4 @@ kitty -e wal -i $next_image_full_path --backend colorthief && \
 echo 'waybg'
 swaybg -i $next_image_full_path -m fill  &
 echo 'waybar'
-pkill waybar
-waybar & 
+sh ~/Documentos/git/dotfiles/scripts/waybar_handler.sh

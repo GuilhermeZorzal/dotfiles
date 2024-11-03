@@ -86,6 +86,3 @@ vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
 -- Additional transparency settings (optional)
 vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "LineNr", { bg = "NONE" })
-
-
--- vim.cmd("NvimTreeToggle")
