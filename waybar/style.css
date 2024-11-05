@@ -205,32 +205,27 @@ button:hover {
 ======================================================================
 */
 #power-profiles-daemon {
-    background-color: transparent;
+    /*background-color: transparent;*/
     color: #ffffff;
-    padding: 0px 15px 0px 5px;
 }
 #power-profiles-daemon:hover {
-    background-color: @color3;
+    background-color: #ff0000;
     box-shadow: inset 0 -3px #ffffff;
-    padding: 0px 15px 0px 5px;
 }
 
 #power-profiles-daemon.performance {
     background-color: @important;
     color: @toggle-text;
-    padding: 0px 15px 0px 5px;
 }
 
 #power-profiles-daemon.balanced {
     background-color: transparent;
     color: @text;
-    padding: 0px 15px 0px 5px;
 }
 
 #power-profiles-daemon.power-saver {
     background-color: #2ecc71;
     color: @toggle-text;
-    padding: 0px 15px 0px 5px;
 }
 
 #idle_inhibitor {
@@ -265,8 +260,7 @@ button:hover {
     color: @font_color;
 }
 #cpu:hover {
-    background-color: @color3;
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: @color4;
 }
 
 #memory {
@@ -284,8 +278,7 @@ button:hover {
 }
 
 #disk:hover {
-    background-color: @color3;
-    box-shadow: inset 0 -3px @text;
+    background-color: @color4;
 }
 
 #backlight {
