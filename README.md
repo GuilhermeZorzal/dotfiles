@@ -19,25 +19,36 @@ generate and store using (this)[https://docs.github.com/en/authentication/connec
 ## Dependencies
 
 ```
-nvim
-bat
-zsh
-waybar
-cava
-cmatrix
-tty-clock
-hyprland
-hyprlock
+sudo dnf install -y \
+neovim \
+bat \
+zsh \
+waybar \
+cava \
+cmatrix \
+hyprland \
+hyprlock \
+zathura \
+wofi \
+btop \
+kitty \
+fzf \
+gnome-tweaks \
+fastfetch \
+python3-pip \
+wlogout \
+NetworkManager-tui \
+zathura-pdf-mupdf
+
+```
+```
 zathura
 wofi
 btop
 kitty
 fzf
 ```
-sudo dnf install -y neovim bat zsh waybar cava cmatrix hyprland hyprlock zathura wofi btop kitty fzf gnome-tweaks
-fastfetch
-python3-pip
-wlogout
+sudo dnf install -y neovim bat zsh waybar cava cmatrix hyprland hyprlock zathura wofi btop kitty fzf gnome-tweaks fastfetch python3-pip wlogout NetworkManager-tui
 
 ## Not in dnf:
 ttyclock
