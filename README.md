@@ -1,18 +1,32 @@
 # dotfiles
 Repository for storing dotfiles
 
+## Basic configurations
+
+### Firefox
+
+Access `about:config` and set `full-screen-api.ignore-widgets` to true
+Bar -> Show only on the tabs
+Extensions:
+- (dark reader)[https://addons.mozilla.org/en-US/firefox/addon/darkreader/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search]
+- (youtube speed)[https://addons.mozilla.org/en-US/firefox/addon/youtube-speed-control/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search]
+
+### Configure git and github
+
+generate and store using (this)[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent]
+
+
 ## Dependencies
 
 ```
+nvim
 bat
 zsh
-nvim
 waybar
 cava
 cmatrix
 tty-clock
 hyprland
-hyprlock
 hyprlock
 zathura
 wofi
@@ -20,7 +34,44 @@ btop
 kitty
 fzf
 ```
+sudo dnf install -y neovim bat zsh waybar cava cmatrix hyprland hyprlock zathura wofi btop kitty fzf gnome-tweaks
+fastfetch
+python3-pip
+wlogout
 
+## Not in dnf:
+ttyclock
+obsidian
+
+## Docker 
+```
+ sudo dnf -y install dnf-plugins-core
+
+ sudo dnf-3 config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+
+ sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+## Oh my zsh
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+## Pywal
+
+using pip
+sudo pip3 install pywal
+
+more info in https://github.com/dylanaraps/pywal/wiki/Customization
+
+also, install colorthief by `pip install colorthief`
+
+## Nerd Fonts
+
+Install a nerd font of the official site
+Extract te zip and move all the files to /usr/share/fonts/ 
+run `fc-cache -fv`
 # TODO:
 
 Configurar o sistema de multiplas abas do kitty

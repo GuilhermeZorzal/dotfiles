@@ -379,6 +379,6 @@ alias change_version_java='update-alternatives --config java'
 alias clock="tty-clock -sc"
 
 alias fv='nvim $(fzf --preview "bat {}")'
-alias conf="cd ~/Documentos/git/dotfiles/"
+alias conf="cd ~/Documents/git/dotfiles/"
 alias Sdocker='sudo service docker start'
 
