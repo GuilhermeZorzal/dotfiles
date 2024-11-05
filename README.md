@@ -41,7 +41,13 @@ wlogout
 
 ## Not in dnf:
 ttyclock
-obsidian
+
+## Obsidian
+
+Installed throught the gnome applications interface (gnome)
+Configs:
+- Git plugin
+- github theme
 
 ## Docker 
 ```
