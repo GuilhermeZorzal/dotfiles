@@ -7,9 +7,15 @@ Repository for storing dotfiles
 
 Access `about:config` and set `full-screen-api.ignore-widgets` to true
 Bar -> Show only on the tabs
-Extensions:
+browser.compactmode.show true
+enable on the config (three lines) on the menu bar > more tools > customize toolbar > density > compact
+
+
+
+#### Extensions:
 - (dark reader)[https://addons.mozilla.org/en-US/firefox/addon/darkreader/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search]
 - (youtube speed)[https://addons.mozilla.org/en-US/firefox/addon/youtube-speed-control/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search]
+- (ublock)[https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search]
 
 ### Configure git and github
 
@@ -38,15 +44,8 @@ fastfetch \
 python3-pip \
 wlogout \
 NetworkManager-tui \
-zathura-pdf-mupdf
-
-```
-```
-zathura
-wofi
-btop
-kitty
-fzf
+zathura-pdf-mupdf \
+blueman
 ```
 sudo dnf install -y neovim bat zsh waybar cava cmatrix hyprland hyprlock zathura wofi btop kitty fzf gnome-tweaks fastfetch python3-pip wlogout NetworkManager-tui
 

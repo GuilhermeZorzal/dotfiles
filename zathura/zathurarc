@@ -3,23 +3,23 @@ map <C-a> set recolor true
 set recolor true
 # set recolor-lightcolor  "#2f4c6b"  # Background color
 # set recolor-darkcolor "#
-
-# Zathura configuration file
-# See man `man zathurarc'
-
-# Open document in fit-width mode by default
+# 
+# # Zathura configuration file
+# # See man `man zathurarc'
+# 
+# # Open document in fit-width mode by default
 set adjust-open "best-fit"
-
-# One page per row by default
+# 
+# # One page per row by default
 set pages-per-row 1
-
-#stop at page boundries
+# 
+# #stop at page boundries
 set scroll-page-aware "true"
 set smooth-scroll "true"
 set scroll-full-overlap 0.01
 set scroll-step 200
-
-#zoom settings
+# 
+# #zoom settings
 set zoom-min 10
 set guioptions ""
 
@@ -45,15 +45,18 @@ set highlight-color "#F4BF75" #0A
 set highlight-active-color "#6A9FB5" #0D
 
 set completion-highlight-fg "#151515" #02
-	set completion-highlight-bg "#90A959" #0C
+set completion-highlight-bg "#90A959" #0C
+
+set notification-bg "#000000"
+set notification-fg "#ffffff"
 
 set completion-bg "#303030" #02
 set completion-fg "#E0E0E0" #0C
 
-set notification-bg "#90A959" #0B
-set notification-fg "#151515" #00
+set notification-bg "#000000" #0B
+set notification-fg "#ffffff" #00
 
-set recolor "true"
+# set recolor "true"
 set recolor-lightcolor "#0a1429" # "#2f4c6b"  # "#000000" #00
 set recolor-darkcolor "#E0E0E0" #06
 set recolor-reverse-video "true"
@@ -61,4 +64,52 @@ set recolor-keephue "true"
 
 
 set render-loading "false"
-set scroll-step 50
+# 
+
+#  _   _                          _   _                              
+# | \ | | _____      __  ______ _| |_| |__  _   _ _ __ __ _ _ __ ___ 
+# |  \| |/ _ \ \ /\ / / |_  / _` | __| '_ \| | | | '__/ _` | '__/ __|
+# | |\  |  __/\ V  V /   / / (_| | |_| | | | |_| | | | (_| | | | (__ 
+# |_| \_|\___| \_/\_/   /___\__,_|\__|_| |_|\__,_|_|  \__,_|_|  \___|
+#                                                                    
+
+# . $HOME/.cache/wal/colors.sh
+# 
+# cat <<CONF
+# set recolor "true"
+# 
+# # set completion-bg "$background"
+# # set completion-fg "$foreground"
+# # set completion-group-bg "$background"
+# # set completion-group-fg "$color2"
+# # set completion-highlight-bg "$foreground"
+# # set completion-highlight-fg "$background"
+# # 
+# # set recolor-lightcolor "$background"
+# # set recolor-darkcolor "$foreground"
+# set default-bg "$background"
+# 
+# # set inputbar-bg "$background"
+# # set inputbar-fg "$foreground"
+# # set notification-bg "$background"
+# # set notification-fg "$foreground"
+# # set notification-error-bg "$color1"
+# # set notification-error-fg "$foreground"
+# # set notification-warning-bg "$color1"
+# # set notification-warning-fg "$foreground"
+# # set statusbar-bg "$background"
+# # set statusbar-fg "$foreground"
+# # set index-bg "$background"
+# # set index-fg "$foreground"
+# # set index-active-bg "$foreground"
+# # set index-active-fg "$background"
+# # set render-loading-bg "$background"
+# # set render-loading-fg "$foreground"
+# 
+# # set window-title-home-tilde true
+# # set statusbar-basename true
+# set selection-clipboard clipboard
+# 
+# set recolor-offset 0
+# set page-padding 0
+# CONF
