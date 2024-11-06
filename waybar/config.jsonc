@@ -13,9 +13,12 @@
         "hyprland/scratchpad",
         "custom/media",
  //       "custom/rhythmbox" 
+ //       "custom/separatorLeft",
+        "custom/empty",
         "custom/chatgpt",
         "custom/brave",
         "custom/localhost"
+//        "custom/separatorRight"
 //         "custom/whatsapp"
     ],
     "modules-center": [
@@ -256,6 +259,15 @@
     "custom/whatsapp" : {
         "format": " ",
         "on-click": "brave-browser --app='https://web.whatsapp.com/'" //"exec-if": "pgrep spotify" }
+    },
+    "custom/separatorLeft" : {
+        "format": " ",
+    },
+    "custom/separatorRight" : {
+        "format": " ",
+    },
+    "custom/empty" : {
+        "format": " ",
     },
     "custom/power": {
         "format" : "⏻ ",

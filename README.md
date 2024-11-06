@@ -88,8 +88,9 @@ also, install colorthief by `pip install colorthief`
 Install a nerd font of the official site
 Extract te zip and move all the files to /usr/share/fonts/ 
 run `fc-cache -fv`
+
 # TODO:
 
-Configurar o sistema de multiplas abas do kitty
-
-Configurar o launcher de paginas do brave com o --app
+Fazer branch minimalista
+Mudar as configurações do waybar pra só aparecer em hover (talvez window hide, hover height = 10)
+Add shortcut to create new window outside current group

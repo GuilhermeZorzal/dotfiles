@@ -498,18 +498,23 @@ label:focus {
 
 #custom-chatgpt {
     padding: 3px 10px 3px 13px;
-    margin: 0px 0px 0px 12px;
         font-size:18px;
     color: @font_color;
+    border-radius: 10px 0px 0px 10px;
     background-color: @color1;
     }
 #custom-chatgpt:hover {
     color: @font_color;
     background-color: @color4;
 }
+#custom-empty {
+    background-color: transparent;
+    padding: 0px 10px;
+}
 #custom-localhost {
+    border-radius: 0px;
     padding: 3px 10px 3px 13px;
-    margin: 0px;
+    border-radius: 0px 10px 10px 0px;
     font-size:18px;
     color: @font_color;
     background-color: @color1;
@@ -517,8 +522,23 @@ label:focus {
 #custom-localhost:hover {
     background-color: @color4;
 }
+#custom-separatorLeft {
+    margin: 0px 0px 0px 12px;
+    border-radius: 25px 0px 0px 25px;
+    font-size:18px;
+    background-color: #ff0000;
+    background-color: @color1;
+}
+
+#custom-separatorRight {
+    margin: 0px;
+    background-color: @color1;
+    border-radius: 0px 25px 25px 0px;
+    font-size:18px;
+}
 #custom-brave {
     padding: 3px 10px 3px 13px;
+    border-radius: 0px;
     margin: 0px;
         font-size:18px;
     color: @font_color;
