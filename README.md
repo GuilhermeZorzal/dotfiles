@@ -16,6 +16,8 @@ enable on the config (three lines) on the menu bar > more tools > customize tool
 - (dark reader)[https://addons.mozilla.org/en-US/firefox/addon/darkreader/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search]
 - (youtube speed)[https://addons.mozilla.org/en-US/firefox/addon/youtube-speed-control/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search]
 - (ublock)[https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search]
+- (SoundFixer)[https://addons.mozilla.org/en-GB/firefox/addon/soundfixer/] - para audio mono
+- (vim-scroll)[https://addons.mozilla.org/pt-BR/firefox/addon/vim-scroll/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search]
 
 ### Configure git and github
 
@@ -92,5 +94,13 @@ run `fc-cache -fv`
 # TODO:
 
 Fazer branch minimalista
+
 Mudar as configurações do waybar pra só aparecer em hover (talvez window hide, hover height = 10)
+
 Add shortcut to create new window outside current group
+
+Ao configurar o waybar, deve-se dizer explicitamente que configuração se deseja (margin: 0px não é o default por exemplo e não faço a mínima ideia do que seja)
+
+Adecionar o wal/ no repo
+
+

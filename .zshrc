@@ -381,4 +381,4 @@ alias clock="tty-clock -sc"
 alias fv='nvim $(fzf --preview "bat {}")'
 alias conf="cd ~/Documents/git/dotfiles/"
 alias Sdocker='sudo service docker start'
-
+alias py='python3'
