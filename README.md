@@ -48,7 +48,9 @@ wlogout \
 NetworkManager-tui \
 zathura-pdf-mupdf \
 blueman \
-clipman
+clipman \
+stow \
+hypridle
 ```
 sudo dnf install -y neovim bat zsh waybar cava cmatrix hyprland hyprlock zathura wofi btop kitty fzf gnome-tweaks fastfetch python3-pip wlogout NetworkManager-tui
 
@@ -106,6 +108,6 @@ Add shortcut to create new window outside current group
 
 Ao configurar o waybar, deve-se dizer explicitamente que configuração se deseja (margin: 0px não é o default por exemplo e não faço a mínima ideia do que seja)
 
-Adecionar o wal/ no repo
+Configurar o hyprlock e hypridle
 
 

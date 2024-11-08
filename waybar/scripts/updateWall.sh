@@ -24,3 +24,4 @@ echo $current_image
 
 waybar &
 swaybg -i $current_image -m fill &
+echo $current_image

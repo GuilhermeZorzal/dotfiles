@@ -82,3 +82,4 @@ echo 'waybg'
 swaybg -i $next_image_full_path -m fill  &
 echo 'waybar'
 sh ~/Documents/git/dotfiles/scripts/waybar_handler.sh
+ln -sf $next_image_full_path ~/Documents/git/dotfiles/hypr/image
