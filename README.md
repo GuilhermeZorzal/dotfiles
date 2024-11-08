@@ -21,7 +21,7 @@ enable on the config (three lines) on the menu bar > more tools > customize tool
 
 ### Configure git and github
 
-generate and store using (this)[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent]
+generate and store the ssh key using the steps from (this)[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent]
 
 
 ## Dependencies
@@ -47,7 +47,8 @@ python3-pip \
 wlogout \
 NetworkManager-tui \
 zathura-pdf-mupdf \
-blueman
+blueman \
+clipman
 ```
 sudo dnf install -y neovim bat zsh waybar cava cmatrix hyprland hyprlock zathura wofi btop kitty fzf gnome-tweaks fastfetch python3-pip wlogout NetworkManager-tui
 
@@ -90,6 +91,10 @@ also, install colorthief by `pip install colorthief`
 Install a nerd font of the official site
 Extract te zip and move all the files to /usr/share/fonts/ 
 run `fc-cache -fv`
+
+## Config themes
+
+On gnome-tweaks, change theme to HighContrastInverse
 
 # TODO:
 

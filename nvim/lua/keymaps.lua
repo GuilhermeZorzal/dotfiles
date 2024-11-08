@@ -42,5 +42,6 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "" })
 vim.keymap.set("n", "<leader>p", "\"+p<CR>", { desc = "" })
 vim.keymap.set("n", "<leader>y", "\"+y<CR>", { desc = "" })
 vim.keymap.set("v", "<leader>y", "\"+y <CR>", { desc = "" })
-vim.keymap.set("i", "<C-u>", "<nop>", { desc = "" })
+-- vim.keymap.set("i", "<C-u>", "<nop>", { desc = "" })
 
+vim.keymap.set("n", "<C-j>", "<C-u>", { desc = "" })

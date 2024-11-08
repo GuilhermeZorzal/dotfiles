@@ -77,7 +77,7 @@ echo "Full path: $next_image_full_path"
 #waybar &
 
 echo 'kitty color'
-kitty -e wal -i $next_image_full_path --backend colorthief && \
+wal -i $next_image_full_path --backend colorthief && \
 echo 'waybg'
 swaybg -i $next_image_full_path -m fill  &
 echo 'waybar'
