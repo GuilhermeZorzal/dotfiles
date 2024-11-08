@@ -1,0 +1,63 @@
+/*@import ".config/myGlobal.css";*/
+@import ".cache/wal/colors-waybar.css";
+/**/
+window {
+margin: 0px;
+border: 2px solid @color4;
+background-color: @background;
+	border-radius: 10px;
+}
+#input {
+margin: 5px;
+color: #ffffff;
+background-color: @background;
+}
+
+#inner-box {
+margin: 5px;
+border: none;
+background-color: @background;
+}
+
+#outer-box {
+margin: 5px;
+border: none;
+background-color: @background;
+}
+
+#scroll {
+margin: 0px;
+border: none;
+}
+
+#text {
+margin: 5px;
+border: none;
+color: #ffffff;
+	/* color: @cursor;*/ 
+} 
+
+/*#entry.activatable #text {*/
+/*color: #282a36;*/
+/*	border-radius: 25px;*/
+/*	border-color: #ffffff;*/
+/*}*/
+#entry:focus {
+color: #ffffff;
+	border-radius: 25px;
+/*	border-color: #ffffff;*/
+}
+
+#entry > * {
+color: #ffffff;
+}
+
+#entry:selected {
+background-color: @color4;
+		color: #ffffff;
+}
+/*e o que foi selecionado em baixo*/
+#entry:selected #text { 
+font-weight: bold;
+	color: #ffffff;
+}
