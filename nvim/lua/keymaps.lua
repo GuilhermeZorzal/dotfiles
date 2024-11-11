@@ -45,3 +45,10 @@ vim.keymap.set("v", "<leader>y", "\"+y <CR>", { desc = "" })
 -- vim.keymap.set("i", "<C-u>", "<nop>", { desc = "" })
 
 vim.keymap.set("n", "<C-j>", "<C-u>", { desc = "" })
+vim.keymap.set("n", "<leader>h", "<C-w>h", { desc = "" })
+vim.keymap.set("n", "<leader>j", "<C-w>j", { desc = "" })
+vim.keymap.set("n", "<leader>k", "<C-w>k", { desc = "" })
+vim.keymap.set("n", "<leader>l", "<C-w>l", { desc = "" })
+
+vim.keymap.set("i", "<C-u>", "<nop>", { desc = "" })
+

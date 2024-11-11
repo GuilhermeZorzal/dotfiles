@@ -30,7 +30,7 @@ get_next_index() {
 }
 
 # Main logic
-folder_path="$HOME/Documents/git/dotfiles/wallpapers/"  # Folder where images are located
+folder_path="$HOME/.config/wallpapers/"  # Folder where images are located
 file_with_image_name="./currentWall.txt"  # File that contains the current image name
 
 # Load images from the folder
@@ -81,5 +81,5 @@ wal -i $next_image_full_path --backend colorthief && \
 echo 'waybg'
 swaybg -i $next_image_full_path -m fill  &
 echo 'waybar'
-sh ~/Documents/git/dotfiles/scripts/waybar_handler.sh
-ln -sf $next_image_full_path ~/Documents/git/dotfiles/hypr/image
+sh ~/.config/scripts/waybar_handler.sh
+ln -sf $next_image_full_path ~/.config/hypr/image

@@ -8,7 +8,7 @@ read_image_name() {
 }
 
 # Main logic
-folder_path="$HOME/Documents/git/dotfiles/wallpapers/"  # Folder where images are located
+folder_path="$HOME/.config/wallpapers/"  # Folder where images are located
 file_with_image_name="./currentWall.txt"  # File that contains the current image name
 
 
