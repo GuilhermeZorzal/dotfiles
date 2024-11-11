@@ -14,6 +14,7 @@ vim.g.maplocalleader = " "
 
 require("options")
 require("keymaps")
+require("autosave_execute")
 -- Set <space> as the leader key
 -- See `:help mapleader`
 
