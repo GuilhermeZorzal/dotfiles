@@ -23,6 +23,9 @@ enable on the config (three lines) on the menu bar > more tools > customize tool
 
 generate and store the ssh key using the steps from (this)[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent]
 
+#### Configuring branch to automaticaly have its counterpart on the remote as you push
+git config push.autoSetupRemote true
+
 
 ## Dependencies
 

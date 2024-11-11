@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directory containing the Bash scripts
-	SCRIPT_DIR="$HOME/scripts/"  # Change this to your scripts folder
+	SCRIPT_DIR="$HOME/.config/scripts/general/"  # Change this to your scripts folder
 
 # List all Bash scripts, show only their names in dmenu, and keep paths for execution
 script_paths=$(find "$SCRIPT_DIR" -type f -name "*.sh")
