@@ -15,19 +15,27 @@ local autorun = function ()
 	    print("Running: ", fileName)
 	    return string.format("python3 %s", fileName)
 	end,
+	c = function ()
+	    print("Running: ", fileName)
+	    return string.format("gcc %s -o run && ./run %s", fileName)
+	end,
 	sh = function ()
 	    print("Running: ", fileName)
 	    return string.format("sh %s", fileName)
-	end
+	end,
     }
     if switch[ext] then
 	return switch[ext]()
     else
+	if not ext then
+	    return "make"
+	end
 	return 'echo "No executable found for this file type"'
     end
 end
 
 vim.keymap.set("n", "<leader>rr", function ()
+    vim.cmd("w")
     local valor = string.format("terminal  %s", autorun())
     vim.cmd(valor)
 end,
