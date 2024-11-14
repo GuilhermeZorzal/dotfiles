@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directory containing the Bash scripts
-	SCRIPT_DIR="$HOME/.config/scripts/general/"  # Change this to your scripts folder
+SCRIPT_DIR="$HOME/.config/scripts/general/"  # Change this to your scripts folder
 
 # List all Bash scripts, show only their names in dmenu, and keep paths for execution
 script_paths=$(find "$SCRIPT_DIR" -type f -name "*.sh")
@@ -18,5 +18,5 @@ selected_script_name=$(echo "$script_names" | wofi --show dmenu --prompt "Select
 
 # Execute the selected script if it exists in the map
 if [[ -n $selected_script_name && -n ${script_map[$selected_script_name]} ]]; then
-    bash "${script_map[$selected_script_name]}"
+    sh "${script_map[$selected_script_name]}"
 fi

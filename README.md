@@ -113,4 +113,15 @@ Ao configurar o waybar, deve-se dizer explicitamente que configuração se desej
 
 Configurar o hyprlock e hypridle
 
+# GNOME CONFIG
 
+Install gnome tweaks
+install forge (tilling manager para o gnome) https://extensions.gnome.org/extension/4481/forge/
+
+## Change overlay view
+
+dconf editor
+-> org/gnome/mutter/overlay-key => set to ""
+
+on configuration of gnome shortcuts:
+-> search "overview" and change to super space
