@@ -53,7 +53,8 @@ zathura-pdf-mupdf \
 blueman \
 clipman \
 stow \
-hypridle
+hypridle \
+yt-dlp
 ```
 sudo dnf install -y neovim bat zsh waybar cava cmatrix hyprland hyprlock zathura wofi btop kitty fzf gnome-tweaks fastfetch python3-pip wlogout NetworkManager-tui
 

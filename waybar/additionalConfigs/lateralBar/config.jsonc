@@ -162,6 +162,7 @@
         // "format-critical": "{temperatureC}°C {icon}",
         "tooltip": true,
         "format": "{icon}",
+        "format-alt": "{icon}\n{temperatureC}",
         "format-icons": ["", "", ""]
     },
     "backlight": {
