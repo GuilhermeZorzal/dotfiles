@@ -1,6 +1,8 @@
 set selection-clipboard clipboard
 map <C-a> set recolor true
 set recolor true
+map j feedkeys "<C-Down>"
+map k feedkeys "<C-Up>"
 # set recolor-lightcolor  "#2f4c6b"  # Background color
 # set recolor-darkcolor "#
 # 

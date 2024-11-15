@@ -4,7 +4,7 @@
 cd ~/.config/wallpapers/
 
 # Use fzf to select a file with a preview
-file=$(fzf --preview 'chafa {}' --preview-window=right:60%)
+file=$(fzf --preview 'chafa {}' --preview-window=right:90%)
 
 # Construct the full file path
 file="$HOME/.config/wallpapers/$file"

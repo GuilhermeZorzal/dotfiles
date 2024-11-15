@@ -383,3 +383,4 @@ alias fv='nvim $(fzf --preview "bat {}")'
 alias conf="cd ~/.config/dotfiles/ && nvim ."
 alias _docker='sudo service docker start'
 alias py='python3'
+alias wallpaperChange="sh ~/.config/scripts/iterative/wallpaper.sh"
