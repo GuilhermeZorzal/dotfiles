@@ -1,19 +1,24 @@
 @import "/home/guizo/.cache/wal/colors-waybar.css";
 
 
+/* background-color: #3F3F3F; //termite. Não foi usado 
+//background-color: @color1; // fundo
+//
+//color: @foreground ; // cor clara
+//color1 = bg
+*/
 * {
     font-family: SauceCodePro, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    margin: 0px;
-    padding: 0px;
-    font-size: 15px;
-    border-radius: 10px;
 }
 
 window#waybar {
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
-    background-color: transparent;
+    background-color: rgba(0,0,0,0.75);
+    margin: 4px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
 }
 
 window#waybar.hidden {
@@ -63,6 +68,7 @@ window#waybar.chromium {
 #mode,
 #idle_inhibitor,
 #scratchpad,
+#wallpaper,
 #power-profiles-daemon,
 /*
 ======================================================================
@@ -76,34 +82,19 @@ window#waybar.chromium {
 */
 
 .modules-right {
-    background-color: @color1; 
-    color: @foreground ;
-    margin: 5px 15px 5px 0px;
-    padding: 0 0 0 5px;
 }
 
 .modules-center {
-    background-color: @color1; 
-    color: @foreground ;
-    margin: 5px 0px;
-    padding-left: 5px;
 }
 .modules-left {
-    background-color: transparent; 
-    color: @foreground ;
-    margin: 5px 15px 5px 15px;
 }
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
-    background-color: @color1;
-    color: @foreground ;
 /*    margin-left: 5px;*/
 }
 
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
-    background-color: transparent;
-    color: @foreground ;
 }
 
 /* 
@@ -118,47 +109,48 @@ __        _____  ____  _  ______  ____   _    ____ _____ ____
 */
 
 button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    background-color: rgba(0,0,0,0);
-    box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
-    border: none;
-    border-radius: 10px;
 }
 
 button:hover {
-/*    background: inherit;  */
-    background-color: transparent;
-    box-shadow: inset 0 -3px #ffffff;
 }
 
 #workspaces button {
-    background-color: rgba(0,0,0,0);
-    color: @font_color ;
-    padding: 0px 5px;
+    padding:3px;
+    margin:0px;
 }
 
+
 #workspaces button:hover {
-    background-color: @color3;
-    color: @foreground;
+    padding:0px;
+    margin:0px;
+    
 }
 
 #workspaces button.focused {
-    background-color: @arrumar;
-    box-shadow: inset 0 -3px @text;
+    padding:0px;
+    margin:0px;
 }
 
 #workspaces button.urgent {
     background-color: @arrumar;
+    padding:0px;
+    margin:0px;
 }
 
 #workspaces button.active {
+    padding: 0px;
     background-color: @color4;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 9px;
+    /*transition: 0.2s ease;*/
+    padding:0px;
+    margin:0px;
 }
 #workspaces {
-    background-color: #ff0000;
-    
+    background-color: transparent;
 }
+#grou
 
 /*
 ======================================================================
@@ -173,11 +165,17 @@ button:hover {
 #battery {
     background-color: rgba(0,0,0,0);
     color: @main_fg ;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 
 #battery.charging, #battery.plugged {
     color: @text;
     background-color: #26A65B;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 
 @keyframes blink {
@@ -195,6 +193,9 @@ button:hover {
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 /*
 ======================================================================
@@ -317,11 +318,17 @@ button:hover {
 */
 #pulseaudio {
     color: @main_fg ;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 
 #pulseaudio.muted {
     background-color: @important;
     color: @main_fg;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 #pulseaudio:hover {
     background-color: rgba(0,0,0,0);
@@ -378,6 +385,8 @@ button:hover {
 #clock {
     background-color: rgba(0,0,0,0);
     color: @main_fg;
+    padding: 0px;
+    margin: 8px 0px;
 }
 
 
@@ -404,15 +413,23 @@ label:focus {
 #temperature {
     background-color: rgba(0,0,0,0);
     color: @font_color ;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 
 #temperature.critical {
     background-color: #eb4d4b;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 
 #tray {
     background-color: rgba(0,0,0,0);
-    padding: 0px 3px;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 
 #tray > .passive {
@@ -495,26 +512,38 @@ label:focus {
     background-color: #f53c3c;
 }
 
-#custom-wallpaperNext {
-    padding: 3px;
-    color: @font_color;
-}
-#custom-power {
-    color: @font_color;
+#wallpaper{
+    margin: 10px 0px;
 }
 #custom-wallpaperPrev {
-    padding: 3px;
     color: @font_color;
+    border-radius: 9px;
+    padding: 3px;
+    margin: 0px 5px;
+}
+#custom-wallpaperNext {
+    color: @font_color;
+    border-radius: 9px;
+    padding: 3px;
+    margin: 0px 5px;
 }
 #custom-wallpaperPrev:hover {
-    padding: 3px;
     background-color: @color4;
     color: @font_color;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 0px 5px;
 }
 #custom-wallpaperNext:hover {
-    padding: 3px;
     color: @font_color;
     background-color: @color4;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 0px 5px;
+}
+
+#custom-power {
+    color: @font_color;
 }
 
 #custom-chatgpt {
