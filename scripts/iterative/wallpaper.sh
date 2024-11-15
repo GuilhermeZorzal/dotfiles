@@ -1,26 +1,26 @@
 #!/bin/bash
 
-# Find all PDF files in the home directory
+# Navigate to the wallpapers directory
 cd ~/.config/wallpapers/
-file=$(fzf --preview 'chafa {}' --preview-window=right:60%
-)
-# Define the directory where PDF files are located
-# PDF_DIR="$HOME/Documents"  # Change this to the directory containing your PDFs
 
+# Use fzf to select a file with a preview
+file=$(fzf --preview 'chafa {}' --preview-window=right:60%)
+
+# Construct the full file path
 file="$HOME/.config/wallpapers/$file"
-echo $file
+echo "$file"
 
-# Check if a PDF was selected
+# Check if a file was selected
 if [[ -n "$file" ]]; then
-    # Close the terminal and open the selected PDF with zathura
-	# setsid zathura "$file" > 
-
-	wal -i $file --backend colorthief &
-	swaybg -i $file -m fill  &
-	sh $HOME/.config/scripts/general/waybar_handler.sh &
-	ln -sf $file $HOME/.config/hypr/image
-	echo $file > "$HOME/.config/waybar/scripts/currentWall.txt"
+    # Run the commands inside a new shell
+    bash -c "
+        wal -i \"$file\" --backend colorthief &
+        swaybg -i \"$file\" -m fill &
+        sh \"$HOME/.config/scripts/general/waybar_handler.sh\" &
+        ln -sf \"$file\" \"$HOME/.config/hypr/image\"
+        echo \"$file\" > \"$HOME/.config/waybar/scripts/currentWall.txt\"
+    "
     exit
 else
-    echo "No PDF selected."
+    echo "No file selected."
 fi
