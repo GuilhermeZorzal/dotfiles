@@ -115,26 +115,30 @@ button:hover {
 }
 
 #workspaces button {
-    padding:3px;
-    margin:0px;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 0px 5px;
 }
 
 
 #workspaces button:hover {
-    padding:0px;
-    margin:0px;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 0px 5px;
     
 }
 
 #workspaces button.focused {
-    padding:0px;
-    margin:0px;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 0px 5px;
 }
 
 #workspaces button.urgent {
-    background-color: @arrumar;
-    padding:0px;
-    margin:0px;
+    background-color: #ff0000;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 0px 5px;
 }
 
 #workspaces button.active {
@@ -144,8 +148,8 @@ button:hover {
     text-shadow: none;
     border-radius: 9px;
     /*transition: 0.2s ease;*/
-    padding:0px;
-    margin:0px;
+    border-radius: 8px;
+    margin: 5px 5px 0px 5px;
 }
 #workspaces {
     background-color: transparent;
