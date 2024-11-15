@@ -275,13 +275,17 @@ button:hover {
 
 
 #cpu {
-    margin: 0px 10px;
     background-color: rgba(0,0,0,0);
     color: @font_color;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 #cpu:hover {
-    margin: 0px 10px;
     background-color: @color4;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 
 #memory {

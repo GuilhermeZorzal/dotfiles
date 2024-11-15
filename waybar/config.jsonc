@@ -33,6 +33,7 @@
         //"custom/wallpaperPrev",
         //"custom/wallpaperNext",
         //"group/hardware",
+        "cpu",
         "temperature",
         //"idle_inhibitor",
         "pulseaudio"
