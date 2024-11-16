@@ -67,6 +67,7 @@ Installed throught the gnome applications interface (gnome)
 Configs:
 - Git plugin
 - github theme
+- Typewriter scroll (mantain the line being edited on center)
 
 ## Docker 
 ```
