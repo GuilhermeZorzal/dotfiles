@@ -115,6 +115,18 @@ handle_extension() {
             mediainfo "${FILE_PATH}" && exit 5
             exiftool "${FILE_PATH}" && exit 5
             ;; # Continue with next handler on failure
+
+        #                                     __ _
+        #  _ __ ___  _   _    ___ ___  _ __  / _(_) __ _ ___ 
+        # | '_ ` _ \| | | |  / __/ _ \| '_ \| |_| |/ _` / __|
+        # | | | | | | |_| | | (_| (_) | | | |  _| | (_| \__ \
+        # |_| |_| |_|\__, |  \___\___/|_| |_|_| |_|\__, |___/
+        #            |___/                         |___/
+        jsx|js|css|java|exs|py)
+            bat --color=always --theme=ansi --style=plain "${FILE_PATH}" && exit 5
+            # nvim -c "syntax enable" -c "set nowrap" -c "set noswapfile" -c "set norelativenumber" -c "set number" -c "set cursorline" "${FILE_PATH}" && exit 5
+            bat --style=plain --color=always "${FILE_PATH}" && exit 5
+            ;;
     esac
 }
 
