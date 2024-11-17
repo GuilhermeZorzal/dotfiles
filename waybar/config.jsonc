@@ -125,12 +125,12 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "interval": 1,
-        //"format":"{:%H\n%M\n%S}",
+        "interval":1,
         "format":"{:%H\n%M\n%S}",
+        "format-alt": "{:%d\n%b}",
+        //"format":"{:%H\n%M}",
         //"format":"{:%I}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-        //"format-alt": "{:%Y-%m-%d}"
     },
     "group/hardware" : {
         "orientation": "vertical",
@@ -218,7 +218,7 @@
         // "scroll-step": 1, // %, can be a float
         "format": "{icon}\n{volume}",
 /*        "format": "{volume}% {icon}  -  {format_source}",*/
-        "format-bluetooth": "{volume}%\n{icon}\n\n{format_source}",
+        "format-bluetooth": "{volume}\n{icon}\n\n{format_source}",
         "format-bluetooth-muted": "󰖁 \n{icon}\n\n{format_source}",
         ///"format-muted": "󰖁  {format_source}",
         "format-muted": "\n{volume}",

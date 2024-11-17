@@ -127,10 +127,10 @@
         // "timezone": "America/New_York",
         "interval":1,
         "format":"{:%H\n%M\n%S}",
+        "format-alt": "{:%d\n%b}",
         //"format":"{:%H\n%M}",
         //"format":"{:%I}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-        //"format-alt": "{:%Y-%m-%d}"
     },
     "group/hardware" : {
         "orientation": "vertical",
