@@ -15,6 +15,23 @@ import os
 # You always need to import ranger.api.commands here to get the Command class:
 from ranger.api.commands import Command
 
+class wallpaper(Command):
+    """
+    :wallpaper
+    Set the selected image as wallpaper using the custom script.
+    Logs output to a file for debugging.
+    """
+    def execute(self):
+        filepath = self.fm.thisfile.path
+        log_file = "/tmp/ranger_wallpaper_debug.log"  # Temporary log file for debugging
+
+        # Check if the file is an image
+        if filepath.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif')):
+            command = f"/home/guizo/.config/waybar/scripts/wallchange.sh -p {filepath} > {log_file} 2>&1"
+            self.fm.notify(f"Running: {command}")  # Notify in ranger
+            self.fm.execute_command(command, flags='w')  # Run command in terminal
+        else:
+            self.fm.notify("Selected file is not an image!", bad=True)
 
 # Any class that is a subclass of "Command" will be integrated into ranger as a
 # command.  Try typing ":my_edit<ENTER>" in ranger!

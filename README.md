@@ -103,6 +103,16 @@ run `fc-cache -fv`
 
 On gnome-tweaks, change theme to HighContrastInverse
 
+## Ranger
+
+### Installing icons
+
+use the (ranger_devicons)[https://github.com/alexanderjeurissen/ranger_devicons/tree/a8d626485ca83719e1d8d5e32289cd96a097c861] plugin. 
+
+## IMPORTANT BUG FIX
+
+Ranger has a bug that has not been released to the oficial packages yet: when you make some actions when a image is selected (using kitty as the terminal emulator) it freezes. The workaround can be found in (here)[https://github.com/ranger/ranger/pull/1758/files] . The file to be edited is in `lib/python3.12/site-packages/ranger/ext/img_display.py`
+
 # TODO:
 
 Fazer branch minimalista
