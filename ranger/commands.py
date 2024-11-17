@@ -27,7 +27,7 @@ class wallpaper(Command):
 
         # Check if the file is an image
         if filepath.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif')):
-            command = f"/home/guizo/.config/waybar/scripts/wallchange.sh -p {filepath} > {log_file} 2>&1"
+            command = f"sh /home/guizo/.config/waybar/scripts/wallchange.sh -p {filepath} > {log_file} 2>&1"
             self.fm.notify(f"Running: {command}")  # Notify in ranger
             self.fm.execute_command(command, flags='w')  # Run command in terminal
         else:

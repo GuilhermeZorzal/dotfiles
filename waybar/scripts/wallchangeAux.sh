@@ -46,7 +46,7 @@ set_wallpaper() {
 
 # Main logic
 folder_path="$HOME/.config/wallpapers/"  # Folder where images are located
-file_with_image_name="$HOME/.config/waybar/scripts/currentWall.txt"  # File that contains the current image name
+file_with_image_name="./currentWall.txt"  # File that contains the current image name
 
 # Load images from the folder
 load_images_from_folder "$folder_path"
@@ -62,60 +62,35 @@ for i in "${!image_files[@]}"; do
     fi
 done
 
+# Initialize variables
+direction=""
 custom_image=""
+
 # Parse command line options
 while getopts "nbp:" option; do
     case $option in
-        n) direction="next" ;;   # Next image
-        b) direction="previous" ;; # Previous image
+        n) direction="next" ;;           # Next image
+        b) direction="previous" ;;       # Previous image
         p) custom_image="$OPTARG" ;;     # Custom image path
         *) echo "Usage: $0 [-n] [-b] [-p <image_path>]"; exit 1 ;;
     esac
 done
 
-# Get the next or previous image index
-next_index=$(get_next_index "$current_index" "$direction" "${#image_files[@]}")
-
-# Output the next or previous image file name
-next_image="${image_files[$next_index]}"
-echo "Next image: $next_image"
-
 if [[ -n "$custom_image" ]]; then
-    echo "AAAAAAAAAA"
     # Validate the custom image path
     if [[ -f "$custom_image" ]]; then
-        echo 'kitty color'
-        wal -i $custom_image --backend colorthief && \
-        echo 'waybg'
-        nohup swaybg -i $custom_image -m fill  &
-        echo 'waybar'
-        # sh ~/.config/scripts/general/waybar_handler.sh
-        ln -sf $custom_image ~/.config/hypr/image
-        echo "$custom_image" > "$file_with_image_name"
+        set_wallpaper "$custom_image"
     else
         echo "Error: The file '$custom_image' does not exist."
         exit 1
     fi
 else
-    echo "$next_image" > "$file_with_image_name"
+    # Get the next or previous image index
+    next_index=$(get_next_index "$current_index" "$direction" "${#image_files[@]}")
 
-    # Create the full path for the next or previous image
+    # Output the next or previous image file name
+    next_image="${image_files[$next_index]}"
     next_image_full_path="$folder_path$next_image"
 
-    echo "Full path: $next_image_full_path"
-
-    # Set the background and update wallpaper
-    # kitty -e wal -i "$next_image_full_path" --backend colorthief &
-    # sleep 1
-    # swaybg -i "$next_image_full_path" -m fill &
-    # pkill waybar 
-    #waybar &
-
-    echo 'kitty color'
-    wal -i $next_image_full_path --backend colorthief && \
-    echo 'waybg'
-    nohup swaybg -i $next_image_full_path -m fill  &
-    echo 'waybar'
-    # sh ~/.config/scripts/general/waybar_handler.sh
-    ln -sf $next_image_full_path ~/.config/hypr/image
+    set_wallpaper "$next_image_full_path"
 fi
