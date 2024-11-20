@@ -112,18 +112,6 @@ use the (ranger_devicons)[https://github.com/alexanderjeurissen/ranger_devicons/
 
 Ranger has a bug that has not been released to the oficial packages yet: when you make some actions when a image is selected (using kitty as the terminal emulator) it freezes. The workaround can be found in (here)[https://github.com/ranger/ranger/pull/1758/files] . The file to be edited is in `lib/python3.12/site-packages/ranger/ext/img_display.py`
 
-# TODO:
-
-Fazer branch minimalista
-
-Mudar as configurações do waybar pra só aparecer em hover (talvez window hide, hover height = 10)
-
-Add shortcut to create new window outside current group
-
-Ao configurar o waybar, deve-se dizer explicitamente que configuração se deseja (margin: 0px não é o default por exemplo e não faço a mínima ideia do que seja)
-
-Configurar o hyprlock e hypridle
-
 # GNOME CONFIG
 
 Install gnome tweaks
@@ -136,3 +124,18 @@ dconf editor
 
 on configuration of gnome shortcuts:
 -> search "overview" and change to super space
+
+# TODO:
+
+Fazer branch minimalista
+
+Mudar as configurações do waybar pra só aparecer em hover (talvez window hide, hover height = 10)
+
+Add shortcut to create new window outside current group
+
+Ao configurar o waybar, deve-se dizer explicitamente que configuração se deseja (margin: 0px não é o default por exemplo e não faço a mínima ideia do que seja)
+
+## Waybar
+
+Configurar a waybar pra rodar dessa forma (fica mais genérica pra poder mexer)
+waybar -c ~/.config/waybar/additionalConfigs/transparentTopBar/config.jsonc -s .config/waybar/additionalConfigs/transparentTopBar/style.css 
