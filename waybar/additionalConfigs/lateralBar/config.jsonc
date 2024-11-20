@@ -17,6 +17,7 @@
         "mpd",
         "hyprland/mode",
         "hyprland/scratchpad",
+        "hyprland/submap",
         "custom/media"
  //       "custom/rhythmbox" 
  //       "custom/separatorLeft",
@@ -77,6 +78,10 @@
         }
     },
     "hyprland/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "hyprland/submap": {
+        "rotate" : 90, 
         "format": "<span style=\"italic\">{}</span>"
     },
     "hyprland/scratchpad": {

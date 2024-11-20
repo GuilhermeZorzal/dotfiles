@@ -616,4 +616,10 @@ label:focus {
 #custom-whatsapp:hover {
     background-color: @color4;
 }
-    
+#submap {
+    border-radius: 10px;
+    padding: 3px 0px 3px 0px;
+    margin: 10px 3px;
+    background-color: @color4;
+    color: @font_color;
+}
