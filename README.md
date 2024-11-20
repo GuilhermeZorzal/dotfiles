@@ -139,3 +139,6 @@ Ao configurar o waybar, deve-se dizer explicitamente que configuração se desej
 
 Configurar a waybar pra rodar dessa forma (fica mais genérica pra poder mexer)
 waybar -c ~/.config/waybar/additionalConfigs/transparentTopBar/config.jsonc -s .config/waybar/additionalConfigs/transparentTopBar/style.css 
+
+Adicionar uma config de waybar dentro de cada config do tiling manager (uma config dentro de hypr/ e uma dentro de sway/)
+
