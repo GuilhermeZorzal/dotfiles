@@ -9,7 +9,7 @@ read_image_name() {
 
 # Main logic
 folder_path="$HOME/.config/wallpapers/"  # Folder where images are located
-file_with_image_name="./currentWall.txt"  # File that contains the current image name
+file_with_image_name="$HOME/.config/waybar/scripts/currentWall.txt"  # File that contains the current image name
 
 
 # Read the image name from the file
@@ -17,7 +17,7 @@ read_image_name "$file_with_image_name"
 
 # Create the full path for the next or previous image
 echo $image_name
-current_image="$folder_path$image_name"
+current_image="$image_name"
 
 echo 'waybg'
 echo $current_image

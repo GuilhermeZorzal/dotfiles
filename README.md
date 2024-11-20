@@ -6,10 +6,9 @@ Repository for storing dotfiles
 ### Firefox
 
 Access `about:config` and set `full-screen-api.ignore-widgets` to true
-Bar -> Show only on the tabs
+Bookmarks -> Show only on the new tabs
 browser.compactmode.show true
 enable on the config (three lines) on the menu bar > more tools > customize toolbar > density > compact
-
 
 
 #### Extensions:

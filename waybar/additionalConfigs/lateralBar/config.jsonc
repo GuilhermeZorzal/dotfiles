@@ -36,8 +36,8 @@
         "cpu",
         "temperature",
         //"idle_inhibitor",
-        "pulseaudio"
-        //"power-profiles-daemon"
+        "pulseaudio",
+        "power-profiles-daemon"
     ],
     "modules-right": [
         //"network",
@@ -126,8 +126,8 @@
     "clock": {
         // "timezone": "America/New_York",
         "interval":1,
-        "format":"{:%H\n%M\n%S}",
-        "format-alt": "{:%d\n%b}",
+        "format":"\n{:%H\n%M\n%S}",
+        "format-alt": "\n{:%d\n%b}",
         //"format":"{:%H\n%M}",
         //"format":"{:%I}",
         "tooltip-format": "<big>{:%Y %B %d}</big>\n<tt><small>{calendar}</small></tt>"
@@ -183,7 +183,7 @@
         "format-full": "{icon}\n{capacity}",
         "format-charging": "󱐋\n{capacity}",
         "format-plugged": "",
-        "format-alt": "{time} {icon} ",
+        "tooltip-format": "Battery: {capacity}%\nPower(watts): {power}\nHeath: {health}\nTime left: {time}", //My battery doenst mark total of cycles
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": [" ", " ", " ", " ", " "]
@@ -196,10 +196,10 @@
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
       "tooltip": true,
       "format-icons": {
-        "default": " ",
-        "performance": " ",
-        "balanced": " ",
-        "power-saver": " "
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
       }
     },
     "network": {

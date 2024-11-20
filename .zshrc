@@ -384,3 +384,5 @@ alias conf="cd ~/.config/dotfiles/ && nvim ."
 alias _docker='sudo service docker start'
 alias py='python3'
 alias wallpaperChange="sh ~/.config/scripts/iterative/wallpaper.sh"
+alias wal-r="wal --theme base16-google"
+alias neomini="fastfetch --config examples/14.jsonc"
