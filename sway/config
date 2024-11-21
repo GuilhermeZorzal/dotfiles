@@ -24,7 +24,8 @@ set $menu wofi --show drun -i
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/.config/wallpapers/isekai.jpg fill
 #
 # Example configuration:
 #
@@ -52,10 +53,12 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 input "2:14:SynPS/2_Synaptics_TouchPad" {
     dwt enabled
     tap enabled
-    natural_scroll disable 
+    natural_scroll enable 
     middle_emulation enabled
 }
-
+input "type:touchpad" {
+    natural_scroll enabled
+}
 input type:keyboard {
       xkb_layout "br"
       xkb_variant "nodeadkeys","neo"
@@ -207,23 +210,51 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#
-# Status Bar:
-#
+# Status Bar
+# bindsym $mod+y exec "waybar -c ~/.config/sway/swayTopBar/config.jsonc -s ~/.config/sway/swayTopBar/style.css"
+
+# bindsym $mod+y exec "sh ~/.config/scripts/general/waybar_handler.sh"
+
+#exec ./waybar.sh
+# bindsym $mod+y exec "pkill waybar && waybar -c ~/.config/sway/swayTopBar/config.jsonc -s ~/.config/sway/swayTopBar/style.css"
+exec_always "pkill waybar && waybar -c ~/.config/sway/swayTopBar/config.jsonc -s ~/.config/sway/swayTopBar/style.css"
+
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-   #  position top
+# bar {
+#    #  position top
+# 
+#     swaybar_command waybar -c /home/guizo/.config/sway/swayTopBar/config.jsonc -s /home/guizo/.config/sway/swayTopBar/style.css
+#    #  # When the status_command prints a new line to stdout, swaybar updates.
+#    #  # The default just shows the current date and time.
+#    #  status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+# 
+#    #  colors {
+#    #      statusline #ffffff
+#    #      background #323232
+#    #      inactive_workspace #32323200 #32323200 #5c5c5c
+#    #  }
+# }
+set $cl_high #009ddc
+set $cl_indi #d9d8d8
+set $cl_back #231f20
+set $cl_fore #d9d8d8
+set $cl_urge #ee2e24
 
-    swaybar_command waybar
-   #  # When the status_command prints a new line to stdout, swaybar updates.
-   #  # The default just shows the current date and time.
-   #  status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+# Colors                border   bg       text     indi     childborder
+client.focused          $cl_high $cl_high $cl_fore $cl_indi $cl_high
+client.focused_inactive $cl_back $cl_back $cl_fore $cl_back $cl_back
+client.unfocused        $cl_back $cl_back $cl_fore $cl_back $cl_back
+client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
-   #  colors {
-   #      statusline #ffffff
-   #      background #323232
-   #      inactive_workspace #32323200 #32323200 #5c5c5c
-   #  }
-}
+# Window borders
+default_border pixel 2
+default_floating_border normal
+hide_edge_borders smart
+
+focus_follows_mouse always
+
+# smart_gaps on
+gaps inner 10
+gaps outer 5
 
 include /etc/sway/config.d/*

@@ -142,3 +142,8 @@ waybar -c ~/.config/waybar/additionalConfigs/transparentTopBar/config.jsonc -s .
 
 Adicionar uma config de waybar dentro de cada config do tiling manager (uma config dentro de hypr/ e uma dentro de sway/)
 
+# Verificar
+
+O dispatcher abaixo troca os workspaces entre dois monitores. Muito útil. Precisa de ser testado 
+swapactiveworkspaces
+
