@@ -147,3 +147,4 @@ Adicionar uma config de waybar dentro de cada config do tiling manager (uma conf
 O dispatcher abaixo troca os workspaces entre dois monitores. Muito útil. Precisa de ser testado 
 swapactiveworkspaces
 
+

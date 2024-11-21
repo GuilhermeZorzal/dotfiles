@@ -38,6 +38,7 @@
         "temperature",
         //"idle_inhibitor",
         "pulseaudio",
+        "idle_inhibitor",
         "power-profiles-daemon"
     ],
     "modules-right": [
