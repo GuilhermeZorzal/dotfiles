@@ -64,8 +64,10 @@ bindsym $mod+Shift+Space exec sh ~/.config/scripts/launcher.sh
 ### Input configuration
 #
 # Example configuration:
-#
-input "2:14:SynPS/2_Synaptics_TouchPad" {
+
+
+# input "2:14:SynPS/2_Synaptics_TouchPad" {
+input "1267:12433:ELAN0504:00_04F3:3091_Touchpad" {
     dwt enabled
     tap enabled
     natural_scroll enable 
