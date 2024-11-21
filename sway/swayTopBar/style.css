@@ -154,6 +154,7 @@ button:hover {
 ======================================================================
 */
 #battery {
+    padding: 0px 7px;
     background-color: rgba(0,0,0,0);
     color: @main_fg ;
 }
@@ -285,6 +286,7 @@ button:hover {
 
 #backlight {
     background-color: rgba(0,0,0,0);
+    padding: 0px 10px;
     color: @main_fg ;
 }
 
@@ -299,14 +301,17 @@ button:hover {
 ======================================================================
 */
 #pulseaudio {
+    padding: 0px 10px;
     color: @main_fg ;
 }
 
 #pulseaudio.muted {
+    padding: 0px 10px;
     background-color: @important;
     color: @main_fg;
 }
 #pulseaudio:hover {
+    padding: 0px 10px;
     background-color: rgba(0,0,0,0);
     color: @main_fg;
 }
@@ -344,11 +349,12 @@ button:hover {
 */
 #network {
     background-color: rgba(0,0,0,0);
+    padding: 0px 10px;
     color: @font_color ;
 }
 
 #network.disconnected {
-    padding: 0px 4px;
+    padding: 0px 10px;
     margin: 0px;
     color: @font_color ;
     background-color: #f53c3c;
@@ -359,6 +365,7 @@ button:hover {
 #window,
 
 #clock {
+    padding: 0px 10px;
     background-color: rgba(0,0,0,0);
     color: @main_fg;
 }
