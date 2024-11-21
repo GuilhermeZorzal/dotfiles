@@ -25,7 +25,7 @@ set $menu wofi --show drun -i
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg ~/.config/wallpapers/isekai.jpg fill
+output * bg ~/.config/wallpapers/mt1.jpg fill
 
 # Example configuration:
 #
@@ -79,7 +79,7 @@ input "type:touchpad" {
 input type:keyboard {
       xkb_layout "br"
       xkb_variant "nodeadkeys","neo"
-      xkb_options "caps:swapescape, ctrl:menu_rctrl, ctrl:swap_lalt_lctl"
+      xkb_options "caps:swapescape, ctrl:menu_rctrl"
 }
 
 
@@ -232,7 +232,7 @@ bindsym $mod+r mode "resize"
 # bindsym $mod+y exec "sh ~/.config/scripts/general/waybar_handler.sh"
 
 #exec ./waybar.sh
-bindsym $mod+y exec "pkill waybar && waybar -c ~/.config/sway/swayTopBar/config.jsonc -s ~/.config/sway/swayTopBar/style.css"
+bindsym $mod+y exec "sh ~/.config/sway/scripts/updateWall.sh"
 exec_always "pkill waybar && waybar -c ~/.config/sway/swayTopBar/config.jsonc -s ~/.config/sway/swayTopBar/style.css"
 
 # Read `man 5 sway-bar` for more information about this section.
