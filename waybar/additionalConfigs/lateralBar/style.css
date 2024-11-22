@@ -616,6 +616,22 @@ label:focus {
     color: @font_color;
     background-color: @color1;
 }
+#custom-help{
+    margin: 9px 0px;
+    padding: 4px 0px;
+    font-size:20px;
+    color: @font_color;
+}
+#custom-help:hover{
+    padding: 4px 0px;
+    margin: 9px 5px;
+    font-size:20px;
+    color: @font_color;
+    background-color: @color4;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 9px;
+}
 #custom-whatsapp:hover {
     background-color: @color4;
 }

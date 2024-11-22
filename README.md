@@ -53,7 +53,8 @@ blueman \
 clipman \
 stow \
 hypridle \
-yt-dlp
+yt-dlp \
+wlsunset
 ```
 sudo dnf install -y neovim bat zsh waybar cava cmatrix hyprland hyprlock zathura wofi btop kitty fzf gnome-tweaks fastfetch python3-pip wlogout NetworkManager-tui
 
