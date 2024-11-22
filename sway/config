@@ -19,7 +19,8 @@ set $term kitty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # set $menu dmenu_path | wmenu | xargs swaymsg exec --
-set $menu wofi --show drun -i
+# set $menu wofi --show drun -i
+set $menu rofi -show drun
 
 ### Output configuration
 #
@@ -70,11 +71,14 @@ bindsym $mod+Shift+Space exec sh ~/.config/scripts/launcher.sh
 input "1267:12433:ELAN0504:00_04F3:3091_Touchpad" {
     dwt enabled
     tap enabled
+    drag enabled
+    tap_button_map lrm
     natural_scroll enable 
     middle_emulation enabled
 }
 input "type:touchpad" {
     natural_scroll enabled
+    pointer_accel 0.5
 }
 input type:keyboard {
       xkb_layout "br"
@@ -101,11 +105,12 @@ input type:keyboard {
     bindsym $mod+space exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
-    # Resize them with right mouse button + $mod.
+    # resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
     # Change normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
-    floating_modifier $mod normal
+    floating_modifier $mod inverse 
+    mouse_warping container 
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
@@ -122,6 +127,7 @@ input type:keyboard {
     bindsym $mod+$right focus right
     # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
+    # focus mode_toggle 
     bindsym $mod+Down focus down
     bindsym $mod+Up focus up
     bindsym $mod+Right focus right
@@ -173,19 +179,19 @@ input type:keyboard {
     bindsym $mod+b splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    #bindsym $mod+s layout stacking
+    bindsym $mod+g layout tabbed
+    bindsym $mod+s layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-#    bindsym $mod+Shift+space floating toggle
+    bindsym $mod+shift+f floating toggle
+
 
     # Swap focus between the tiling area and the floating area
     # TODO: Arrumar
-    # bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
@@ -225,6 +231,10 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+bindgesture pinch:inward+up move up
+bindgesture pinch:inward+down move down
+bindgesture pinch:inward+left move left
+bindgesture pinch:inward+right move right
 
 # Status Bar
 # bindsym $mod+y exec "waybar -c ~/.config/sway/swayTopBar/config.jsonc -s ~/.config/sway/swayTopBar/style.css"
@@ -236,20 +246,20 @@ bindsym $mod+y exec "sh ~/.config/sway/scripts/updateWall.sh"
 exec_always "pkill waybar && waybar -c ~/.config/sway/swayTopBar/config.jsonc -s ~/.config/sway/swayTopBar/style.css"
 
 # Read `man 5 sway-bar` for more information about this section.
-# bar {
-#    #  position top
-# 
-#     swaybar_command waybar -c /home/guizo/.config/sway/swayTopBar/config.jsonc -s /home/guizo/.config/sway/swayTopBar/style.css
-#    #  # When the status_command prints a new line to stdout, swaybar updates.
-#    #  # The default just shows the current date and time.
-#    #  status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-# 
-#    #  colors {
-#    #      statusline #ffffff
-#    #      background #323232
-#    #      inactive_workspace #32323200 #32323200 #5c5c5c
-#    #  }
-# }
+bar {
+   #  position top
+
+    swaybar_command waybar -c /home/guizo/.config/sway/swayTopBar/config.jsonc -s /home/guizo/.config/sway/swayTopBar/style.css
+   #  # When the status_command prints a new line to stdout, swaybar updates.
+   #  # The default just shows the current date and time.
+   #  status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+
+   #  colors {
+   #      statusline #ffffff
+   #      background #323232
+   #      inactive_workspace #32323200 #32323200 #5c5c5c
+   #  }
+}
 set $cl_high #009ddc
 set $cl_indi #d9d8d8
 set $cl_back #231f20
@@ -263,14 +273,20 @@ client.unfocused        $cl_back $cl_back $cl_fore $cl_back $cl_back
 client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
 # Window borders
-default_border pixel 2
+default_border pixel 4
 default_floating_border normal
 hide_edge_borders smart
 
 focus_follows_mouse always
 
 # smart_gaps on
-gaps inner 10
+gaps inner 5
 gaps outer 5
+
+for_window [title="Calculator"] floating enable 
+for_window [title="TesteGodot (DEBUG)"] floating enable 
+for_window [class="Godot_Engine"] floating enable
+for_window [title=".*Godot.*"] floating enable
+for_window [title="Please Confirm..."] floating enable
 
 include /etc/sway/config.d/*

@@ -68,6 +68,7 @@ Configs:
 - Git plugin
 - github theme
 - Typewriter scroll (mantain the line being edited on center)
+- Hider (util for hidding some components of the obsidian screen that are not natively supported, like the bars, tabs, etc)
 
 ## Docker 
 ```

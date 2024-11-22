@@ -17,6 +17,7 @@ ZSH_THEME="trapd00r"
 # - strug
 # - rmp
 # - trapd00r
+setopt autocd
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
