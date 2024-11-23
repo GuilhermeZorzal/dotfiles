@@ -15,10 +15,11 @@
         "sway/workspaces",
         "sway/mode",
         "sway/scratchpad",
-        "custom/media",
         "mpd",
         "custom/help",
         "group/options",
+         //"wlr/taskbar",
+        "custom/waybarMedia",
         "custom/media"
  //       "custom/rhythmbox" 
  //       "custom/separatorLeft",
@@ -31,6 +32,7 @@
     ],
     "modules-center": [
         // "hyprland/window"
+        //"bluetooth",
         "cpu",
         "memory",
         "disk",
@@ -39,6 +41,7 @@
         "power-profiles-daemon"
     ],
     "modules-right": [
+        "cava",
         "pulseaudio",
         "network",
         "backlight",
@@ -50,6 +53,20 @@
         "tray",
         "custom/power"
     ],
+    "custom/waybarMedia": {
+        //"exec": "playerctl metadata --format '{{ title }}'",
+        "exec": "sh ~/.config/waybar/scripts/waybar-media.sh",
+        "return-type": "json",
+        "format":"{}",
+        "tooltip":true,
+        "interval": 10
+    },
+    "custom/fileManager": {
+            "format": "",
+            "on-click": "kitty -e ranger",
+            "tooltip": true,
+            "tooltip-format": "File Manager",
+    },
     // "sway/workspaces": {
     //     "disable-scroll": true,
     //     "all-outputs": true,
@@ -66,6 +83,38 @@
     //         "default": ""
     //     }
     // },
+     "cava": {
+       "cava_config": "$HOME/.config/cava/config",
+        "framerate": 30,
+        "autosens": 1,
+        "sensitivity": 100,
+        "bars": 14,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "pulse",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.77,
+        "input_delay": 4,
+        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+               "on-click-right": "mode"
+               }
+    },
+    "bluetooth": {
+            "format": " {status}",
+            "format-connected": " {device_alias}",
+            "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+            // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+            "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+            "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+            "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+            "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -101,6 +150,24 @@
  //      //      "focused": "",
  //      //      "default": ""
  //        }
+     "wlr/taskbar": {
+	"format": "{icon}",
+	"icon-size": 14,
+	"icon-theme": "Numix-Circle",
+	"tooltip-format": "{title}",
+	"on-click": "activate",
+	"on-click-middle": "close",
+	"ignore-list": [
+	    "Alacritty"
+	],
+	"app_ids-mapping": {
+		"firefoxdeveloperedition": "firefox-developer-edition"
+	},
+	"rewrite": {
+		"Firefox Web Browser": "Firefox",
+		"Foot Server": "Terminal"
+	}
+},
     "group/options": {
         "orientation": "inherit",
         "drawer": {
@@ -112,6 +179,7 @@
             "custom/wallpaperPrev",
             "custom/wallpaperNext",
             "custom/screenrecorder",
+            "custom/fileManager",
         ]
     },
     "custom/screenrecorder": {
@@ -221,7 +289,9 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-         "format": "{percent}% ", 
+        "format": "{percent}% ", 
+        "tooltip-format":"Toggle night light",
+        "on-click":"sh $HOME/.config/waybar/scripts/night_light.sh"
 /*         "format": "{percent}% {icon}", */
 /*         "format-icons": ["", "", "", "", "", "", "", "", ""] */
     },
@@ -275,7 +345,7 @@
         "format-bluetooth": "{volume}% {icon}",
         "format-bluetooth-muted": "{volume}󰖁  {icon}",
         ///"format-muted": "󰖁  {format_source}",
-        "format-muted": "{volume}% 󰖁",
+        "format-muted": "{volume}% ",
         "format-source": "{volume}% ",
         "format-source-muted": "  " ,
         "format-icons": {

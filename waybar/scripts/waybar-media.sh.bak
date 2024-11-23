@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# Check if playerctl is available
+if ! command -v playerctl &> /dev/null; then
+    echo '{"error": "playerctl not found"}'
+    exit 1
+fi
+
+# Check if a player is active
+if ! playerctl --list-all &> /dev/null; then
+    echo '{"error": "No active media players"}'
+    exit 1
+fi
+
+# Fetch information
+PLAYER=$(playerctl --list-all | head -n 1) # Use the first active player
+STATUS=$(playerctl --player="$PLAYER" status 2>/dev/null || echo "Stopped")
+TITLE=$(playerctl --player="$PLAYER" metadata xesam:title 2>/dev/null || echo "Unknown Title")
+ARTIST=$(playerctl --player="$PLAYER" metadata xesam:artist 2>/dev/null || echo "Unknown Artist")
+ALBUM=$(playerctl --player="$PLAYER" metadata xesam:album 2>/dev/null || echo "Unknown Album")
+POSITION=$(playerctl --player="$PLAYER" position 2>/dev/null || echo "0")
+LENGTH=$(playerctl --player="$PLAYER" metadata mpris:length 2>/dev/null || echo "0")
+ART_URL=$(playerctl --player="$PLAYER" metadata mpris:artUrl 2>/dev/null || echo "")
+
+# Convert length from microseconds to seconds
+LENGTH_SEC=$(($LENGTH / 1000000))
+
+MIN=60
+# Format position as mm:ss# Convert position and length from seconds to minutes:seconds format
+POSITION_MIN=$(echo "$POSITION / 60" | bc)
+POSITION_SEC=$(echo "$POSITION % 60" | bc)
+
+# Ensure that POSITION_SEC is an integer, by rounding the floating-point part
+POSITION_SEC_INT=$(echo "scale=0; $POSITION_SEC / 1" | bc)
+POSITION_FORMATTED=$(printf "%02d:%02d" $POSITION_MIN $POSITION_SEC_INT)
+#POSITION_MIN=$(($POSITION / 60))
+# result=$(awk '{print $1/$2}' <<<"${POSITION} ${MIN}")
+# result2=$(awk '{print $1%$2}' <<<"${POSITION} ${MIN}")
+# #POSITION_SEC=$(($POSITION % 60))
+# POSITION_FORMATTED=$(printf "%02d:%02d" $result $result2)
+
+# Format length as mm:ss
+LENGTH_MIN=$(($LENGTH_SEC / 60))
+LENGTH_SEC_REMAINING=$(($LENGTH_SEC % 60))
+LENGTH_FORMATTED=$(printf "%02d:%02d" $LENGTH_MIN $LENGTH_SEC_REMAINING)
+
+# Output JSON
+cat <<EOF
+{
+  "player": "$PLAYER",
+  "status": "$STATUS",
+  "title": "$TITLE",
+  "artist": "$ARTIST",
+  "album": "$ALBUM",
+  "position": "$POSITION_FORMATTED",
+  "length": "$LENGTH_FORMATTED",
+  "art_url": "$ART_URL"
+}
+EOF

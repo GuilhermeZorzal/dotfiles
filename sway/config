@@ -250,6 +250,7 @@ bindsym $mod+y exec "pkill waybar && waybar"
 #exec ./waybar.sh
 # bindsym $mod+y exec waybar
 exec nm-applet &
+exec blueman-applet &
 
 # Read `man 5 sway-bar` for more information about this section.
 bar {
