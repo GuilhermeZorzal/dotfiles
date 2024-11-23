@@ -4,7 +4,7 @@
 * {
     font-family: SauceCodePro, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     margin: 0px;
-    padding: 0px 4px;
+    padding: 0px;
 }
 
 window#waybar {
@@ -12,7 +12,8 @@ window#waybar {
     transition-property: background-color;
     transition-duration: .5s;
     background-color: rgba(0,0,0,1);
-    margin: 4px;
+    margin: 0px;
+    padding: 0px;
 }
 
 
@@ -436,16 +437,24 @@ label:focus {
 
 #tray {
     background-color: rgba(0,0,0,0);
-    padding: 0px 3px;
+    padding: 0px;
+    margin: 0px;
 }
 
+/*
+#tray > .active {
+    -gtk-icon-effect: dim;
+    background-color: #eb4d4b;
+}
+*/
 #tray > .passive {
     -gtk-icon-effect: dim;
+    background-color: #ffff00;
 }
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: #ff00ff;
 }
 
 
@@ -524,7 +533,14 @@ label:focus {
     color: @font_color;
 }
 #custom-power {
+    padding:0px 8px;
     color: @font_color;
+}
+#custom-power:hover {
+    padding:0px 8px;
+    color: @font_color;
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
 }
 #custom-wallpaperPrev {
     padding: 3px;

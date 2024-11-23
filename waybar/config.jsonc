@@ -253,8 +253,8 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
-        "spacing": 10
+        "icon-size": 21,
+        "spacing": 5
     },
     "clock": {
         // "timezone": "America/New_York",
@@ -416,7 +416,7 @@
         "format": " ",
     },
     "custom/power": {
-        "format" : "⏻ ",
+        "format" : "⏻",
         "tooltip": false,
         "on-click"  : "wlogout"
 /*		"menu": "on-click",*/
