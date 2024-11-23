@@ -646,7 +646,7 @@ label:focus {
     font-size:18px;
     animation-name:none;
     color: #ffffff;
-    background-color: #000000;
+    background-color: transparent;
 } 
 #custom-hider {
     margin: 0px;
