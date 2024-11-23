@@ -51,11 +51,11 @@ LENGTH_FORMATTED=$(printf "%02d:%02d" $LENGTH_MIN $LENGTH_SEC_INT)
 
 # Based on the status, set the appropriate text and tooltip
 if [ "$STATUS" == "Playing" ]; then
-    printf '{"text":"  %s", "class":"playing, scrolling-title", "tooltip":"Title: %s\\nArtist: %s\\nLength: %s"}\n' \
-        "$CROP_TITLE" "$TITLE""$ARTIST" "$LENGTH_FORMATTED"
+    printf '{"text":"  %s", "class":"playing", "tooltip":"Title: %s\\nArtist: %s\\nLength: %s"}\n' \
+        "$CROP_TITLE" "$TITLE" "$ARTIST" "$LENGTH_FORMATTED"
 elif [ "$STATUS" == "Paused" ]; then
     printf '{"text":"󰏤 %s", "class":"paused", "tooltip":"Title: %s\\nArtist: %s\\nLength: %s"}\n' \
-        "$CROP_TITLE" "$CROP_TITLE" "$ARTIST"  "$LENGTH_FORMATTED"
+        "$CROP_TITLE" "$TITLE" "$ARTIST" "$LENGTH_FORMATTED"
 else
     printf '{"text":"󰨜", "tooltip":"Stopped", "class":"stopped"}\n'
 fi
