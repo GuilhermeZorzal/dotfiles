@@ -243,7 +243,7 @@ bindgesture pinch:inward+left move left
 bindgesture pinch:inward+right move right
 
 # Status Bar
-# bindsym $mod+y exec "waybar -c ~/.config/sway/swayTopBar/config.jsonc -s ~/.config/sway/swayTopBar/style.css"
+bindsym $mod+y exec "pkill waybar && waybar"
 
 # bindsym $mod+y exec "sh ~/.config/scripts/general/waybar_handler.sh"
 
@@ -255,7 +255,9 @@ exec nm-applet &
 bar {
    #  position top
 
-    swaybar_command waybar
+    # swaybar_command waybar
+    swaybar_command "waybar -c ~/.config/waybar/additionalConfigs/lateralBar/config.jsonc -s ~/.config/waybar/additionalConfigs/lateralBar/style.css"
+
    #  # When the status_command prints a new line to stdout, swaybar updates.
    #  # The default just shows the current date and time.
    #  status_command while date +'%Y-%m-%d %X'; do sleep 1; done

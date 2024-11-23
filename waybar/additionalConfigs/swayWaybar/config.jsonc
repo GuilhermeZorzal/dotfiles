@@ -9,7 +9,7 @@
     //"spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
 // "width": 1280, // Waybar width
-    //"spacing": 4, // Gaps between modules (4px)
+    "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
         "sway/workspaces",
@@ -18,7 +18,6 @@
         "custom/media",
         "mpd",
         "custom/help",
-        "custom/screenrecorder",
         "group/options",
         "custom/media"
  //       "custom/rhythmbox" 
@@ -112,18 +111,11 @@
             "custom/hider",
             "custom/wallpaperPrev",
             "custom/wallpaperNext",
-            "custom/screenrecorder",
+            "custom/screenRecorder",
         ]
     },
-    "custom/screenrecorder": {
-        "exec": "$HOME/.config/waybar/waybar-screenrecorder/screenrecorder status",
-        "interval": "once",
-        "signal": 1,
-        "return-type": "json",
-        "tooltip": true,
-        "format": "{}",
-        "on-click": "$HOME/.config/waybar/waybar-screenrecorder/screenrecorder toggle fullscreen",
-        "on-click-right": "$HOME/.config/waybar/waybar-screenrecorder/screenrecorder toggle region"
+    "custom/screenRecorder": {
+        "format": "󰨜",
     },
     "custom/hider": {
         "format": "",
@@ -198,17 +190,17 @@
         "tooltip-format": "<big>{:%Y %B %d}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}%  ",
         "tooltip": true,
         "on-click" : "kitty -e btop"
     },
     "memory": {
         "tooltip": true,
-        "format": "{}% "
+        "format": "{}%  "
     },
     "disk": {
         "interval": 30,
-	"format": "{percentage_used}% ",
+	"format": "{percentage_used}%  ",
         "tooltip": true,
         "on-click" : "baobab",
     },
