@@ -718,3 +718,25 @@ label:focus {
     padding: 0px 8px;
     background-color: #64727D;
 }
+menu {
+    padding: 8px;
+	border-radius: 8px;
+	background: #161320;
+	color: #B5E8E0;
+}
+menuitem {
+    padding: 8px;
+    font-size:17px;
+	border-radius: 8px;
+}
+tooltip {
+  background: rgba(43, 48, 59, 0.5);
+	background: #161320;
+	color: #B5E8E0;
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+    padding: 8px;
+    font-size:17px;
+  color: white;
+}

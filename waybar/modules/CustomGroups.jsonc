@@ -1,0 +1,17 @@
+{
+    "group/options": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "click-to-reveal": true,
+        },
+        "modules": [
+            "custom/hider",
+            "custom/wallpaper",
+            "custom/wallpaperPrev",
+            "custom/wallpaperNext",
+            "custom/screenrecorder",
+            "custom/fileManager",
+        ]
+    }
+}

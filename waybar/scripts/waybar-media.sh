@@ -57,5 +57,5 @@ elif [ "$STATUS" == "Paused" ]; then
     printf '{"text":"󰏤 %s", "class":"paused", "tooltip":"Title: %s\\nArtist: %s\\nLength: %s"}\n' \
         "$CROP_TITLE" "$TITLE" "$ARTIST" "$LENGTH_FORMATTED"
 else
-    printf '{"text":"󰨜", "tooltip":"Stopped", "class":"stopped"}\n'
+    printf '{"text":"", "tooltip":"Stopped", "class":"stopped"}\n'
 fi

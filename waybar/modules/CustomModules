@@ -1,0 +1,113 @@
+{
+	"custom/media": {
+		"format": "{icon} {text}",
+		"return-type": "json",
+		"max-length": 40,
+		"format-icons": {
+			"spotify": "",
+			"default": "🎜"
+		},
+		"escape": true,
+		"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+		// "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+	},
+	"custom/wallpaper": {
+		"format" : "󰸉",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "$HOME/.config/waybar/menus/wallpaper.xml", // Menu file in resources folder
+		"menu-actions": {
+			"prev": "kitty",
+			"next": "kitty -e ranger",
+		} //	"on-click": "sh $HOME/.config/waybar/scripts/wallchange.sh -b", // Menu file in resources folder
+	},
+	"custom/wallpaperPrev": {
+		"format" : "  ",
+		"tooltip": false,
+		"on-click": "sh $HOME/.config/waybar/scripts/wallchange.sh -b", // Menu file in resources folder
+	},
+	"custom/wallpaperNext": {
+		"format" : "  ",
+		"tooltip": false,
+		"on-click": "sh $HOME/.config/waybar/scripts/wallchange.sh -n", // Menu file in resources folder
+	},
+	"custom/rhythmbox":{ 
+		"format": " ♪  {}", 
+		"max-length": 50, 
+		// "interval": 10, 
+		"tooltip": false, 
+		"exec": "rhythmbox-client --print-playing-format=\"%tt:  %aa\"", 
+		"on-click": "rhythmbox-client --play-pause" //"exec-if": "pgrep spotify" }
+	},
+	"custom/chatgpt":{ 
+		"format": " ", 
+		"tooltip": false, 
+		"on-click": "brave-browser --app='https://chatgpt.com/?temporary-chat=true'" //"exec-if": "pgrep spotify" }
+		},
+	"custom/localhost" : {
+		"format": "󰜈 ",
+		"on-click": "brave-browser --app='http://localhost:3000/'" //"exec-if": "pgrep spotify" }
+	},
+	"custom/brave" : {
+		"format": "󰊯 ",
+		"on-click": "brave-browser --app=' https://search.brave.com/'" //"exec-if": "pgrep spotify" }
+		},
+	"custom/whatsapp" : {
+		"format": " ",
+		"on-click": "brave-browser --app='https://web.whatsapp.com/'" //"exec-if": "pgrep spotify" }
+	},
+	"custom/separatorLeft" : {
+		"format": " ",
+	},
+	"custom/separatorRight" : {
+		"format": " ",
+	},
+	"custom/empty" : {
+		"format": " ",
+	},
+	"custom/power": {
+		"format" : "⏻",
+		"tooltip": false,
+		"on-click"  : "wlogout"
+			/*		"menu": "on-click",*/
+			/*		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder*/
+			/*		"menu-actions": {*/
+			/*			"shutdown": "shutdown",*/
+			/*			"reboot": "reboot",*/
+			/*			"suspend": "systemctl suspend",*/
+			/*			"hibernate": "systemctl hibernate"*/
+			/*		}*/
+	},
+	"custom/help": {
+		"format": "󰘥",
+		"tooltip-format": "Keybinds",
+		"on-click":"rofi -show p -modi p:$HOME/.config/sway/scripts/key.sh"
+	},
+	"custom/screenrecorder": {
+		"exec": "$HOME/.config/waybar/waybar-screenrecorder/screenrecorder status",
+		"interval": "once",
+		"signal": 1,
+		"return-type": "json",
+		"tooltip": true,
+		"format": "{}",
+		"on-click": "$HOME/.config/waybar/waybar-screenrecorder/screenrecorder toggle fullscreen",
+		"on-click-right": "$HOME/.config/waybar/waybar-screenrecorder/screenrecorder toggle region"
+	},
+	"custom/hider": {
+		"format": "",
+	},
+	"custom/waybarMedia": {
+		//"exec": "playerctl metadata --format '{{ title }}'",
+		"exec": "sh ~/.config/waybar/scripts/waybar-media.sh",
+		"return-type": "json",
+		"format":"{}",
+		"tooltip":true,
+		"interval": 10
+	},
+	"custom/fileManager": {
+		"format": "",
+		"on-click": "kitty -e ranger",
+		"tooltip": true,
+		"tooltip-format": "File Manager",
+	}
+}
