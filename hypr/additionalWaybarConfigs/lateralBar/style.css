@@ -1,6 +1,12 @@
 @import "/home/guizo/.cache/wal/colors-waybar.css";
 
 
+/* background-color: #3F3F3F; //termite. Não foi usado 
+//background-color: @color1; // fundo
+//
+//color: @foreground ; // cor clara
+//color1 = bg
+*/
 * {
     font-family: SauceCodePro, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
 }
@@ -9,10 +15,11 @@ window#waybar {
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
-    background-color: rgba(0,0,0,1);
+    background-color: rgba(0,0,0,0.75);
     margin: 4px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
 }
-
 
 window#waybar.hidden {
     opacity: 0.2;
@@ -31,7 +38,6 @@ window#waybar.termite {
 }
 
 window#waybar.chromium {
-    border-radius: 10px;
     background-color: #000000;
     border: none;
 }
@@ -62,6 +68,7 @@ window#waybar.chromium {
 #mode,
 #idle_inhibitor,
 #scratchpad,
+#wallpaper,
 #power-profiles-daemon,
 /*
 ======================================================================
@@ -100,48 +107,54 @@ __        _____  ____  _  ______  ____   _    ____ _____ ____
 
 ======================================================================
 */
+
 button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
-    border: none;
-    border-radius: 0;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-    background-color: #a37800;
 }
 
 #workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    color: #ffffff;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 0px 5px;
 }
 
+
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    padding: 3px;
+    border-radius: 9px;
+    margin: 0px 5px;
+    
 }
 
 #workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 0px 5px;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: #ff0000;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 0px 5px;
 }
 
-#mode {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+#workspaces button.active {
+    padding: 0px;
+    background-color: @color4;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 9px;
+    /*transition: 0.2s ease;*/
+    border-radius: 8px;
+    margin: 5px 5px 0px 5px;
 }
+#workspaces {
+    background-color: transparent;
+}
+#grou
 
 /*
 ======================================================================
@@ -154,14 +167,19 @@ button:hover {
 ======================================================================
 */
 #battery {
-    padding: 0px 7px;
     background-color: rgba(0,0,0,0);
     color: @main_fg ;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px 10px 5px;
 }
 
 #battery.charging, #battery.plugged {
     color: @text;
     background-color: #26A65B;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 
 @keyframes blink {
@@ -179,6 +197,9 @@ button:hover {
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 /*
 ======================================================================
@@ -191,68 +212,58 @@ button:hover {
 ======================================================================
 */
 #power-profiles-daemon {
-    padding: 0px 5px;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
     background-color: transparent;
     color: #ffffff;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 #power-profiles-daemon:hover {
-    margin:0px;
-    background-color: #64727D;
+    background-color: @color4;
     box-shadow: inset 0 -3px #ffffff;
-    padding: 0px 5px;
 }
 
 #power-profiles-daemon.performance {
-    margin: 0px;
-    background-color: #ff0000;
-    color: @toggle-text;
-}
-
-#power-profiles-daemon.performance:hover {
-    margin: 0px;
-    background-color: #fa5757;
+    background-color: red;
     color: @toggle-text;
 }
 
 #power-profiles-daemon.balanced {
-    margin:0px;
     background-color: transparent;
     color: @text;
 }
 #power-profiles-daemon.balanced:hover {
-    margin:0px;
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: @color4;
     color: @text;
 }
 
 #power-profiles-daemon.power-saver {
-    margin:0px;
-    background-color: #029e44;
-    color: @toggle-text;
-}
-#power-profiles-daemon.power-saver:hover {
-    margin:0px;
-    background-color: #45f791;
+    background-color: #2ecc71;
     color: @toggle-text;
 }
 
 #idle_inhibitor {
-    margin: 0px 10px;
     background-color: rgba(0,0,0,0);
-    padding: 0px 5px;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px 10px 5px;
     color: @font_color ;
 }
 #idle_inhibitor:hover {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-    margin: 0px 10px;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px 10px 5px;
+    background-color: @color4;
 }
 
 #idle_inhibitor.activated {
-    margin: 0px 10px;
     background-color: red;
-    padding: 0px 5px;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px 10px 5px;
     color: @toggle-text;
 }
 /*
@@ -268,14 +279,17 @@ button:hover {
 
 
 #cpu {
-    margin: 0px 10px;
     background-color: rgba(0,0,0,0);
     color: @font_color;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 #cpu:hover {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-    margin: 0px 10px;
+    background-color: @color4;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 
 #memory {
@@ -295,14 +309,12 @@ button:hover {
 }
 
 #disk:hover {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
     margin: 0px 10px;
+    background-color: @color4;
 }
 
 #backlight {
     background-color: rgba(0,0,0,0);
-    padding: 0px 10px;
     color: @main_fg ;
 }
 
@@ -317,17 +329,20 @@ button:hover {
 ======================================================================
 */
 #pulseaudio {
-    padding: 0px 10px;
     color: @main_fg ;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 
 #pulseaudio.muted {
-    padding: 0px 10px;
     background-color: @important;
     color: @main_fg;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 #pulseaudio:hover {
-    padding: 0px 10px;
     background-color: rgba(0,0,0,0);
     color: @main_fg;
 }
@@ -365,12 +380,11 @@ button:hover {
 */
 #network {
     background-color: rgba(0,0,0,0);
-    padding: 0px 10px;
     color: @font_color ;
 }
 
 #network.disconnected {
-    padding: 0px 10px;
+    padding: 0px 4px;
     margin: 0px;
     color: @font_color ;
     background-color: #f53c3c;
@@ -381,9 +395,10 @@ button:hover {
 #window,
 
 #clock {
-    padding: 0px 10px;
     background-color: rgba(0,0,0,0);
     color: @main_fg;
+    padding: 0px;
+    margin: 8px 0px;
 }
 
 
@@ -410,15 +425,23 @@ label:focus {
 #temperature {
     background-color: rgba(0,0,0,0);
     color: @font_color ;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 
 #temperature.critical {
     background-color: #eb4d4b;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 
 #tray {
     background-color: rgba(0,0,0,0);
-    padding: 0px 3px;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 
 #tray > .passive {
@@ -501,39 +524,48 @@ label:focus {
     background-color: #f53c3c;
 }
 
-#custom-wallpaperNext {
-    padding: 3px;
-    color: @font_color;
-}
-#custom-power {
-    color: @font_color;
+#wallpaper{
+    margin: 10px 0px;
 }
 #custom-wallpaperPrev {
-    padding: 3px;
     color: @font_color;
+    border-radius: 9px;
+    padding: 3px;
+    margin: 0px 5px;
+}
+#custom-wallpaperNext {
+    color: @font_color;
+    border-radius: 9px;
+    padding: 3px;
+    margin: 0px 5px;
 }
 #custom-wallpaperPrev:hover {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-    padding: 3px;
+    background-color: @color4;
     color: @font_color;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 0px 5px;
 }
 #custom-wallpaperNext:hover {
+    color: @font_color;
+    background-color: @color4;
     padding: 3px;
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+    border-radius: 9px;
+    margin: 0px 5px;
+}
+
+#custom-power {
     color: @font_color;
 }
 
 #custom-chatgpt {
     padding: 3px 10px 3px 13px;
-    font-size:18px;
+        font-size:18px;
     color: @font_color;
     border-radius: 10px 0px 0px 10px;
     background-color: @color1;
     }
 #custom-chatgpt:hover {
-    box-shadow: inset 0 -3px #ffffff;
     color: @font_color;
     background-color: @color4;
 }
@@ -576,7 +608,6 @@ label:focus {
 }
 #custom-brave:hover {
     background-color: @color4;
-    box-shadow: inset 0 -3px #ffffff;
 }
 #custom-whatsapp {
     padding: 3px 10px 3px 13px;
@@ -585,37 +616,29 @@ label:focus {
     color: @font_color;
     background-color: @color1;
 }
-#custom-whatsapp:hover {
-    background-color: @color4;
-}
 #custom-help{
-    margin: 0px 9px;
-    padding: 0px 4px;
+    margin: 9px 0px;
+    padding: 4px 0px;
     font-size:20px;
     color: @font_color;
 }
 #custom-help:hover{
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-    margin: 0px 9px;
+    padding: 4px 0px;
+    margin: 9px 5px;
     font-size:20px;
     color: @font_color;
+    background-color: @color4;
     box-shadow: none;
     text-shadow: none;
+    border-radius: 9px;
 }
-#custom-screenRecorder {
-     margin: 0px 9px;
-     padding: 0px 4px;
-     font-size:18px;
-     color: black;
-    background-color: #ffffff;
- }
- #custom-screenRecorder:hover{
-     background-color: #64727D;
-     box-shadow: inset 0 -3px #ffffff;
-     margin: 0px 9px;
-     font-size:20px;
-     color: @font_color;
-     box-shadow: none;
-     text-shadow: none;
- }
+#custom-whatsapp:hover {
+    background-color: @color4;
+}
+#submap {
+    border-radius: 10px;
+    padding: 3px 0px 3px 0px;
+    margin: 10px 3px;
+    background-color: @color4;
+    color: @font_color;
+}

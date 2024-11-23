@@ -9,7 +9,7 @@ read_image_name() {
 
 # Main logic
 folder_path="$HOME/.config/wallpapers/"  # Folder where images are located
-file_with_image_name="$HOME/.config/waybar/scripts/currentWall.txt"  # File that contains the current image name
+file_with_image_name="$HOME/.config/hypr/scripts/currentWall.txt"  # File that contains the current image name
 
 
 # Read the image name from the file
@@ -22,6 +22,6 @@ current_image="$image_name"
 echo 'waybg'
 echo $current_image
 
-waybar -c ~/.config/sway/swayTopBar/config.jsonc -s ~/.config/sway/swayTopBar/style.css
+waybar -c /home/guizo/.config/sway/swayTopBar/config.jsonc -s /home/guizo/.config/sway/swayTopBar/style.css
 swaybg -i $current_image -m fill &
 echo $current_image

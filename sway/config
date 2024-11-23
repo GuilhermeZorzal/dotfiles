@@ -41,7 +41,11 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86MonBrightnessDown exec brightnessctl s 1%-
 bindsym XF86MonBrightnessUp exec brightnessctl s +1% 
-bindsym  Print exec grim -g "$(slurp -d)" - | wl-copy && notify-send "Screenshot taken"
+
+bindsym $mod+XF86MonBrightnessDown exec pkill wlsunset
+bindsym $mod+XF86MonBrightnessUp exec wlsunset
+
+bindsym Print exec grim -g "$(slurp -d)" - | wl-copy && notify-send "Screenshot taken"
 bindsym $mod+Print exec grim - | wl-copy && notify-send "Screenshot taken"
 bindsym $mod+Backspace exec "wlogout -C ~/.config/sway/wlogout/style.css -l ~/.config/sway/wlogout/layout"
 bindsym $mod+Ctrl+f exec kitty -T "zathura-launcher" -e sh ~/.config/scripts/general/zathura_launcher.sh
@@ -109,7 +113,7 @@ input type:keyboard {
     # Despite the name, also works for non-floating windows.
     # Change normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
-    floating_modifier $mod inverse 
+        floating_modifier $mod inverse 
     mouse_warping container 
 
     # Reload the configuration file
@@ -203,10 +207,12 @@ input type:keyboard {
 
     # Move the currently focused window to the scratchpad
     bindsym $mod+Shift+minus move scratchpad
+    bindsym $mod+Shift+KP_Subtract move scratchpad
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
+    bindsym $mod+KP_Subtract scratchpad show
 #
 # Resizing containers:
 #
@@ -242,14 +248,14 @@ bindgesture pinch:inward+right move right
 # bindsym $mod+y exec "sh ~/.config/scripts/general/waybar_handler.sh"
 
 #exec ./waybar.sh
-bindsym $mod+y exec "sh ~/.config/sway/scripts/updateWall.sh"
-exec_always "pkill waybar && waybar -c ~/.config/sway/swayTopBar/config.jsonc -s ~/.config/sway/swayTopBar/style.css"
+# bindsym $mod+y exec waybar
+exec nm-applet &
 
 # Read `man 5 sway-bar` for more information about this section.
 bar {
    #  position top
 
-    swaybar_command waybar -c /home/guizo/.config/sway/swayTopBar/config.jsonc -s /home/guizo/.config/sway/swayTopBar/style.css
+    swaybar_command waybar
    #  # When the status_command prints a new line to stdout, swaybar updates.
    #  # The default just shows the current date and time.
    #  status_command while date +'%Y-%m-%d %X'; do sleep 1; done
@@ -288,5 +294,6 @@ for_window [title="TesteGodot (DEBUG)"] floating enable
 for_window [class="Godot_Engine"] floating enable
 for_window [title=".*Godot.*"] floating enable
 for_window [title="Please Confirm..."] floating enable
+for_window [title="zathura-launcher"] floating enable
 
 include /etc/sway/config.d/*

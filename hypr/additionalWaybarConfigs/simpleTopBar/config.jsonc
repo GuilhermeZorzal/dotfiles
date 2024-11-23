@@ -2,30 +2,23 @@
 {
     // "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-     "reload_style_on_change": true,
     // "position": "top", // Waybar position (top|bottom|left|right)
     //"height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     //"spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-// "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
     "modules-left": [
-        "sway/workspaces",
-        "sway/mode",
-        "sway/scratchpad",
-        "custom/media",
+        "hyprland/workspaces",
         "mpd",
-        "custom/help",
-        "group/power",
-        "custom/media"
+        "hyprland/mode",
+        "hyprland/scratchpad",
+        "custom/media",
  //       "custom/rhythmbox" 
  //       "custom/separatorLeft",
-//        "custom/empty",
-//        "custom/chatgpt",
-//        "custom/brave",
-//        "custom/localhost"
+        "custom/empty",
+        "custom/chatgpt",
+        "custom/brave",
+        "custom/localhost"
 //        "custom/separatorRight"
 //         "custom/whatsapp"
     ],
@@ -52,41 +45,6 @@
         "tray",
         "custom/power"
     ],
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
     // Modules configuration
  //    "hyprland/workspaces": {
  //        "disable-scroll": true,
@@ -103,23 +61,7 @@
  //      //      "focused": "",
  //      //      "default": ""
  //        }
-    "group/power": {
-        "orientation": "inherit",
-        "drawer": {
-            "transition-duration": 500,
-            "click-to-reveal": true,
-        },
-        "modules": [
-            "custom/hider",
-            "custom/screenRecorder"
-        ]
-    },
-    "custom/screenRecorder": {
-        "format": "󰨜",
-    },
-    "custom/hider": {
-        "format": "",
-    },
+ //    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -128,11 +70,6 @@
             "locked": "",
             "unlocked": ""
         }
-    },
-    "custom/help": {
-        "format": "󰘥",
-        "tooltip-format": "Keybinds",
-        "on-click":"rofi -show p -modi p:$HOME/.config/sway/scripts/key.sh"
     },
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -221,7 +158,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon} ",
+        "format": "{capacity}% {icon}  ",
         "format-full": "{capacity}% {icon} ",
         "format-charging": "{capacity}% 󱐋 ",
         "format-plugged": "{capacity}%  ",
@@ -247,7 +184,7 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
 /*        "format-wifi": "{essid} ({signalStrength}%) ",*/
-        "format-wifi": "({signalStrength}%)  ",
+        "format-wifi": "({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr}  ",
         "tooltip-format": "{ifname} via {gwaddr} 󰀂 ",
         "format-linked": "{ifname} (No IP) ",
@@ -258,12 +195,12 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}",
+        "format": "{icon} {volume}%",
 /*        "format": "{volume}% {icon}  -  {format_source}",*/
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": "󰖁  {icon} {format_source}",
         ///"format-muted": "󰖁  {format_source}",
-        "format-muted": "{volume}% 󰖁",
+        "format-muted": "󰖁  {volume}%",
         "format-source": "{volume}% ",
         "format-source-muted": "  " ,
         "format-icons": {
