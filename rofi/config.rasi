@@ -100,7 +100,7 @@ listbox {
 /* ---- Listview ---- */
 listview { // items do rofi
     enabled:                     true;
-    columns:                     2;
+    columns:                     1;
     lines:                       8;
     cycle:                       true;
     dynamic:                     true;

@@ -358,9 +358,19 @@ alias md='mkdir -p'
 alias rd=rmdir
 alias which-command=whence
 
-alias change_version_java='update-alternatives --config java'
-alias clock="~/.config/tty-clock-master/tty-clock -sc"
 
+#  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+# |_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
+#  __  ____   __   ____ _   _ ____ _____ ___  __  __ 
+# |  \/  \ \ / /  / ___| | | / ___|_   _/ _ \|  \/  |
+# | |\/| |\ V /  | |   | | | \___ \ | || | | | |\/| |
+# | |  | | | |   | |___| |_| |___) || || |_| | |  | |
+# |_|  |_| |_|    \____|\___/|____/ |_| \___/|_|  |_|
+#  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+# |_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
+
+alias clock="~/.config/tty-clock-master/tty-clock -sc"
+alias change_version_java='update-alternatives --config java'
 alias fv='nvim $(fzf --preview "bat {}")'
 alias conf="cd ~/.config/dotfiles/ && nvim ."
 alias _docker='sudo service docker start'
@@ -386,4 +396,24 @@ alias img="kitty icat"
 alias termiconf="cd ~/.config/kitty/"
 alias fEquipe4="cd ~/Documents/git/Equipe-4Ano/digitovsky/frontend/"
 alias cat="bat"
+
+#  _____ _   _ _   _  ____ _____ ___ ___  _   _ ____  
+# |  ___| | | | \ | |/ ___|_   _|_ _/ _ \| \ | / ___| 
+# | |_  | | | |  \| | |     | |  | | | | |  \| \___ \ 
+# |  _| | |_| | |\  | |___  | |  | | |_| | |\  |___) |
+# |_|    \___/|_| \_|\____| |_| |___\___/|_| \_|____/ 
+
+function fix_waybar () {
+    killall -q waybar
+    while pgrep -x waybar >/dev/null; do sleep 1; done
+    nohup waybar &
+}
+
+#  ___       _      _       _ _          _   _             
+# |_ _|_ __ (_) ___(_) __ _| (_)______ _| |_(_) ___  _ __  
+#  | || '_ \| |/ __| |/ _` | | |_  / _` | __| |/ _ \| '_ \ 
+#  | || | | | | (__| | (_| | | |/ / (_| | |_| | (_) | | | |
+# |___|_| |_|_|\___|_|\__,_|_|_/___\__,_|\__|_|\___/|_| |_|
+#                                                          
+neo
 

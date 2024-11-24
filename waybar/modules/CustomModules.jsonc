@@ -117,7 +117,7 @@
 	},
 	"custom/fileManager": {
 		"format": "",
-		"on-click": "kitty -e ranger",
+		"on-click": "kitty -t 'float_ranger' -e ranger",
 		"tooltip": true,
 		"tooltip-format": "File Manager",
 	}

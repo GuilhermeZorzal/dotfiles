@@ -51,7 +51,7 @@ bindsym Print exec grim -g "$(slurp -d)" - | wl-copy && notify-send "Screenshot 
 bindsym $mod+Print exec grim - | wl-copy && notify-send "Screenshot taken"
 bindsym $mod+Backspace exec "wlogout -C ~/.config/sway/wlogout/style.css -l ~/.config/sway/wlogout/layout"
 bindsym $mod+Ctrl+f exec kitty -T "zathura-launcher" -e sh ~/.config/scripts/general/zathura_launcher.sh
-bindsym $mod+e exec kitty -T "ranger" -e ranger
+bindsym $mod+e exec kitty -T "float_ranger" -e ranger
 
 # bindsym $mod+Shift+Space exec sh ~/.config/scripts/launcher.sh 
 bindsym $mod+Shift+space floating toggle
@@ -117,7 +117,7 @@ input type:keyboard {
 
     # Start your launcher
     bindsym $mod+space exec $menu
-    # bindsym $mod+shift+space exec $superMenu
+    bindsym $mod+d exec $superMenu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # resize them with right mouse button + $mod.
@@ -262,7 +262,7 @@ bindsym $mod+y exec "sh ~/.config/scripts/general/waybar_handler.sh"
 
 exec nm-applet &
 exec blueman-applet &
-exec_always ~/.config/waybar/scripts/updateWall.sh
+# exec_always ~/.config/waybar/scripts/updateWall.sh
 
 bar {
     # swaybar_command waybar
@@ -278,7 +278,7 @@ bindgesture {
 }
 
 
-set $cl_high #009ddc
+set $cl_high #444444
 set $cl_indi #d9d8d8
 set $cl_back #231f20
 set $cl_fore #d9d8d8
@@ -299,15 +299,15 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 # client.unfocused          $background  $background  $foreground  $color3      $color3
 # client.urgent             $background  $background  $color7      $foreground  $foreground
 # Window borders
-default_border pixel 4
+default_border pixel 1
 default_floating_border normal
 hide_edge_borders smart
 
 focus_follows_mouse always
 
 # smart_gaps on
-gaps inner 5
-gaps outer 5
+gaps inner 0
+gaps outer 0
 
 for_window [title="Firefox"] floating disable 
 for_window [title="Calculator"] floating enable 
@@ -327,7 +327,7 @@ for_window [app_id = "floating"] floating enable
 for_window [app_id = "floating_update"] floating enable, resize set width 1000px height 600px
 for_window [class = "(?i)pinentry"] floating enable
 for_window [title = "Administrator privileges required"] floating enable
-for_window [title = "ranger"] floating enable
+for_window [title = "float_ranger"] floating enable
 # Inhibit Idle if a window is fullscreen
 for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen

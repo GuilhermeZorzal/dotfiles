@@ -22,6 +22,8 @@ current_image="$image_name"
 echo 'waybg'
 echo $current_image
 
-waybar &
+killall -q waybar
+while pgrep -x waybar >/dev/null; do sleep 1; done
+waybar -c ~/.config/waybar/configs/Simple\ Top\ Bar\ Sway.jsonc -s ~/.config/waybar/styles/Simple\ Top\ Bar\ Sway\.css
 swaybg -i $current_image -m fill &
 echo $current_image
