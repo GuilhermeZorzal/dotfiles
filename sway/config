@@ -299,15 +299,15 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 # client.unfocused          $background  $background  $foreground  $color3      $color3
 # client.urgent             $background  $background  $color7      $foreground  $foreground
 # Window borders
-default_border pixel 0
+default_border pixel 4
 default_floating_border normal
 hide_edge_borders smart
 
 focus_follows_mouse always
 
 # smart_gaps on
-gaps inner 0
-gaps outer 0
+gaps inner 5
+gaps outer 5
 
 for_window [title="Firefox"] floating disable 
 for_window [title="Calculator"] floating enable 
