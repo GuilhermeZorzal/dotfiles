@@ -1,0 +1,31 @@
+{
+    "group/wallpaper":{
+        "orientation": "vertical",
+        "modules":[
+            "custom/wallpaperPrev#vertical",
+            "custom/wallpaperNext#vertical"
+        ]
+    },
+    "group/hardware" : {
+        "orientation": "vertical",
+        "modules": [
+            "cpu",
+            "memory",
+            "disk"
+        ]
+
+    }, 
+    "group/options": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "click-to-reveal": true,
+        },
+        "modules": [
+            "custom/hider",
+            "custom/wallpaper",
+            "custom/screenrecorder",
+            "custom/fileManager",
+        ]
+    }
+}

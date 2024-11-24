@@ -1,0 +1,551 @@
+[2024-11-23 16:24:29.393] [info] Using configuration file /home/guizo/.config/waybar/config.jsonc
+[2024-11-23 16:24:29.393] [info] Including resource file: $HOME/.config/waybar/modules/DefaultModules.jsonc
+[2024-11-23 16:24:29.394] [info] Including resource file: $HOME/.config/waybar/modules/CustomModules.jsonc
+[2024-11-23 16:24:29.395] [info] Including resource file: $HOME/.config/waybar/modules/CustomGroups.jsonc
+[2024-11-23 16:24:29.399] [info] Discovered appearance 'dark'
+[2024-11-23 16:24:29.399] [info] Using CSS file /home/guizo/.config/waybar/style.css
+[2024-11-23 16:24:29.411] [warning] Mapping is not an object
+[2024-11-23 16:24:29.423] [warning] module cava: Unknown module: cava
+[2024-11-23 16:24:29.424] [error] media stopped unexpectedly, is it endless?
+[2024-11-23 16:24:29.428] [warning] Can't open /dev/input/mice (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:24:29.428] [warning] Can't open /dev/input/event0 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:24:29.428] [warning] Can't open /dev/input/event1 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:24:29.428] [warning] Can't open /dev/input/event2 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:24:29.428] [warning] Can't open /dev/input/event3 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:24:29.428] [warning] Can't open /dev/input/event4 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:24:29.428] [warning] Can't open /dev/input/mouse0 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:24:29.428] [warning] Can't open /dev/input/event5 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:24:29.428] [warning] Can't open /dev/input/mouse1 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:24:29.428] [warning] Can't open /dev/input/event6 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:24:29.429] [warning] Can't open /dev/input/event7 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:24:29.429] [warning] Can't open /dev/input/event8 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:24:29.429] [warning] Can't open /dev/input/event9 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:24:29.429] [warning] Can't open /dev/input/event10 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:24:29.429] [warning] Can't open /dev/input/event11 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:24:29.429] [warning] Can't open /dev/input/event12 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:24:29.429] [warning] Can't open /dev/input/event13 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:24:29.429] [warning] Can't open /dev/input/event14 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:24:29.429] [warning] module keyboard-state: Disabling module "keyboard-state", Failed to find keyboard device: EACCES Permission denied
+[2024-11-23 16:24:29.626] [info] Bar configured (width: 1920, height: 29) for output: eDP-1
+
+** (waybar:76015): WARNING **: 16:24:29.626: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:76015): WARNING **: 16:24:31.049: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+[0.112] Ignoring unknown config key: color_scheme
+[0.460] [PARSE ERROR] Unknown char after ESC: 0x6b
+[0.460] [PARSE ERROR] Unknown char after ESC: 0x5c
+[0.460] [PARSE ERROR] Unknown char after ESC: 0x6b
+[0.460] [PARSE ERROR] Unknown char after ESC: 0x5c
+[13.557] [PARSE ERROR] Unknown OSC escape code: 13;#a29d9c
+[13.558] [PARSE ERROR] Unknown OSC escape code: 708;#040101
+[14.547] [PARSE ERROR] Unknown char after ESC: 0x6b
+[14.547] [PARSE ERROR] Unknown char after ESC: 0x5c
+[0.112] Ignoring unknown config key: color_scheme
+[0.509] [PARSE ERROR] Unknown char after ESC: 0x6b
+[0.510] [PARSE ERROR] Unknown char after ESC: 0x5c
+[0.510] [PARSE ERROR] Unknown char after ESC: 0x6b
+[0.510] [PARSE ERROR] Unknown char after ESC: 0x5c
+[7.380] [PARSE ERROR] Unknown OSC escape code: 13;#a1abab
+[7.380] [PARSE ERROR] Unknown OSC escape code: 708;#040809
+[8.489] [PARSE ERROR] Unknown char after ESC: 0x6b
+[8.489] [PARSE ERROR] Unknown char after ESC: 0x5c
+[0.112] Ignoring unknown config key: color_scheme
+[0.504] [PARSE ERROR] Unknown char after ESC: 0x6b
+[0.504] [PARSE ERROR] Unknown char after ESC: 0x5c
+[0.504] [PARSE ERROR] Unknown char after ESC: 0x6b
+[0.504] [PARSE ERROR] Unknown char after ESC: 0x5c
+[2024-11-23 16:28:00.395] [info] Using configuration file /home/guizo/.config/waybar/config.jsonc
+[2024-11-23 16:28:00.395] [info] Including resource file: $HOME/.config/waybar/modules/DefaultModules.jsonc
+[2024-11-23 16:28:00.396] [info] Including resource file: $HOME/.config/waybar/modules/CustomModules.jsonc
+[2024-11-23 16:28:00.396] [info] Including resource file: $HOME/.config/waybar/modules/CustomGroups.jsonc
+[2024-11-23 16:28:00.401] [info] Discovered appearance 'dark'
+[2024-11-23 16:28:00.401] [info] Using CSS file /home/guizo/.config/waybar/style.css
+[2024-11-23 16:28:00.413] [warning] Mapping is not an object
+[2024-11-23 16:28:00.422] [warning] module cava: Unknown module: cava
+[2024-11-23 16:28:00.425] [error] media stopped unexpectedly, is it endless?
+[2024-11-23 16:28:00.428] [warning] Can't open /dev/input/mice (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:28:00.428] [warning] Can't open /dev/input/event0 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:28:00.428] [warning] Can't open /dev/input/event1 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:28:00.428] [warning] Can't open /dev/input/event2 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:28:00.428] [warning] Can't open /dev/input/event3 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:28:00.428] [warning] Can't open /dev/input/event4 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:28:00.428] [warning] Can't open /dev/input/mouse0 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:28:00.428] [warning] Can't open /dev/input/event5 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:28:00.428] [warning] Can't open /dev/input/mouse1 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:28:00.428] [warning] Can't open /dev/input/event6 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:28:00.428] [warning] Can't open /dev/input/event7 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:28:00.428] [warning] Can't open /dev/input/event8 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:28:00.428] [warning] Can't open /dev/input/event9 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:28:00.428] [warning] Can't open /dev/input/event10 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:28:00.428] [warning] Can't open /dev/input/event11 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:28:00.428] [warning] Can't open /dev/input/event12 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:28:00.428] [warning] Can't open /dev/input/event13 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:28:00.428] [warning] Can't open /dev/input/event14 (are you in the input group?): EACCES Permission denied
+[2024-11-23 16:28:00.428] [warning] module keyboard-state: Disabling module "keyboard-state", Failed to find keyboard device: EACCES Permission denied
+[2024-11-23 16:28:00.607] [info] Bar configured (width: 1920, height: 29) for output: eDP-1
+
+** (waybar:78534): WARNING **: 16:28:00.607: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:78534): WARNING **: 16:28:00.608: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:78534): WARNING **: 16:28:02.039: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:78534): WARNING **: 16:28:02.039: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+
+** (waybar:78534): WARNING **: 17:21:22.425: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:78534): WARNING **: 17:21:22.426: Status Notifier Host with bus name ':1.6992' and object path '/StatusNotifierHost/0' is already registered
+
+** (waybar:78534): WARNING **: 17:21:24.037: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:78534): WARNING **: 17:21:24.038: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+[2024-11-23 17:38:52.158] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:39:02.506] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:39:12.854] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:39:23.140] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:39:33.459] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:39:43.844] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:39:54.216] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:40:04.644] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:40:14.976] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:40:25.309] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:40:35.634] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:40:45.954] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:40:56.366] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:41:06.687] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:41:17.007] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:41:27.331] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:41:37.642] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:41:47.974] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:41:58.299] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:42:08.629] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:42:18.953] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:42:29.277] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:42:39.603] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:42:49.935] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:43:00.260] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:43:10.592] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-23 17:43:20.925] [error] custom/waybarMedia: Error parsing JSON: * Line 1, Column 29
+  Missing ',' or '}' in object declaration
+
+[2024-11-24 09:09:52.898] [info] Using configuration file /home/guizo/.config/waybar/config.jsonc
+[2024-11-24 09:09:52.899] [info] Including resource file: $HOME/.config/waybar/modules/DefaultModules.jsonc
+[2024-11-24 09:09:52.900] [info] Including resource file: $HOME/.config/waybar/modules/CustomModules.jsonc
+[2024-11-24 09:09:52.901] [info] Including resource file: $HOME/.config/waybar/modules/CustomGroups.jsonc
+[2024-11-24 09:09:52.905] [info] Discovered appearance 'dark'
+[2024-11-24 09:09:52.905] [info] Using CSS file /home/guizo/.config/waybar/style.css
+[2024-11-24 09:09:52.917] [warning] Mapping is not an object
+[2024-11-24 09:09:52.926] [warning] module cava: Unknown module: cava
+[2024-11-24 09:09:52.928] [error] media stopped unexpectedly, is it endless?
+[2024-11-24 09:09:52.931] [warning] Can't open /dev/input/mice (are you in the input group?): EACCES Permission denied
+[2024-11-24 09:09:52.931] [warning] Can't open /dev/input/event0 (are you in the input group?): EACCES Permission denied
+[2024-11-24 09:09:52.931] [warning] Can't open /dev/input/event1 (are you in the input group?): EACCES Permission denied
+[2024-11-24 09:09:52.931] [warning] Can't open /dev/input/event2 (are you in the input group?): EACCES Permission denied
+[2024-11-24 09:09:52.931] [warning] Can't open /dev/input/event3 (are you in the input group?): EACCES Permission denied
+[2024-11-24 09:09:52.931] [warning] Can't open /dev/input/event4 (are you in the input group?): EACCES Permission denied
+[2024-11-24 09:09:52.931] [warning] Can't open /dev/input/mouse0 (are you in the input group?): EACCES Permission denied
+[2024-11-24 09:09:52.931] [warning] Can't open /dev/input/event5 (are you in the input group?): EACCES Permission denied
+[2024-11-24 09:09:52.931] [warning] Can't open /dev/input/mouse1 (are you in the input group?): EACCES Permission denied
+[2024-11-24 09:09:52.931] [warning] Can't open /dev/input/event6 (are you in the input group?): EACCES Permission denied
+[2024-11-24 09:09:52.931] [warning] Can't open /dev/input/event7 (are you in the input group?): EACCES Permission denied
+[2024-11-24 09:09:52.931] [warning] Can't open /dev/input/event8 (are you in the input group?): EACCES Permission denied
+[2024-11-24 09:09:52.931] [warning] Can't open /dev/input/event9 (are you in the input group?): EACCES Permission denied
+[2024-11-24 09:09:52.931] [warning] Can't open /dev/input/event10 (are you in the input group?): EACCES Permission denied
+[2024-11-24 09:09:52.931] [warning] Can't open /dev/input/event11 (are you in the input group?): EACCES Permission denied
+[2024-11-24 09:09:52.931] [warning] Can't open /dev/input/event12 (are you in the input group?): EACCES Permission denied
+[2024-11-24 09:09:52.931] [warning] Can't open /dev/input/event13 (are you in the input group?): EACCES Permission denied
+[2024-11-24 09:09:52.931] [warning] Can't open /dev/input/event14 (are you in the input group?): EACCES Permission denied
+[2024-11-24 09:09:52.931] [warning] module keyboard-state: Disabling module "keyboard-state", Failed to find keyboard device: EACCES Permission denied
+No players found
+[2024-11-24 09:09:53.130] [info] Bar configured (width: 1920, height: 29) for output: eDP-1
+
+** (waybar:11070): WARNING **: 09:09:53.136: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:11070): WARNING **: 09:09:53.137: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:11070): WARNING **: 09:09:54.040: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:11070): WARNING **: 09:09:54.040: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+No players found
+[2024-11-24 10:42:44.207] [info] Using configuration file /home/guizo/.config/waybar/config.jsonc
+[2024-11-24 10:42:44.207] [info] Including resource file: $HOME/.config/waybar/modules/DefaultModules.jsonc
+[2024-11-24 10:42:44.208] [info] Including resource file: $HOME/.config/waybar/modules/CustomModules.jsonc
+[2024-11-24 10:42:44.209] [info] Including resource file: $HOME/.config/waybar/modules/CustomGroups.jsonc
+[2024-11-24 10:42:44.213] [info] Discovered appearance 'dark'
+[2024-11-24 10:42:44.213] [info] Using CSS file /home/guizo/.config/waybar/style.css
+[2024-11-24 10:42:44.225] [warning] Mapping is not an object
+[2024-11-24 10:42:44.236] [warning] module cava: Unknown module: cava
+[2024-11-24 10:42:44.239] [error] media stopped unexpectedly, is it endless?
+[2024-11-24 10:42:44.240] [warning] Can't open /dev/input/mice (are you in the input group?): EACCES Permission denied
+[2024-11-24 10:42:44.240] [warning] Can't open /dev/input/event0 (are you in the input group?): EACCES Permission denied
+[2024-11-24 10:42:44.240] [warning] Can't open /dev/input/event1 (are you in the input group?): EACCES Permission denied
+[2024-11-24 10:42:44.240] [warning] Can't open /dev/input/event2 (are you in the input group?): EACCES Permission denied
+[2024-11-24 10:42:44.240] [warning] Can't open /dev/input/event3 (are you in the input group?): EACCES Permission denied
+[2024-11-24 10:42:44.240] [warning] Can't open /dev/input/event4 (are you in the input group?): EACCES Permission denied
+[2024-11-24 10:42:44.240] [warning] Can't open /dev/input/mouse0 (are you in the input group?): EACCES Permission denied
+[2024-11-24 10:42:44.241] [warning] Can't open /dev/input/event5 (are you in the input group?): EACCES Permission denied
+[2024-11-24 10:42:44.241] [warning] Can't open /dev/input/mouse1 (are you in the input group?): EACCES Permission denied
+[2024-11-24 10:42:44.241] [warning] Can't open /dev/input/event6 (are you in the input group?): EACCES Permission denied
+[2024-11-24 10:42:44.241] [warning] Can't open /dev/input/event7 (are you in the input group?): EACCES Permission denied
+[2024-11-24 10:42:44.241] [warning] Can't open /dev/input/event8 (are you in the input group?): EACCES Permission denied
+[2024-11-24 10:42:44.241] [warning] Can't open /dev/input/event9 (are you in the input group?): EACCES Permission denied
+[2024-11-24 10:42:44.241] [warning] Can't open /dev/input/event10 (are you in the input group?): EACCES Permission denied
+[2024-11-24 10:42:44.241] [warning] Can't open /dev/input/event11 (are you in the input group?): EACCES Permission denied
+[2024-11-24 10:42:44.241] [warning] Can't open /dev/input/event12 (are you in the input group?): EACCES Permission denied
+[2024-11-24 10:42:44.241] [warning] Can't open /dev/input/event13 (are you in the input group?): EACCES Permission denied
+[2024-11-24 10:42:44.241] [warning] Can't open /dev/input/event14 (are you in the input group?): EACCES Permission denied
+[2024-11-24 10:42:44.241] [warning] module keyboard-state: Disabling module "keyboard-state", Failed to find keyboard device: EACCES Permission denied
+No players found
+
+** (waybar:73726): WARNING **: 10:42:44.415: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:73726): WARNING **: 10:42:44.415: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:73726): WARNING **: 10:42:44.415: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:73726): WARNING **: 10:42:44.415: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:73726): WARNING **: 10:42:44.415: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:73726): WARNING **: 10:42:44.415: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:73726): WARNING **: 10:42:44.416: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+[2024-11-24 10:42:44.462] [info] Bar configured (width: 1920, height: 29) for output: eDP-1
+
+** (waybar:73726): WARNING **: 10:42:45.028: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:73726): WARNING **: 10:42:45.028: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:73726): WARNING **: 10:42:45.028: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:73726): WARNING **: 10:42:45.028: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:73726): WARNING **: 10:42:45.028: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:73726): WARNING **: 10:42:45.029: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+
+** (waybar:73726): WARNING **: 10:42:45.029: Status Notifier Item with bus name ':1.4' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
