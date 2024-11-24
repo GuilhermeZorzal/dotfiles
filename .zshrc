@@ -396,6 +396,7 @@ alias img="kitty icat"
 alias termiconf="cd ~/.config/kitty/"
 alias fEquipe4="cd ~/Documents/git/Equipe-4Ano/digitovsky/frontend/"
 alias cat="bat"
+alias pipes="sh ~/.config/pipes/pipes.sh"
 
 #  _____ _   _ _   _  ____ _____ ___ ___  _   _ ____  
 # |  ___| | | | \ | |/ ___|_   _|_ _/ _ \| \ | / ___| 
