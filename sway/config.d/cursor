@@ -1,0 +1,3 @@
+
+# Change cursor size
+seat seat0 xcursor_theme default 16 
