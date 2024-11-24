@@ -14,12 +14,13 @@
 	"custom/wallpaper": {
 		"format" : "󰸉",
 		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/menus/wallpaper.xml", // Menu file in resources folder
-		"menu-actions": {
-			"prev": "kitty",
-			"next": "kitty -e ranger",
-		} //	"on-click": "sh $HOME/.config/waybar/scripts/wallchange.sh -b", // Menu file in resources folder
+		"on-click": "kitty -T 'wallpaper' -e ranger ~/.config/wallpapers"
+		//"menu": "on-click",
+		//"menu-file": "$HOME/.config/waybar/menus/wallpaper.xml", // Menu file in resources folder
+		//"menu-actions": {
+		//	"prev": "sh $HOME/.config/hypr/scripts/wallchange.sh -b",
+		//	"next": "sh $HOME/.config/hypr/scripts/wallchange.sh -n",
+		//} //	"on-click": "sh $HOME/.config/waybar/scripts/wallchange.sh -b", // Menu file in resources folder
 	},
 	"custom/wallpaperPrev": {
 		"format" : "  ",
@@ -31,6 +32,16 @@
 		"tooltip": false,
 		"on-click": "sh $HOME/.config/waybar/scripts/wallchange.sh -n", // Menu file in resources folder
 	},
+    "custom/wallpaperPrev#vertical": {
+        "format" : "",
+		"tooltip": false,
+		"on-click": "sh $HOME/.config/waybar/scripts/wallchange.sh -b", // Menu file in resources folder
+    },
+    "custom/wallpaperNext#vertical": {
+        "format" : "",
+		"tooltip": false,
+		"on-click": "sh $HOME/.config/waybar/scripts/wallchange.sh -n", // Menu file in resources folder
+    },
 	"custom/rhythmbox":{ 
 		"format": " ♪  {}", 
 		"max-length": 50, 
@@ -81,17 +92,17 @@
 	"custom/help": {
 		"format": "󰘥",
 		"tooltip-format": "Keybinds",
-		"on-click":"rofi -show p -modi p:$HOME/.config/sway/scripts/key.sh"
+		"on-click":"rofi -show p -modi p:$HOME/.config/rofi/scripts/SwayKeys.sh"
 	},
 	"custom/screenrecorder": {
-		"exec": "$HOME/.config/waybar/waybar-screenrecorder/screenrecorder status",
+		"exec": "$HOME/.config/waybar/scripts/waybar-screenrecorder/screenrecorder status",
 		"interval": "once",
 		"signal": 1,
 		"return-type": "json",
 		"tooltip": true,
 		"format": "{}",
-		"on-click": "$HOME/.config/waybar/waybar-screenrecorder/screenrecorder toggle fullscreen",
-		"on-click-right": "$HOME/.config/waybar/waybar-screenrecorder/screenrecorder toggle region"
+		"on-click": "$HOME/.config/waybar/scripts/waybar-screenrecorder/screenrecorder toggle fullscreen",
+		"on-click-right": "$HOME/.config/waybar/scripts/waybar-screenrecorder/screenrecorder toggle region"
 	},
 	"custom/hider": {
 		"format": "",

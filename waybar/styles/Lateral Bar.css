@@ -115,7 +115,7 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 4px;
+    padding: 3px;
     border-radius: 9px;
     margin: 0px 5px;
 }
@@ -171,7 +171,7 @@ button:hover {
     color: @main_fg ;
     padding: 3px;
     border-radius: 9px;
-    margin: 8px 5px;
+    margin: 8px 5px 10px 5px;
 }
 
 #battery.charging, #battery.plugged {
@@ -212,19 +212,21 @@ button:hover {
 ======================================================================
 */
 #power-profiles-daemon {
-    margin: 0px 10px;
-    padding: 0px 5px;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
     background-color: transparent;
     color: #ffffff;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px;
 }
 #power-profiles-daemon:hover {
-    padding: 0px 5px;
     background-color: @color4;
     box-shadow: inset 0 -3px #ffffff;
 }
 
 #power-profiles-daemon.performance {
-    margin: 0px 10px;
     background-color: red;
     color: @toggle-text;
 }
@@ -239,27 +241,29 @@ button:hover {
 }
 
 #power-profiles-daemon.power-saver {
-    margin: 0px 10px;
     background-color: #2ecc71;
     color: @toggle-text;
 }
 
 #idle_inhibitor {
-    margin: 0px 10px;
     background-color: rgba(0,0,0,0);
-    padding: 0px 5px;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px 10px 5px;
     color: @font_color ;
 }
 #idle_inhibitor:hover {
-    margin: 0px 10px;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px 10px 5px;
     background-color: @color4;
-    box-shadow: inset 0 -3px #ffffff;
 }
 
 #idle_inhibitor.activated {
-    margin: 0px 10px;
     background-color: red;
-    padding: 0px 5px;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 8px 5px 10px 5px;
     color: @toggle-text;
 }
 /*
@@ -612,7 +616,29 @@ label:focus {
     color: @font_color;
     background-color: @color1;
 }
+#custom-help{
+    margin: 9px 0px;
+    padding: 4px 0px;
+    font-size:20px;
+    color: @font_color;
+}
+#custom-help:hover{
+    padding: 4px 0px;
+    margin: 9px 5px;
+    font-size:20px;
+    color: @font_color;
+    background-color: @color4;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 9px;
+}
 #custom-whatsapp:hover {
     background-color: @color4;
 }
-    
+#submap {
+    border-radius: 10px;
+    padding: 3px 0px 3px 0px;
+    margin: 10px 3px;
+    background-color: @color4;
+    color: @font_color;
+}

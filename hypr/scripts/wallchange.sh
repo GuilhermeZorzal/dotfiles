@@ -87,7 +87,7 @@ if [[ -n "$custom_image" ]]; then
         echo 'kitty color'
         wal -i $custom_image --backend colorthief && \
         echo 'waybg'
-        nohup swaybg -i $custom_image -m fill  &
+        pkill swaybg && nohup swaybg -i $custom_image -m fill  &
         echo 'waybar'
         # sh ~/.config/scripts/general/waybar_handler.sh
         ln -sf $custom_image ~/.config/hypr/image
@@ -114,7 +114,7 @@ else
     echo 'kitty color'
     wal -i $next_image_full_path --backend colorthief && \
     echo 'waybg'
-    nohup swaybg -i $next_image_full_path -m fill  &
+    pkill swaybg && nohup swaybg -i $next_image_full_path -m fill  &
     echo 'waybar'
     # sh ~/.config/scripts/general/waybar_handler.sh
     ln -sf $next_image_full_path ~/.config/hypr/image

@@ -1,4 +1,20 @@
 {
+    "group/wallpaper":{
+        "orientation": "vertical",
+        "modules":[
+            "custom/wallpaperPrev#vertical",
+            "custom/wallpaperNext#vertical"
+        ]
+    },
+    "group/hardware" : {
+        "orientation": "vertical",
+        "modules": [
+            "cpu",
+            "memory",
+            "disk"
+        ]
+
+    }, 
     "group/options": {
         "orientation": "inherit",
         "drawer": {
@@ -8,8 +24,6 @@
         "modules": [
             "custom/hider",
             "custom/wallpaper",
-            "custom/wallpaperPrev",
-            "custom/wallpaperNext",
             "custom/screenrecorder",
             "custom/fileManager",
         ]

@@ -1,2 +1,2 @@
 #!/bin/bash
-waybar -c /home/guizo/.config/sway/swayTopBar/config.jsonc -s /home/guizo/.config/sway/swayTopBar/style.css
+waybar -c ~/.config/waybar/configs/Simple\ Top\ Bar\ Sway.jsonc -s ~/.config/waybar/styles/Simple\ Top\ Bar\ Sway\.css
