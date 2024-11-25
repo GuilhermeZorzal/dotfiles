@@ -40,3 +40,7 @@ bindsym $mod+a focus parent
 
 bindsym $mod+p sticky toggle 
 
+# Shortcuts
+bindsym $mod+shift+s exec rofi -show p -modi p:$HOME/.config/rofi/scripts/system-shortcuts.sh 
+
+

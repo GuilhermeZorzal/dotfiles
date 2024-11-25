@@ -1,4 +1,3 @@
-for_window [title="Firefox"] floating disable 
 for_window [title="Calculator"] floating enable 
 for_window [title="TesteGodot (DEBUG)"] floating enable 
 for_window [class="Godot_Engine"] floating enable

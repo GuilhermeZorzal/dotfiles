@@ -2,7 +2,7 @@ exec nm-applet &
 exec blueman-applet &
 
 bar {
-    # swaybar_command waybar
-    swaybar_command ./waybar.sh
+    swaybar_command waybar
+    # swaybar_command ./waybar.sh
 }
 
