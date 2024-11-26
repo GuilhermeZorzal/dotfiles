@@ -12,6 +12,7 @@ input "1267:12433:ELAN0504:00_04F3:3091_Touchpad" {
 input "type:touchpad" {
     natural_scroll enabled
     pointer_accel 0.5
+    middle_emulation enabled
 }
 input type:keyboard {
       xkb_layout "br"

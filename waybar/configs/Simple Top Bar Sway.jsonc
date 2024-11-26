@@ -22,7 +22,7 @@
         "mpd",
         "custom/help",
         "group/options",
-        "custom/waybarMedia",
+        //"custom/waybarMedia",
         "custom/media"
     ],
     "modules-center": [
@@ -35,6 +35,7 @@
     ],
     "modules-right": [
         "cava",
+        "bluetooth",
         "pulseaudio",
         "network",
         "backlight",
