@@ -11,11 +11,12 @@ for_window [window_role = "dialog"] floating enable
 for_window [window_type = "dialog"] floating enable
 for_window [window_role = "task_dialog"] floating enable
 for_window [window_type = "menu"] floating enable
-for_window [app_id = "floating"] floating enable
+# for_window [app_id = "floating"] floating enable
 for_window [app_id = "floating_update"] floating enable, resize set width 1000px height 600px
 for_window [class = "(?i)pinentry"] floating enable
 for_window [title = "Administrator privileges required"] floating enable
 for_window [title = "float_ranger"] floating enable
+
 # Inhibit Idle if a window is fullscreen
 for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen
