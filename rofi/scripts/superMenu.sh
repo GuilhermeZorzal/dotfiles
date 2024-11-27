@@ -66,7 +66,13 @@ then
     kitty --detach -e nvim ~/.config/dotfiles/
     exit 0
 fi
+if [ x"$@" = x"Appearence" ]
+then
+    kitty --detach --hold -e sh ~/.config/sway/appearence.sh  2> /dev/null
+    exit 0
+fi
 echo "Configurations"
+echo "Appearence"
 echo "ChatGPT"
 echo "LocalHost:3000"
 echo "LocalHost:8080"

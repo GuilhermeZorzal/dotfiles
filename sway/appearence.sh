@@ -40,7 +40,8 @@ while true; do
         echo "Selected file path: $dir/$selected_file"
         rm ~/.config/sway/config.d/appearence
         ln -s $dir/$selected_file ~/.config/sway/config.d/appearence
-        swaymsg reload && sh ~/.config/sway/waybar.sh &
+        nohup swaymsg reload
+        nohup sh ~/.config/sway/waybar.sh &
 
 
 
