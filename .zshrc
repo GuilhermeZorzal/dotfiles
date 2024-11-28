@@ -10,7 +10,15 @@ export DOCKER_HOST=unix:///run/user/1000/docker.sock
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="trapd00r"
+ZSH_THEME="random"
+
+# Bons temas: 
+# - mira
+# - wezm
+# mikeh
+
+
+# ZSH_THEME="trapd00r" ----> o que realmente uso mais
 # ZSH_THEME="random"
 # ZSH_THEME="strug"
 # Good candidates for themes

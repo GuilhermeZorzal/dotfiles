@@ -1,5 +1,6 @@
+include ~/.cache/wal/colors-sway
 
-set $cl_high #3C85FA
+set $cl_high $color4
 set $cl_indi #d9d8d8
 set $cl_back #231f20
 set $cl_fore #d9d8d8
@@ -26,5 +27,5 @@ default_floating_border normal
 hide_edge_borders smart
 
 smart_gaps on
-gaps inner 5
-gaps outer 5
+gaps inner 6
+gaps outer 3

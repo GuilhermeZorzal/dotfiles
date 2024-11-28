@@ -34,7 +34,7 @@
     },
     "tray": {
         "icon-size": 21,
-        "spacing": 5
+        "spacing": 10
     },
     "clock": {
         // "timezone": "America/New_York",
@@ -116,11 +116,11 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon} ",
-        "format-full": "{capacity}% {icon} ",
-        "format-charging": "{capacity}% 󱐋 ",
-        "format-plugged": "{capacity}%  ",
-        "format-alt": "{time} {icon} ",
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󱐋",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "tooltip-format": "Battery: {capacity}%\nPower(watts): {power}\nHeath: {health}\nTime left: {time}", //My battery doenst mark total of cycles
@@ -242,9 +242,10 @@
 	},
         "bluetooth": {
                 "format": "",
-                "format-alt": "bluetooth: {status}",
+                //"format-alt": "bluetooth: {status}",
                 "format-on": "",
                 "format-off": "!",
+                "on-click": "blueman-manager",
                 "format-connected-battery": " {device_alias} {device_battery_percentage}{icon}%",
                 "format-connected": " {device_alias} {device_battery_percentage}",
                 // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device

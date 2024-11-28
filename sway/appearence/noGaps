@@ -25,6 +25,6 @@ default_border pixel 1
 default_floating_border normal
 hide_edge_borders smart
 
-# smart_gaps on
+smart_gaps on
 gaps inner 0
 gaps outer 0
