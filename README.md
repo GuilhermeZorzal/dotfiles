@@ -10,6 +10,10 @@ Bookmarks -> Show only on the new tabs
 browser.compactmode.show true
 enable on the config (three lines) on the menu bar > more tools > customize toolbar > density > compact
 
+### Zen Browser
+
+EXCEPTIONAL with shortcuts and theme.
+Binded alt+hjkl for workspaces and tabs switching
 
 #### Extensions:
 - (dark reader)[https://addons.mozilla.org/en-US/firefox/addon/darkreader/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search]

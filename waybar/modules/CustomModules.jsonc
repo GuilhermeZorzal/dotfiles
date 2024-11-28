@@ -92,7 +92,8 @@
 	"custom/help": {
 		"format": "󰘥",
 		"tooltip-format": "Keybinds",
-		"on-click":"rofi -show p -modi p:$HOME/.config/rofi/scripts/SwayKeys.sh"
+		//"on-click":"rofi -show p -modi p:$HOME/.config/rofi/scripts/SwayKeys.sh"
+		"on-click":"rofi -show p -modi p:$HOME/.config/rofi/scripts/system-shortcuts.sh"
 	},
 	"custom/screenrecorder": {
 		"exec": "$HOME/.config/waybar/scripts/waybar-screenrecorder/screenrecorder status",
@@ -117,7 +118,7 @@
 	},
 	"custom/fileManager": {
 		"format": "",
-		"on-click": "kitty -e ranger",
+		"on-click": "kitty -t 'float_ranger' -e ranger",
 		"tooltip": true,
 		"tooltip-format": "File Manager",
 	}

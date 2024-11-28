@@ -26,6 +26,7 @@
             "custom/wallpaper",
             "custom/screenrecorder",
             "custom/fileManager",
+            "custom/waybarMedia",
         ]
     }
 }

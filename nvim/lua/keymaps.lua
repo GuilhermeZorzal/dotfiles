@@ -51,4 +51,4 @@ vim.keymap.set("n", "<leader>k", "<C-w>k", { desc = "" })
 vim.keymap.set("n", "<leader>l", "<C-w>l", { desc = "" })
 
 vim.keymap.set("i", "<C-u>", "<nop>", { desc = "" })
-
+vim.api.nvim_set_keymap('i', '<C-BS>', '<C-W>', { noremap = true, silent = true })

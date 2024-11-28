@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+echo "****************** SWAY KEYS ******************"
 echo "REMAPS: Esc  CapsLock and CapsLock  Esc"
 echo "SUPER + Q = Closes window"
 echo "SUPER + Enter = Opens a new terminal"
@@ -36,3 +37,5 @@ echo "SUPER + A = Focus parent container (focus all windows)"
 echo "SUPER + Minus = Show scratchpad"
 echo "SUPER + SHIFT + Minus = Move to scratchpad"
 echo "SUPER + R = Resize windows (Down, Up, Left, Right for resizing or hjkl)"
+echo " "
+echo "****************** SWAY KEYS ******************"

@@ -72,7 +72,7 @@
  //    },
     "custom/help": {
         "format": "󰘥",
-        "tooltip-format": "Keybinds"
+        "tooltip-format": "Keybinds",
         "on-click":"rofi -show p -modi p:$HOME/.config/rofi/scripts/key.sh"
     },
     "keyboard-state": {

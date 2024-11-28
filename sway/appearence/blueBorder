@@ -1,0 +1,30 @@
+
+set $cl_high #3C85FA
+set $cl_indi #d9d8d8
+set $cl_back #231f20
+set $cl_fore #d9d8d8
+set $cl_urge #ee2e24
+
+# Colors                border   bg       text     indi     childborder
+client.focused          $cl_high $cl_high $cl_fore $cl_indi $cl_high
+client.focused_inactive $cl_back $cl_back $cl_fore $cl_back $cl_back
+client.unfocused        $cl_back $cl_back $cl_fore $cl_back $cl_back
+client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
+
+# It doesnt automatically updates, so its not so cool
+# include ~/.cache/wal/colors-sway
+# 
+# # class                   border       backgr.      text         indicator    child_border
+# client.focused            $color1      $background  $foreground  $color6      $color1
+# client.focused_inactive   $background  $background  $foreground  $color3      $color3
+# client.unfocused          $background  $background  $foreground  $color3      $color3
+# client.urgent             $background  $background  $color7      $foreground  $foreground
+# Window borders
+
+default_border pixel 4
+default_floating_border normal
+hide_edge_borders smart
+
+smart_gaps on
+gaps inner 5
+gaps outer 5

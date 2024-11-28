@@ -10,7 +10,16 @@ export DOCKER_HOST=unix:///run/user/1000/docker.sock
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="trapd00r"
+ZSH_THEME="gnzh"
+
+# Bons temas: 
+# - mira
+# - wezm
+# - fino-time
+# - fine
+
+
+# ZSH_THEME="trapd00r" ----> o que realmente uso mais
 # ZSH_THEME="random"
 # ZSH_THEME="strug"
 # Good candidates for themes
@@ -358,9 +367,19 @@ alias md='mkdir -p'
 alias rd=rmdir
 alias which-command=whence
 
-alias change_version_java='update-alternatives --config java'
-alias clock="~/.config/tty-clock-master/tty-clock -sc"
 
+#  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+# |_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
+#  __  ____   __   ____ _   _ ____ _____ ___  __  __ 
+# |  \/  \ \ / /  / ___| | | / ___|_   _/ _ \|  \/  |
+# | |\/| |\ V /  | |   | | | \___ \ | || | | | |\/| |
+# | |  | | | |   | |___| |_| |___) || || |_| | |  | |
+# |_|  |_| |_|    \____|\___/|____/ |_| \___/|_|  |_|
+#  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+# |_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
+
+alias clock="~/.config/tty-clock-master/tty-clock -sc"
+alias change_version_java='update-alternatives --config java'
 alias fv='nvim $(fzf --preview "bat {}")'
 alias conf="cd ~/.config/dotfiles/ && nvim ."
 alias _docker='sudo service docker start'
@@ -386,4 +405,26 @@ alias img="kitty icat"
 alias termiconf="cd ~/.config/kitty/"
 alias fEquipe4="cd ~/Documents/git/Equipe-4Ano/digitovsky/frontend/"
 alias cat="bat"
+alias pipes="sh ~/.config/pipes/pipes.sh"
+alias setapp="cd ~/Documents/git/TreinamentoSetApp/"
+
+#  _____ _   _ _   _  ____ _____ ___ ___  _   _ ____  
+# |  ___| | | | \ | |/ ___|_   _|_ _/ _ \| \ | / ___| 
+# | |_  | | | |  \| | |     | |  | | | | |  \| \___ \ 
+# |  _| | |_| | |\  | |___  | |  | | |_| | |\  |___) |
+# |_|    \___/|_| \_|\____| |_| |___\___/|_| \_|____/ 
+
+function fix_waybar () {
+    killall -q waybar
+    while pgrep -x waybar >/dev/null; do sleep 1; done
+    nohup waybar &
+}
+
+#  ___       _      _       _ _          _   _             
+# |_ _|_ __ (_) ___(_) __ _| (_)______ _| |_(_) ___  _ __  
+#  | || '_ \| |/ __| |/ _` | | |_  / _` | __| |/ _ \| '_ \ 
+#  | || | | | | (__| | (_| | | |/ / (_| | |_| | (_) | | | |
+# |___|_| |_|_|\___|_|\__,_|_|_/___\__,_|\__|_|\___/|_| |_|
+#                                                          
+neo
 

@@ -1,0 +1,13 @@
+bindgesture pinch:inward+up move up
+bindgesture pinch:inward+down move down
+bindgesture pinch:inward+left move left
+bindgesture pinch:inward+right move right
+
+bindgesture {
+  swipe:3:left  exec gestures backward
+  swipe:3:down  focus right
+  swipe:3:up    focus left
+  swipe:3:right exec gestures forward
+  swipe:4:up    exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+  swipe:4:down  exec pactl set-sink-mute   @DEFAULT_SINK@   toggle
+}

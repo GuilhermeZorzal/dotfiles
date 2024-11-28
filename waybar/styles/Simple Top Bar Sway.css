@@ -125,9 +125,6 @@ button:hover {
 }
 
 /* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-    background-color: #a37800;
-}
 
 #workspaces button {
     padding: 0 5px;
@@ -278,11 +275,13 @@ _   _    _    ____  ______        ___    ____  _____
 
 
 #cpu {
+    padding: 0px 10px;
     margin: 0px 10px;
     background-color: rgba(0,0,0,0);
     color: @font_color;
 }
 #cpu:hover {
+    padding: 0px 10px;
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
     margin: 0px 10px;
@@ -299,6 +298,7 @@ _   _    _    ____  ______        ___    ____  _____
 /*}*/
 
 #disk {
+    padding: 0px 10px;
     margin: 0px 10px;
     background-color: rgba(0,0,0,0);
     color: @font_color ;
@@ -308,6 +308,7 @@ _   _    _    ____  ______        ___    ____  _____
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
     margin: 0px 10px;
+    padding: 0px 10px;
 }
 
 #backlight {
@@ -322,14 +323,27 @@ _   _    _    ____  ______        ___    ____  _____
 
 /*
 ======================================================================
-_   _   _ ____ ___ ___  
-/ \ | | | |  _ \_ _/ _ \ 
-/ _ \| | | | | | | | | | |
-/ ___ \ |_| | |_| | | |_| |
+    _   _   _ ____ ___ ___  
+   / \ | | | |  _ \_ _/ _ \ 
+  / _ \| | | | | | | | | | |
+ / ___ \ |_| | |_| | | |_| |
 /_/   \_\___/|____/___\___/ 
 
 ======================================================================
 */
+#bluetooth {
+    padding: 0px 8px;
+    margin: 0px 10px;
+    box-shadow: inset 0 -2px #ffffff;
+    color: @main_fg ;
+}
+#bluetooth:hover {
+    padding: 0px 8px;
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+    margin: 0px 10px;
+}
+
 #pulseaudio {
     padding: 0px 10px;
     color: @main_fg ;
@@ -396,20 +410,20 @@ _   _ _____ _______        _____  ____  _  __
 
 #clock {
     padding: 0px 10px;
+    margin: 0px 10px;
     background-color: rgba(0,0,0,0);
     color: @main_fg;
 }
-
-
-
-label:focus {
-    background-color: #000000;
+#clock:hover {
+    padding: 0px 10px;
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+    margin: 0px 10px;
 }
-
 
 #custom-waybarMedia {
     margin:0px 9px;
-    background-color: #000000;
+    background-color: transparent;
 }
 
 #custom-media {
@@ -528,12 +542,11 @@ label:focus {
     background-color: #f53c3c;
 }
 #custom-wallpaper {
-    padding: 6px;
-    margin: 0px 6px;
+    padding: 0px 10px;
     color: @font_color;
 }
 #custom-wallpaper:hover {
-    padding: 6px;
+    padding: 0px 10px;
     color: @font_color;
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
@@ -543,6 +556,7 @@ label:focus {
     color: @font_color;
 }
 #custom-power {
+    margin: 0px 0px 0px 10px;
     padding:0px 8px;
     color: @font_color;
 }
@@ -693,8 +707,8 @@ label:focus {
 } 
 #custom-hider {
     margin: 0px;
+    padding: 0px 4px 2px 4px;
     padding: 0px 9px;
-    padding: 0px 8px 2px 8px;
     font-size:18px;
     color:white;
     background-color: #000000;
@@ -704,6 +718,7 @@ label:focus {
     background-color: #64727D;
     /*box-shadow: inset 0 -3px #ffffff;*/
     font-size:18px;
+	padding: 0px 9px;
     color: @font_color;
     box-shadow: none;
     text-shadow: none;
@@ -739,6 +754,11 @@ menuitem {
     font-size:17px;
 	border-radius: 8px;
 }
+
+label:focus {
+    background-color: #000000;
+}
+
 tooltip {
   background: rgba(43, 48, 59, 0.5);
 	background: #161320;
