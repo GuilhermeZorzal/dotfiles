@@ -10,12 +10,13 @@ export DOCKER_HOST=unix:///run/user/1000/docker.sock
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="random"
+ZSH_THEME="gnzh"
 
 # Bons temas: 
 # - mira
 # - wezm
-# mikeh
+# - fino-time
+# - fine
 
 
 # ZSH_THEME="trapd00r" ----> o que realmente uso mais
@@ -405,6 +406,7 @@ alias termiconf="cd ~/.config/kitty/"
 alias fEquipe4="cd ~/Documents/git/Equipe-4Ano/digitovsky/frontend/"
 alias cat="bat"
 alias pipes="sh ~/.config/pipes/pipes.sh"
+alias setapp="cd ~/Documents/git/TreinamentoSetApp/"
 
 #  _____ _   _ _   _  ____ _____ ___ ___  _   _ ____  
 # |  ___| | | | \ | |/ ___|_   _|_ _/ _ \| \ | / ___| 

@@ -41,7 +41,7 @@
         "backlight",
         "keyboard-state",
         "battery",
-        "clock",
+        "clock#teste",
         "tray",
         "custom/power"
     ],
