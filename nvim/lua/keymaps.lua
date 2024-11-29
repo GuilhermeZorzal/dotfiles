@@ -52,3 +52,45 @@ vim.keymap.set("n", "<leader>l", "<C-w>l", { desc = "" })
 
 vim.keymap.set("i", "<C-u>", "<nop>", { desc = "" })
 vim.api.nvim_set_keymap('i', '<C-BS>', '<C-W>', { noremap = true, silent = true })
+
+
+
+vim.keymap.set('n', '<A>h', '<Cmd>BufferPrevious<CR>', {desc = ""})
+vim.keymap.set('n', '<A>l', '<Cmd>BufferNext<CR>', {desc = ""})
+-- Re-order to previous/next,
+vim.keymap.set('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', {desc = ""})
+vim.keymap.set('n', '<A->>', '<Cmd>BufferMoveNext<CR>', {desc = ""})
+-- Goto buffer in position...
+vim.keymap.set('n', '<A-1>', '<Cmd>BufferGoto 1<CR>', {desc = ""})
+vim.keymap.set('n', '<A-2>', '<Cmd>BufferGoto 2<CR>', {desc = ""})
+vim.keymap.set('n', '<A-3>', '<Cmd>BufferGoto 3<CR>', {desc = ""})
+vim.keymap.set('n', '<A-4>', '<Cmd>BufferGoto 4<CR>', {desc = ""})
+vim.keymap.set('n', '<A-5>', '<Cmd>BufferGoto 5<CR>', {desc = ""})
+vim.keymap.set('n', '<A-6>', '<Cmd>BufferGoto 6<CR>', {desc = ""})
+vim.keymap.set('n', '<A-7>', '<Cmd>BufferGoto 7<CR>', {desc = ""})
+vim.keymap.set('n', '<A-8>', '<Cmd>BufferGoto 8<CR>', {desc = ""})
+vim.keymap.set('n', '<A-9>', '<Cmd>BufferGoto 9<CR>', {desc = ""})
+vim.keymap.set('n', '<A-0>', '<Cmd>BufferLast<CR>', {desc = ""})
+-- Pin/unpin buffer
+vim.keymap.set('n', '<A-p>', '<Cmd>BufferPin<CR>', {desc = ""})
+-- Goto pinned/unpinned buffer
+--                 :BufferGotoPinned
+--                 :BufferGotoUnpinned
+-- Close buffer
+vim.keymap.set('n', '<A-c>', '<Cmd>BufferClose<CR>', {desc = ""})
+-- Wipeout buffer
+--                 :BufferWipeout
+-- Close commands
+--                 :BufferCloseAllButCurrent
+--                 :BufferCloseAllButPinned
+--                 :BufferCloseAllButCurrentOrPinned
+--                 :BufferCloseBuffersLeft
+--                 :BufferCloseBuffersRight
+-- Magic buffer-picking mode
+-- vim.keymap.set('n', '<C-p>', '<Cmd>BufferPick<CR>', {desc = ""})
+-- Sort automatically by...
+vim.keymap.set('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', {desc = ""})
+vim.keymap.set('n', '<Space>bn', '<Cmd>BufferOrderByName<CR>', {desc = ""})
+vim.keymap.set('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', {desc = ""})
+vim.keymap.set('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', {desc = ""})
+vim.keymap.set('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', {desc = ""})

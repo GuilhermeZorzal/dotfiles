@@ -29,6 +29,8 @@ generate and store the ssh key using the steps from (this)[https://docs.github.c
 #### Configuring branch to automaticaly have its counterpart on the remote as you push
 git config push.autoSetupRemote true
 
+##### Setting a alias for the tree log view
+git config --global alias.tree 'log --oneline --graph --decorate --all'
 
 ## Dependencies
 
