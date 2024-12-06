@@ -94,3 +94,6 @@ vim.keymap.set('n', '<Space>bn', '<Cmd>BufferOrderByName<CR>', {desc = ""})
 vim.keymap.set('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', {desc = ""})
 vim.keymap.set('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', {desc = ""})
 vim.keymap.set('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', {desc = ""})
+
+
+vim.keymap.set('n', '<leader>yc', 'yygccp', {desc = ""})

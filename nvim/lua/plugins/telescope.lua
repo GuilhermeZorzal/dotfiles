@@ -48,11 +48,15 @@ return { -- Fuzzy Finder (files, lsp, etc)
 				-- You can put your default mappings / updates / etc. in here
 				--  All the info you're looking for is in `:help telescope.setup()`
 				--
-				-- defaults = {
-				--   mappings = {
-				--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-				--   },
-				-- },
+				defaults = {
+				  mappings = {
+					  n = {
+						["q"] = require('telescope.actions').send_selected_to_qflist,
+						["l"] = "select_default",
+					  },
+					i = { ['<c-enter>'] = 'to_fuzzy_refine' },
+				  },
+				},
 				-- pickers = {}
 				extensions = {
 					["ui-select"] = {
@@ -80,7 +84,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
 			vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
 			vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
 			vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
-
 			-- Slightly advanced example of overriding default behavior and theme
 			vim.keymap.set("n", "<leader>/", function()
 				-- You can pass additional configuration to Telescope to change the theme, layout, etc.

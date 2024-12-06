@@ -407,6 +407,7 @@ alias fEquipe4="cd ~/Documents/git/Equipe-4Ano/digitovsky/frontend/"
 alias cat="bat"
 alias pipes="sh ~/.config/pipes/pipes.sh"
 alias setapp="cd ~/Documents/git/TreinamentoSetApp/"
+alias game="cd ~/Documents/git/GameJam-Sol_Letras/"
 
 #  _____ _   _ _   _  ____ _____ ___ ___  _   _ ____  
 # |  ___| | | | \ | |/ ___|_   _|_ _/ _ \| \ | / ___| 

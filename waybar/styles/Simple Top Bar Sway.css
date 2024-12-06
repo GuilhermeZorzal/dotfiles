@@ -743,6 +743,10 @@ _   _ _____ _______        _____  ____  _  __
     padding: 0px 8px;
     background-color: #64727D;
 }
+#custom-docker {
+    padding: 0px 8px;
+    background-color: #64727D;
+}
 menu {
     padding: 8px;
 	border-radius: 8px;

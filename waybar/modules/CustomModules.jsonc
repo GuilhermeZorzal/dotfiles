@@ -121,5 +121,14 @@
 		"on-click": "kitty -t 'float_ranger' -e ranger",
 		"tooltip": true,
 		"tooltip-format": "File Manager",
-	}
+	},
+	"custom/docker": {
+		"format": "",
+		"exec": "sh ~/.config/waybar/scripts/docker.sh",
+		//"interval": 10,
+		//"return-type": "json",
+		"tooltip": true,
+		"on-click": "kitty -T 'docker' -e 'sudo service docker start'",
+		"on-click-right": "kitty -T 'docker' -e 'sudo service docker stop'"
+	},
 }
