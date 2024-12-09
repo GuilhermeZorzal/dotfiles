@@ -12,7 +12,8 @@ then
 fi
 if [ x"$@" = x"Iniciação Científica Frontend" ]
 then
-    kitty --detach -e nvim ~/Documents/git/causal-inference-web-frontend/src/
+    cd ~/Documents/git/causal-inference-web-frontend/src/
+    kitty --detach -e nvim .
     pkill rofi
     exit 0
 fi
@@ -36,7 +37,9 @@ then
 fi
 if [ x"$@" = x"PI - Projeto Integrador" ]
 then
-    kitty --detach -e nvim ~/Documents/git/Equipe-4Ano/digitovsky/frontend/src/pages/
+    cd ~/Documents/git/Equipe-4Ano/digitovsky 
+    kitty --detach -e nvim ./frontend/src/pages/
+
     exit 0
 fi
 if [ x"$@" = x"Wallpaper" ]
@@ -48,6 +51,7 @@ fi
 if [ x"$@" = x"Waybar (fix, update)" ]
 then
     nohup sh ~/.config/waybar/waybar.sh &
+    pkill rofi
     exit 0
 fi
 if [ x"$@" = x"Whatsapp" ]
@@ -63,7 +67,8 @@ then
 fi
 if [ x"$@" = x"Configurations" ]
 then
-    kitty --detach -e nvim ~/.config/dotfiles/
+    cd ~/.config/dotfiles/
+    kitty --detach -e nvim .
     exit 0
 fi
 if [ x"$@" = x"Appearence" ]
@@ -80,7 +85,7 @@ echo "LocalHost:8000"
 echo "Iniciação Científica Frontend"
 echo "PI - Projeto Integrador"
 echo "Wallpaper"
-# echo "Waybar (fix, update)"
+echo "Waybar (fix, update)"
 echo "Whatsapp"
 echo "Zathura"
 echo "quit"

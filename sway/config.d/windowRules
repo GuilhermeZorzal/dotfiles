@@ -16,8 +16,10 @@ for_window [app_id = "floating_update"] floating enable, resize set width 1000px
 for_window [class = "(?i)pinentry"] floating enable
 for_window [title = "Administrator privileges required"] floating enable
 for_window [title = "^.*Zen Browser.*"] floating disable 
+for_window [title = "^.*Firefox.*"] floating disable 
 for_window [app_id = "blueman-manager"] floating enable 
 for_window [title = "^.*Fazer login nas Contas do Google.*"] floating enable 
+
 
 # Inhibit Idle if a window is fullscreen
 for_window [class="^.*"] inhibit_idle fullscreen
