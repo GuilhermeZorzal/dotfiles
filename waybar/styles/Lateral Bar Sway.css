@@ -1,10 +1,15 @@
 @import "/home/guizo/.cache/wal/colors-waybar.css";
 
 
+/* background-color: #3F3F3F; //termite. Não foi usado 
+//background-color: @color1; // fundo
+//
+//color: @foreground ; // cor clara
+//color1 = bg
+*/
 * {
     font-family: SauceCodePro, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    margin: 0px;
-    padding: 0px;
+    
 }
 
 window#waybar {
@@ -14,42 +19,38 @@ window#waybar {
     background-color: rgba(0,0,0,1);
 }
 
-
 window#waybar.hidden {
     opacity: 0.2;
+    margin: 0px;
 }
 /*
 window#waybar.empty {
-background-color: transparent;
+    background-color: transparent;
 }
 window#waybar.solo {
-background-color: #FFFFFF;
+    background-color: #FFFFFF;
 }
 */
-#waybar .playing {
-    /*width: 180px;  Adjust the width as needed */
-}
-
-#waybar .playing .scrolling-title {
-}
-
 
 window#waybar.termite {
     background-color: #3F3F3F;
+    padding: 0px;
+    margin: 0px;
 }
 
 window#waybar.chromium {
-    border-radius: 10px;
     background-color: #000000;
     border: none;
+    padding: 0px;
+    margin: 0px;
 }
 /*
 ======================================================================
-___  ____   ____    _    _   _ ___ _____   _  _____ ___ ___  _   _ 
-/ _ \|  _ \ / ___|  / \  | \ | |_ _|__  /  / \|_   _|_ _/ _ \| \ | |
+  ___  ____   ____    _    _   _ ___ _____   _  _____ ___ ___  _   _ 
+ / _ \|  _ \ / ___|  / \  | \ | |_ _|__  /  / \|_   _|_ _/ _ \| \ | |
 | | | | |_) | |  _  / _ \ |  \| || |  / /  / _ \ | |  | | | | |  \| |
 | |_| |  _ <| |_| |/ ___ \| |\  || | / /_ / ___ \| |  | | |_| | |\  |
-\___/|_| \_\\____/_/   \_\_| \_|___/____/_/   \_\_| |___\___/|_| \_|
+ \___/|_| \_\\____/_/   \_\_| \_|___/____/_/   \_\_| |___\___/|_| \_|
 
 ======================================================================
 
@@ -70,15 +71,16 @@ ___  ____   ____    _    _   _ ___ _____   _  _____ ___ ___  _   _
 #mode,
 #idle_inhibitor,
 #scratchpad,
+#wallpaper,
 #power-profiles-daemon,
 /*
 ======================================================================
-__  __  ___  ____  _   _ _     _____ ____  
+ __  __  ___  ____  _   _ _     _____ ____  
 |  \/  |/ _ \|  _ \| | | | |   | ____/ ___| 
 | |\/| | | | | | | | | | | |   |  _| \___ \ 
 | |  | | |_| | |_| | |_| | |___| |___ ___) |
 |_|  |_|\___/|____/ \___/|_____|_____|____/ 
-
+                                            
 ======================================================================
 */
 
@@ -91,7 +93,7 @@ __  __  ___  ____  _   _ _     _____ ____
 }
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
-    /*    margin-left: 5px;*/
+/*    margin-left: 5px;*/
 }
 
 /* If workspaces is the rightmost module, omit right margin */
@@ -102,55 +104,81 @@ __  __  ___  ____  _   _ _     _____ ____
 ======================================================================
 __        _____  ____  _  ______  ____   _    ____ _____ ____  
 \ \      / / _ \|  _ \| |/ / ___||  _ \ / \  / ___| ____/ ___| 
-\ \ /\ / / | | | |_) | ' /\___ \| |_) / _ \| |   |  _| \___ \ 
-\ V  V /| |_| |  _ <| . \ ___) |  __/ ___ \ |___| |___ ___) |
-\_/\_/  \___/|_| \_\_|\_\____/|_| /_/   \_\____|_____|____/   
+ \ \ /\ / / | | | |_) | ' /\___ \| |_) / _ \| |   |  _| \___ \ 
+  \ V  V /| |_| |  _ <| . \ ___) |  __/ ___ \ |___| |___ ___) |
+   \_/\_/  \___/|_| \_\_|\_\____/|_| /_/   \_\____|_____|____/   
 
 ======================================================================
 */
+
 button {
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
     /* Avoid rounded borders under each button name */
     border: none;
     border-radius: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
     box-shadow: inset 0 -3px #ffffff;
+    padding: 0px;
+    margin: 0px;
 }
-
-/* you can set a style on hover for any module like this */
-
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
     color: #ffffff;
+    padding: 0px;
+    margin: 0px;
 }
 
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
+    padding: 0px;
+    margin: 0px;
 }
 
 #workspaces button.focused {
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
+    padding: 0px;
+    margin: 0px;
 }
 
 #workspaces button.urgent {
     background-color: #eb4d4b;
+    padding: 0px;
+    margin: 0px;
 }
 
 #mode {
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*#workspaces button.active {*/
+/*    padding: 0px;*/
+/*    background-color: @;*/
+/*    box-shadow: none;*/
+/*    text-shadow: none;*/
+/*    border-radius: 9px;*/
+/*    transition: 0.2s ease;*/
+/*    border-radius: 8px;*/
+/*    margin: 5px 5px 0px 5px;*/
+/*}*/
+#workspaces {
+    background-color: transparent;
 }
 
 /*
 ======================================================================
-____    _  _____ _____ _____ ______   __
+ ____    _  _____ _____ _____ ______   __
 | __ )  / \|_   _|_   _| ____|  _ \ \ / /
 |  _ \ / _ \ | |   | | |  _| | |_) \ V / 
 | |_) / ___ \| |   | | | |___|  _ < | |  
@@ -161,19 +189,26 @@ ____    _  _____ _____ _____ ______   __
 #battery {
     padding: 0px 7px;
     background-color: rgba(0,0,0,0);
+    font-size:13px;
     color: @main_fg ;
+    padding: 0px;
+    margin: 0px;
 }
 
 #battery.charging, #battery.plugged {
     color: @text;
     background-color: #26A65B;
+    font-size:13px;
+    color: @main_fg ;
+    padding: 0px;
+    margin: 0px;
 }
 
 @keyframes blink {
-to {
-    background-color: #ffffff;
-    color: #000000;
-}
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
 }
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
@@ -187,7 +222,7 @@ to {
 }
 /*
 ======================================================================
-____  _____ ____  _____ ___  ____  __  __    _    _   _  ____ _____ 
+ ____  _____ ____  _____ ___  ____  __  __    _    _   _  ____ _____ 
 |  _ \| ____|  _ \|  ___/ _ \|  _ \|  \/  |  / \  | \ | |/ ___| ____|
 | |_) |  _| | |_) | |_ | | | | |_) | |\/| | / _ \ |  \| | |   |  _|  
 |  __/| |___|  _ <|  _|| |_| |  _ <| |  | |/ ___ \| |\  | |___| |___ 
@@ -199,47 +234,62 @@ ____  _____ ____  _____ ___  ____  __  __    _    _   _  ____ _____
     padding: 0px 5px;
     background-color: transparent;
     color: #ffffff;
+    padding: 2px 0px;
+    margin: 8px 0px;
 }
 #power-profiles-daemon:hover {
     margin:0px;
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
-    padding: 0px 5px;
+    padding: 2px 0px;
+    margin: 8px 0px;
 }
 
 #power-profiles-daemon.performance {
     margin: 0px;
     background-color: #ff0000;
     color: @toggle-text;
+    padding: 2px 0px;
+    margin: 8px 0px;
 }
 
 #power-profiles-daemon.performance:hover {
     margin: 0px;
     background-color: #fa5757;
     color: @toggle-text;
+    padding: 2px 0px;
+    margin: 8px 0px;
 }
 
 #power-profiles-daemon.balanced {
     margin:0px;
     background-color: transparent;
     color: @text;
+    padding: 2px 0px;
+    margin: 8px 0px;
 }
 #power-profiles-daemon.balanced:hover {
     margin:0px;
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
     color: @text;
+    padding: 2px 0px;
+    margin: 8px 0px;
 }
 
 #power-profiles-daemon.power-saver {
     margin:0px;
     background-color: #029e44;
     color: @toggle-text;
+    padding: 2px 0px;
+    margin: 8px 0px;
 }
 #power-profiles-daemon.power-saver:hover {
     margin:0px;
     background-color: #45f791;
     color: @toggle-text;
+    padding: 2px 0px;
+    margin: 8px 0px;
 }
 
 #idle_inhibitor {
@@ -247,11 +297,14 @@ ____  _____ ____  _____ ___  ____  __  __    _    _   _  ____ _____
     background-color: rgba(0,0,0,0);
     padding: 0px 5px;
     color: @font_color ;
+    padding: 2px 0px;
+    margin: 8px 0px;
 }
 #idle_inhibitor:hover {
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
-    margin: 0px 10px;
+    padding: 2px 0px;
+    margin: 8px 0px;
 }
 
 #idle_inhibitor.activated {
@@ -259,10 +312,12 @@ ____  _____ ____  _____ ___  ____  __  __    _    _   _  ____ _____
     background-color: red;
     padding: 0px 5px;
     color: @toggle-text;
+    padding: 2px 0px;
+    margin: 8px 0px;
 }
 /*
 ======================================================================
-_   _    _    ____  ______        ___    ____  _____ 
+ _   _    _    ____  ______        ___    ____  _____ 
 | | | |  / \  |  _ \|  _ \ \      / / \  |  _ \| ____|
 | |_| | / _ \ | |_) | | | \ \ /\ / / _ \ | |_) |  _|  
 |  _  |/ ___ \|  _ <| |_| |\ V  V / ___ \|  _ <| |___ 
@@ -271,24 +326,25 @@ _   _    _    ____  ______        ___    ____  _____
 ======================================================================
 */
 
-
 #cpu {
-    padding: 0px 10px;
-    margin: 0px 10px;
     background-color: rgba(0,0,0,0);
     color: @font_color;
+    padding: 0px;
+    margin: 8px 0px;
 }
 #cpu:hover {
     padding: 0px 10px;
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
-    margin: 0px 10px;
+    padding: 0px;
+    margin: 8px 0px;
 }
 
 #memory {
     background-color: rgba(0,0,0,0);
-    margin: 0px 10px;
     color: @font_color ;
+    padding: 0px;
+    margin: 8px 0px;
 }
 /*#memory:hover {*/
 /*    background-color: @wb_hvr_bg;*/
@@ -296,27 +352,30 @@ _   _    _    ____  ______        ___    ____  _____
 /*}*/
 
 #disk {
-    padding: 0px 10px;
-    margin: 0px 10px;
     background-color: rgba(0,0,0,0);
     color: @font_color ;
+    padding: 0px;
+    margin: 8px 0px;
 }
 
 #disk:hover {
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
-    margin: 0px 10px;
-    padding: 0px 10px;
+    padding: 0px;
+    margin: 8px 0px;
 }
 
 #backlight {
     background-color: rgba(0,0,0,0);
-    padding: 0px 10px;
     color: @main_fg ;
+    padding: 0px;
+    margin: 8px 0px;
 }
 #backlight:hover {
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
+    padding: 0px;
+    margin: 8px 0px;
 }
 
 /*
@@ -329,59 +388,71 @@ _   _    _    ____  ______        ___    ____  _____
 
 ======================================================================
 */
+
 #bluetooth {
-    padding: 0px 8px;
-    margin: 0px 10px;
-    box-shadow: inset 0 -2px #ffffff;
     color: @main_fg ;
+    padding: 0px;
+    margin: 20px 0px;
 }
 #bluetooth:hover {
-    padding: 0px 8px;
     background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-    margin: 0px 10px;
+    box-shadow: inset -3px 0px #ffffff;
+    padding: 0px;
+    margin: 20px 0px;
 }
 
 #pulseaudio {
-    padding: 0px 10px;
     color: @main_fg ;
+    padding: 0px;
+    margin: 8px 0px;
 }
 
 #pulseaudio.muted {
-    padding: 0px 10px;
     background-color: @important;
     color: @main_fg;
+    padding: 0px;
+    margin: 8px 0px;
 }
 #pulseaudio:hover {
-    padding: 0px 10px;
     background-color: rgba(0,0,0,0);
     color: @main_fg;
+    padding: 0px;
+    margin: 8px 0px;
 }
 #mpd {
     background-color: rgba(0,0,0,0);
     color: @main_fg ;
-    padding: 0 10px;
+    padding: 0px;
+    margin: 8px 0px;
 }
 #mpd {
     background-color: rgba(0,0,0,0);
     color: @main_fg ;
+    padding: 0px;
+    margin: 8px 0px;
 }
 
 #mpd.disconnected {
     background-color: #f53c3c;
+    padding: 0px;
+    margin: 8px 0px;
 }
 
 #mpd.stopped {
     background-color: #90b1b1;
+    padding: 0px;
+    margin: 8px 0px;
 }
 
 #mpd.paused {
     background-color: #51a37a;
+    padding: 0px;
+    margin: 8px 0px;
 }
 /*
 *
 ======================================================================
-_   _ _____ _______        _____  ____  _  __
+ _   _ _____ _______        _____  ____  _  __
 | \ | | ____|_   _\ \      / / _ \|  _ \| |/ /
 |  \| |  _|   | |  \ \ /\ / / | | | |_) | ' / 
 | |\  | |___  | |   \ V  V /| |_| |  _ <| . \ 
@@ -391,13 +462,10 @@ _   _ _____ _______        _____  ____  _  __
 */
 #network {
     background-color: rgba(0,0,0,0);
-    padding: 0px 10px;
     color: @font_color ;
 }
 
 #network.disconnected {
-    padding: 0px 10px;
-    margin: 0px;
     color: @font_color ;
     background-color: #f53c3c;
 }
@@ -407,80 +475,85 @@ _   _ _____ _______        _____  ____  _  __
 #window,
 
 #clock {
-    padding: 0px 10px;
-    margin: 0px 10px;
     background-color: rgba(0,0,0,0);
     color: @main_fg;
-}
-#clock:hover {
-    padding: 0px 10px;
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-    margin: 0px 10px;
+    padding: 0px;
+    margin: 8px 0px;
 }
 
-#custom-waybarMedia {
-    margin:0px 9px;
-    background-color: transparent;
+
+
+label:focus {
+    background-color: #000000;
 }
+
 
 #custom-media {
     background-color: #66cc99;
     color: #2a5c45;
     min-width: 100px;
+    padding: 0px;
+    margin: 0px;
 }
 
 #custom-media.custom-spotify {
     background-color: #66cc99;
+    padding: 0px;
+    margin: 0px;
 }
 
 #custom-media.custom-vlc {
     background-color: #ffa000;
+    padding: 0px;
+    margin: 0px;
 }
 
 #temperature {
     background-color: rgba(0,0,0,0);
     color: @font_color ;
+    padding: 0px;
+    margin: 8px 0px;
 }
 
 #temperature.critical {
     background-color: #eb4d4b;
+    padding: 0px;
+    margin: 8px 0px;
 }
 
 #tray {
     background-color: rgba(0,0,0,0);
     padding: 0px;
-    margin: 0px;
+    margin: 8px 0px;
 }
 
-/*
-#tray > .active {
-    -gtk-icon-effect: dim;
-    background-color: #eb4d4b;
-}
-*/
 #tray > .passive {
     -gtk-icon-effect: dim;
-    background-color: #ffff00;
+    padding: 0px;
+    margin: 8px 0px;
 }
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #ff00ff;
+    background-color: #eb4d4b;
+    padding: 0px;
+    margin: 8px 0px;
 }
 
 
 #language {
     background-color: rgba(0,0,0,0);
     color: @font_color ;
-    padding: 0 5px;
+    padding: 0px;
+    margin: 8px 0px;
+    min-width: 16px;
 }
 
 #keyboard-state {
     background-color: rgba(0,0,0,0);
     color: @font_color ;
-    padding: 0 0px;
-    margin: 0 5px;
+    padding: 0px;
+    margin: 8px 0px;
     min-width: 16px;
 }
 
@@ -510,18 +583,26 @@ _   _ _____ _______        _____  ____  _  __
 #privacy-item {
     padding: 0 5px;
     color: white;
+    padding: 0px;
+    margin: 0px;
 }
 
 #privacy-item.screenshare {
     background-color: #cf5700;
+    padding: 0px;
+    margin: 0px;
 }
 
 #privacy-item.audio-in {
     background-color: #1ca000;
+    padding: 0px;
+    margin: 0px;
 }
 
 #privacy-item.audio-out {
     background-color: #0069d4;
+    padding: 0px;
+    margin: 0px;
 }
 
 
@@ -537,57 +618,52 @@ _   _ _____ _______        _____  ____  _  __
 #wireplumber.muted {
     background-color: #f53c3c;
 }
-#custom-wallpaper {
-    padding: 0px 10px;
-    color: @font_color;
-}
-#custom-wallpaper:hover {
-    padding: 0px 10px;
-    color: @font_color;
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-}
-#custom-wallpaperNext {
-    padding: 3px;
-    color: @font_color;
-}
-#custom-power {
-    margin: 0px 0px 0px 10px;
-    padding:0px 8px;
-    color: @font_color;
-}
-#custom-power:hover {
-    padding:0px 8px;
-    color: @font_color;
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+
+#wallpaper{
+    margin: 10px 0px;
+    padding: 0px;
+    margin: 0px;
 }
 #custom-wallpaperPrev {
-    padding: 3px;
     color: @font_color;
+    border-radius: 9px;
+    padding: 3px;
+    margin: 0px 5px;
+}
+#custom-wallpaperNext {
+    color: @font_color;
+    border-radius: 9px;
+    padding: 3px;
+    margin: 0px 5px;
 }
 #custom-wallpaperPrev:hover {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-    padding: 3px;
+    background-color: @color4;
     color: @font_color;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 0px 5px;
 }
 #custom-wallpaperNext:hover {
-    padding: 3px;
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
     color: @font_color;
+    background-color: @color4;
+    padding: 3px;
+    border-radius: 9px;
+}
+
+#custom-power {
+    color: @font_color;
+    padding: 0px;
+    margin: 8px 0px;
 }
 
 #custom-chatgpt {
     padding: 3px 10px 3px 13px;
-    font-size:18px;
+        font-size:18px;
     color: @font_color;
     border-radius: 10px 0px 0px 10px;
     background-color: @color1;
-}
+    }
 #custom-chatgpt:hover {
-    box-shadow: inset 0 -3px #ffffff;
     color: @font_color;
     background-color: @color4;
 }
@@ -624,149 +700,44 @@ _   _ _____ _______        _____  ____  _  __
     padding: 3px 10px 3px 13px;
     border-radius: 0px;
     margin: 0px;
-    font-size:18px;
+        font-size:18px;
     color: @font_color;
     background-color: @color1;
 }
 #custom-brave:hover {
     background-color: @color4;
-    box-shadow: inset 0 -3px #ffffff;
 }
 #custom-whatsapp {
     padding: 3px 10px 3px 13px;
     margin: 0px;
-    font-size:18px;
+        font-size:18px;
     color: @font_color;
     background-color: @color1;
+}
+#custom-help{
+    margin: 9px 0px;
+    padding: 4px 0px;
+    font-size:20px;
+    color: @font_color;
+    padding: 0px;
+    margin: 8px 0px;
+}
+#custom-help:hover{
+    font-size:20px;
+    color: @font_color;
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+    text-shadow: none;
+    padding: 0px;
+    margin: 8px 0px;
 }
 #custom-whatsapp:hover {
     background-color: @color4;
 }
-#custom-help{
-    margin: 0px 9px;
-    padding: 0px 4px 2px 4px;
-    font-size:18px;
+#submap {
+    border-radius: 10px;
+    padding: 3px 0px 3px 0px;
+    margin: 10px 3px;
+    background-color: @color4;
     color: @font_color;
-    background-color: #000000;
-}
-#custom-help:hover{
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-    margin: 0px 9px;
-    font-size:18px;
-    color: @font_color;
-    box-shadow: none;
-    text-shadow: none;
-}
-#custom-screenrecorder.recording {
-    background-color: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    margin: 0px 9px;
-    padding: 0px 5px;
-    font-size:18px;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-#custom-screenrecorder.recording:hover {
-    background-color: #64727D;
-    color: #ffffff;
-    animation-name: blink;
-    margin: 0px 9px;
-    padding: 0px 5px;
-    font-size:18px;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    box-shadow: inset 0 -3px #ffffff;
-    animation-direction: alternate;
-}
-#custom-screenrecorder.stopped:hover{
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-    margin: 0px 9px;
-    padding: 0px 5px;
-    font-size:18px;
-    color: @font_color;
-    box-shadow: none;
-    text-shadow: none;
-}
-#custom-screenrecorder.stopped {
-    margin: 0px 9px;
-    padding: 0px 5px;
-    font-size:18px;
-    animation-name:none;
-    color: #ffffff;
-    background-color: transparent;
-} 
-#custom-hider {
-    margin: 0px;
-    padding: 0px 4px 2px 4px;
-    padding: 0px 9px;
-    font-size:18px;
-    color:white;
-    background-color: #000000;
-
-}
-#custom-hider:hover{
-    background-color: #64727D;
-    /*box-shadow: inset 0 -3px #ffffff;*/
-    font-size:18px;
-	padding: 0px 9px;
-    color: @font_color;
-    box-shadow: none;
-    text-shadow: none;
-}
-#options {
-    margin: 0px;
-    padding: 0px;
-    background-color: #272c30;
-}
-
-#cava {
-    margin: 9px;
-    padding: 8px;
-    background-color: #272c30;
-}
-#custom-fileManager{
-    background-color: transparent;
-    padding: 0px 8px;
-}
-
-#custom-fileManager:hover{
-    padding: 0px 8px;
-    background-color: #64727D;
-}
-#custom-docker {
-    padding: 0px 8px;
-    background-color: #64727D;
-}
-menu {
-    padding: 8px;
-	border-radius: 8px;
-	background: #161320;
-	color: #B5E8E0;
-}
-menuitem {
-    padding: 8px;
-    font-size:17px;
-	border-radius: 8px;
-}
-
-label:focus {
-    background-color: #000000;
-}
-
-tooltip {
-  background: rgba(43, 48, 59, 0.5);
-	background: #161320;
-	color: #B5E8E0;
-  border: 1px solid rgba(100, 114, 125, 0.5);
-}
-tooltip label {
-    padding: 8px;
-    font-size:17px;
-  color: white;
 }

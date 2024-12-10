@@ -17,5 +17,5 @@ input "type:touchpad" {
 input type:keyboard {
       xkb_layout "br"
       xkb_variant "nodeadkeys","neo"
-      xkb_options "caps:swapescape, ctrl:menu_rctrl, ctrl:swap_lalt_lctrl"
+      xkb_options "caps:swapescape,ctrl:menu_rctrl,ctrl:swap_lalt_lctrl"
 }

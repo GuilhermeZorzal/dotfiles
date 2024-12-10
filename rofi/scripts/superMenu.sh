@@ -10,7 +10,14 @@ then
     pkill rofi
     exit 0
 fi
-if [ x"$@" = x"Iniciação Científica Frontend" ]
+if [ x"$@" = x"IC - Backend" ]
+then
+    cd ~/Documents/git/causal-inference-web-backend/
+    kitty --detach -e nvim .
+    pkill rofi
+    exit 0
+fi
+if [ x"$@" = x"IC - Frontend" ]
 then
     cd ~/Documents/git/causal-inference-web-frontend/src/
     kitty --detach -e nvim .
@@ -82,7 +89,8 @@ echo "ChatGPT"
 echo "LocalHost:3000"
 echo "LocalHost:8080"
 echo "LocalHost:8000"
-echo "Iniciação Científica Frontend"
+echo "IC - Frontend"
+echo "IC - Backend"
 echo "PI - Projeto Integrador"
 echo "Wallpaper"
 echo "Waybar (fix, update)"

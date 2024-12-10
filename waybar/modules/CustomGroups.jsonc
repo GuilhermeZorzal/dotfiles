@@ -15,6 +15,20 @@
         ]
 
     }, 
+    "group/options#vertical": {
+        "orientation": "vertical",
+        "drawer": {
+            "transition-duration": 500,
+            "click-to-reveal": true,
+        },
+        "modules": [
+            "custom/hider#vertical",
+            "custom/wallpaper",
+            "custom/screenrecorder",
+            "custom/fileManager",
+            "custom/docker",
+        ]
+    },
     "group/options": {
         "orientation": "inherit",
         "drawer": {

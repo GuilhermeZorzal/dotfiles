@@ -108,6 +108,9 @@
 	"custom/hider": {
 		"format": "",
 	},
+	"custom/hider#vertical": {
+		"format": "",
+	},
 	"custom/waybarMedia": {
 		//"exec": "playerctl metadata --format '{{ title }}'",
 		"exec": "sh ~/.config/waybar/scripts/waybar-media.sh",
