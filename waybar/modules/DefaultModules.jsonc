@@ -114,8 +114,8 @@
         "on-click" : "kitty -e btop"
     },
     "cpu#vertical": {
-        "format":  "",
-        "format-alt":  "\n{usage}",
+        "format-alt":  "",
+        "format":  "\n{usage}",
         "tooltip": true,
     },
     "memory": {
@@ -124,20 +124,20 @@
     },
     "memory#vertical": {
         "tooltip": true,
-        "format": "",
-        "format-alt": "\n{}"
+        "format-alt": "",
+        "format": "\n{}"
     },
     "disk": {
         "interval": 30,
-		"format": "{percentage_used}% ",
+	"format": "{percentage_used}% ",
         "tooltip": true,
         "on-click" : "baobab",
     },
     "disk#vertical": {
         "interval": 30,
-	"format": "",
+	"format-alt": "",
         "tooltip": true,
-        "format-alt": "\n{percentage_used}",
+        "format": "\n{percentage_used}",
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -153,8 +153,8 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "tooltip": true,
-        "format": "{icon}",
-        "format-alt": "{icon}\n{temperatureC}",
+        "format-alt": "{icon}",
+        "format": "{icon}\n{temperatureC}",
         "format-icons": ["", "", ""]
     },
     "backlight": {
@@ -302,7 +302,7 @@
                 "format-off": "!",
                 "on-click": "blueman-manager",
                 "format-connected-battery": "{icon}\n{device_battery_percentage}",
-                "format-connected": "{device_alias}\n{device_battery_percentage}",
+                "format-connected": "\n{device_battery_percentage}",
                 // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
                 "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
                 "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
