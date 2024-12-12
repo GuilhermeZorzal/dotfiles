@@ -14,11 +14,9 @@ nvim="."
 pipes="."
 ranger="."
 rofi="."
-scripts="."
 sway="."
 tty_clock="."
 wal="."
-wallpapers="."
 waybar="."
 wlogout="."
 wofi="."
@@ -48,24 +46,160 @@ printInstaller() {
 
 list_funcions(){
 echo "
-A. 	Mark All               	10.[$rofi] rofi
-Z. 	Unmark All             	11.[$scripts] scripts
-1. 	[$ags] ags             	12.[$sway] sway
-2. 	[$btop] btop           	13.[$tty_clock] tty_clock
-3. 	[$cava] cava           	14.[$wal] wal
-4. 	[$dunst] dunst         	15.[$wallpapers] wallpapers
-5. 	[$hypr] hypr           	16.[$waybar] waybar
-6. 	[$kitty] kitty         	17.[$wlogout] wlogout
-7. 	[$nvim] nvim           	18.[$wofi] wofi
-8. 	[$pipes] pipes         	19.[$zathura] zathura
-9. 	[$ranger] ranger
+A. Mark All               	
+Z. Unmark All             	
+1. [$ags] ags             	10. [$rofi] rofi
+2. [$btop] btop           	11. [$sway] sway
+3. [$cava] cava           	12. [$tty_clock] tty_clock
+4. [$dunst] dunst         	13. [$wal] wal
+5. [$hypr] hypr           	14. [$waybar] waybar
+6. [$kitty] kitty         	15. [$wlogout] wlogout
+7. [$nvim] nvim           	16. [$wofi] wofi
+8. [$pipes] pipes         	17. [$zathura] zathura
+9. [$ranger] ranger
 
 0. Quit Menu
 "
 }
+preInstall(){
+	printInstaller
+	echo "Welcome to the installer of my dotfiles!!!
 
-install(){
-	echo "Installing..."
+Before continuing, note that this installer wont install 
+anything in your system. What we're going to do is to set
+the config files of certain aplications. To install it you
+must dowload the packages for yourself.
+
+At the end, after you choose your desired packages, we'll 
+give you all the packages names you installed, so you can 
+install it latter by yourself.
+
+IMPORTANT: Make sure you are executing this script inside
+the dotfiles folder. If you are not, please exit and move
+to the correct path.
+
+"
+	while [ true ]; do
+		read -p "Do you want to procced? [Y/n]: " userInput
+		if [ $userInput = "n" ]; then 
+			echo "Exiting..."
+			exit
+		elif [ $userInput = "Y" ]; then 
+			break
+		else 
+			echo "Invalid input!!"
+		fi
+	done	
+		
+
+}
+
+installPackages(){
+	if [ $ags = "x" ]; then 
+		echo "ags"
+	fi
+	if [ $btop = "x" ]; then 
+		echo "btop"
+	fi
+	if [ $cava = "x" ]; then 
+		echo "cava"
+	fi
+	if [ $dunst = "x" ]; then 
+		echo "dunst"
+	fi
+	if [ $hypr = "x" ]; then 
+		echo "hypr"
+	fi
+	if [ $kitty = "x" ]; then 
+		echo "kitty"
+	fi
+	if [ $nvim = "x" ]; then 
+		echo "nvim"
+	fi
+	if [ $pipes = "x" ]; then 
+		echo "pipes"
+	fi
+	if [ $ranger = "x" ]; then 
+		echo "ranger"
+	fi
+	if [ $rofi = "x" ]; then 
+		echo "rofi"
+	fi
+	if [ $sway = "x" ]; then 
+		echo "sway"
+	fi
+	if [ $tty_clock = "x" ]; then 
+		echo "tty_clock"
+	fi
+	if [ $wal = "x" ]; then 
+		echo "wal"
+	fi
+	if [ $waybar = "x" ]; then 
+		echo "waybar"
+	fi
+	if [ $wlogout = "x" ]; then 
+		echo "wlogout"
+	fi
+	if [ $wofi = "x" ]; then 
+		echo "wofi"
+	fi
+	if [ $zathura = "x" ]; then 
+		echo "zathura"
+	fi
+}
+
+verifyPackages(){
+	if [ $ags = "x" ]; then 
+		echo "ags"
+	fi
+	if [ $btop = "x" ]; then 
+		echo "btop"
+	fi
+	if [ $cava = "x" ]; then 
+		echo "cava"
+	fi
+	if [ $dunst = "x" ]; then 
+		echo "dunst"
+	fi
+	if [ $hypr = "x" ]; then 
+		echo "hypr"
+	fi
+	if [ $kitty = "x" ]; then 
+		echo "kitty"
+	fi
+	if [ $nvim = "x" ]; then 
+		echo "nvim"
+	fi
+	if [ $pipes = "x" ]; then 
+		echo "pipes"
+	fi
+	if [ $ranger = "x" ]; then 
+		echo "ranger"
+	fi
+	if [ $rofi = "x" ]; then 
+		echo "rofi"
+	fi
+	if [ $sway = "x" ]; then 
+		echo "sway"
+	fi
+	if [ $tty_clock = "x" ]; then 
+		echo "tty_clock"
+	fi
+	if [ $wal = "x" ]; then 
+		echo "wal"
+	fi
+	if [ $waybar = "x" ]; then 
+		echo "waybar"
+	fi
+	if [ $wlogout = "x" ]; then 
+		echo "wlogout"
+	fi
+	if [ $wofi = "x" ]; then 
+		echo "wofi"
+	fi
+	if [ $zathura = "x" ]; then 
+		echo "zathura"
+	fi
 }
 
 unmarkAll() {
@@ -79,11 +213,9 @@ unmarkAll() {
 	pipes="."
 	ranger="."
 	rofi="."
-	scripts="."
 	sway="."
 	tty_clock="."
 	wal="."
-	wallpapers="."
 	waybar="."
 	wlogout="."
 	wofi="."
@@ -101,11 +233,9 @@ markAll() {
 	pipes="x"
 	ranger="x"
 	rofi="x"
-	scripts="x"
 	sway="x"
 	tty_clock="x"
 	wal="x"
-	wallpapers="x"
 	waybar="x"
 	wlogout="x"
 	wofi="x"
@@ -203,17 +333,7 @@ switchInputOptions(){
 				rofi="."
 			fi
 			;;
-
-		"11") 
-			if [ $scripts = "." ]; then 
-				scripts="x"
-			else 
-				scripts="."
-			fi
-			;;
-
-		"12")
-			echo $userInput
+		"11")
 			if [ $sway = "." ]; then 
 				sway="x"
 			else
@@ -221,7 +341,7 @@ switchInputOptions(){
 			fi 
 			;;
 
-		"13")
+		"12")
 			if [ $tty_clock = "." ]; then 
 				tty_clock="x"
 			else 
@@ -229,22 +349,14 @@ switchInputOptions(){
 			fi 
 			;;
 
-		"14")
+		"13")
 			if [ $wal = "." ]; then 
 				wal="x"
 			else 
 				wal="."
 			fi 
 			;;
-		"15")
-
-			if [ $wallpapers = "." ]; then 
-				wallpapers="x"
-			else 
-				wallpapers="."
-			fi 
-			;;
-		"16")
+		"14")
 			if [ $waybar = "." ]; then 
 				waybar="x"
 			else 
@@ -252,7 +364,7 @@ switchInputOptions(){
 			fi 
 			;;
 
-		"17")
+		"15")
 			if [ $wlogout = "." ]; then 
 				wlogout="x"
 			else 
@@ -260,7 +372,7 @@ switchInputOptions(){
 			fi
 			;;
 
-		"18")
+		"16")
 			if [ $wofi = "." ]; then 
 				wofi="x"
 			else 
@@ -268,7 +380,7 @@ switchInputOptions(){
 			fi
 			;;
 
-		"19")
+		"17")
 			if [ $zathura = "." ]; then 
 				zathura="x"
 			else
@@ -278,6 +390,7 @@ switchInputOptions(){
 
 		*)
 			echo "Invalid input"
+			read
 			;;
 	esac
 }
@@ -285,23 +398,56 @@ switchInputOptions(){
 menu(){
 	while [ $menu -eq 1 ]; do 
 		clear
-	printInstaller
+		printInstaller
 		list_funcions
-		read -p "Enter the number of the program you want to install: " userInput
+		read -p "Enter the option you want to choose: " userInput
 		echo $userInput
 
 		if [ $userInput = "0" ]; then 
 			echo "Exiting"
-			exit 
+			break 
 	 	fi 	
 
 		switchInputOptions
 	done
 }
 
-main() {
+install() {
+	clear
+	echo "Installing the following packages: "
+	verifyPackages
+	echo ""
+	installPackages
+	echo ""
+	echo "Exiting..."
+	exit
+}
 
+main() {
+	clear
+	preInstall
 	menu
+	while true; do
+		clear
+		echo "Selected Packages: "
+		verifyPackages
+		echo ""
+		read -p "Do you want to install the selected packages?
+	1. Yes
+	2. No
+	3. Return to menu: " userInput
+
+		if [ $userInput = "1" ]; then 
+			install
+		elif [ $userInput = "2" ]; then 
+			exit
+		elif [ $userInput = "3" ]; then 
+			menu
+		else 
+			echo "Invalid input!!"
+			read 
+		fi
+	done 
 }
 
 main
