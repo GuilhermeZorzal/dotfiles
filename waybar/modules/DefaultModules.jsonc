@@ -325,6 +325,28 @@
                 "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
 		"format-icons": [ "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
         },
+        "privacy": {
+                "icon-spacing": 4,
+                "icon-size": 18,
+                "transition-duration": 250,
+                "modules": [
+                        {
+                                "type": "screenshare",
+                                "tooltip": true,
+                                "tooltip-icon-size": 24
+                        },
+                        {
+                                "type": "audio-out",
+                                "tooltip": true,
+                                "tooltip-icon-size": 24
+                        },
+                        {
+                                "type": "audio-in",
+                                "tooltip": true,
+                                "tooltip-icon-size": 24
+                        }
+                ]
+        },
 	"wlr/taskbar": {
 		"format": "{icon}",
 		"icon-size": 14,

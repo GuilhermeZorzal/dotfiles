@@ -23,6 +23,7 @@
         "custom/media"
     ],
     "modules-center": [
+        "privacy",
         "cpu#vertical",
         "temperature#vertical",
         "pulseaudio#vertical",
