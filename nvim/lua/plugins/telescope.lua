@@ -85,13 +85,13 @@ return { -- Fuzzy Finder (files, lsp, etc)
 			vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
 			vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 			-- Slightly advanced example of overriding default behavior and theme
-			vim.keymap.set("n", "<leader>/", function()
-				-- You can pass additional configuration to Telescope to change the theme, layout, etc.
-				builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
-					winblend = 10,
-					previewer = false,
-				}))
-			end, { desc = "[/] Fuzzily search in current buffer" })
+			-- vim.keymap.set("n", "<leader>/", function()
+			-- 	-- You can pass additional configuration to Telescope to change the theme, layout, etc.
+			-- 	builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+			-- 		winblend = 10,
+			-- 		previewer = false,
+			-- 	}))
+			-- end, { desc = "[/] Fuzzily search in current buffer" })
 
 			-- It's also possible to pass additional configuration options.
 			--  See `:help telescope.builtin.live_grep()` for information about particular keys
@@ -101,6 +101,21 @@ return { -- Fuzzy Finder (files, lsp, etc)
 					prompt_title = "Live Grep in Open Files",
 				})
 			end, { desc = "[S]earch [/] in Open Files" })
+
+			vim.keymap.set("n", "<leader>/", function ()
+			  local w = vim.fn.input("Pesquisar no diretório: ")
+			  if w == "" then return end -- operação cancelada
+			  builtin.grep_string { search = w }
+			end)
+		 
+			-- Seleciona apenas os arquivos do diretório atual
+			local u = require("telescope.utils")
+			vim.keymap.set("n", "<leader>.", function ()
+			  builtin.find_files {
+				cwd = u.buffer_dir(),
+				path_display = { shorten = false }
+			  }
+			end)
 
 			-- Shortcut for searching your Neovim configuration files
 			vim.keymap.set("n", "<leader>sn", function()

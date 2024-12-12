@@ -7,3 +7,7 @@ bindsym $mod+Shift+KP_Subtract move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
 bindsym $mod+KP_Subtract scratchpad show
+
+bindsym $mod+Shift+p mark "scratch1", move scratchpad
+bindsym $mod+u [con_mark="scratch1"] scratchpad show
+show_marks yes

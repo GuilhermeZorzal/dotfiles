@@ -561,6 +561,8 @@ label:focus {
 }
 
 #scratchpad {
+    margin: 8px 0px;
+    padding: 4px 0px;
     background-color: rgba(0,0,0,0);
     color: @font_color ;
 }

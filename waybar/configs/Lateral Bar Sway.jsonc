@@ -12,6 +12,7 @@
         "$HOME/.config/waybar/modules/DefaultModules.jsonc",
         "$HOME/.config/waybar/modules/CustomModules.jsonc",
         "$HOME/.config/waybar/modules/CustomGroups.jsonc",
+        "$HOME/.config/waybar/modules/SwaySpecific.jsonc",
     ],   // Choose the order of the modules
     "modules-left": [
         "sway/workspaces",
