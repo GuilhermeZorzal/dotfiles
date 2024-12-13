@@ -74,7 +74,7 @@ then
 fi
 if [ x"$@" = x"Configurations" ]
 then
-    cd ~/.config/dotfiles/
+    cd ~/Documents/git/dotfiles/
     kitty --detach -e nvim .
     exit 0
 fi
