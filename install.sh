@@ -21,6 +21,7 @@ waybar="."
 wlogout="."
 wofi="."
 zathura="."
+zshrc="."
 
 menu=1
 userInput=0
@@ -56,7 +57,7 @@ Z. Unmark All
 6. [$kitty] kitty         	15. [$wlogout] wlogout
 7. [$nvim] nvim           	16. [$wofi] wofi
 8. [$pipes] pipes         	17. [$zathura] zathura
-9. [$ranger] ranger
+9. [$ranger] ranger       	18. [$zshrc] zshrc
 
 0. Quit Menu
 "
@@ -96,6 +97,14 @@ to the correct path.
 
 }
 
+replacePathHome(){
+	local path=$1
+	rm -rf ~/$path
+	echo "REMOVED PATH TO $path"
+	ln -s $(pwd)/$path ~/$path
+	echo "$path configuration set :)"
+}
+
 replacePath(){
 	local path=$1
 	rm -rf ~/.config/$path
@@ -129,7 +138,34 @@ verifyPath(){
 	echo "===================="
 	echo "Installing $path"
 	echo "===================="
-	echo "$HOME/.config/$path" 
+
+	if [ $path = ".zshrc" ]; then 
+		if [ -e "$HOME/.zshrc" ]; then 
+			while [ true ]; do
+				read -p "Config for $path already exists. Do you want to replace the existing configuration? [Y/n]: " userInput
+				if [ $userInput = "Y" ]; then 
+					replacePathHome $path
+					break
+				elif [ $userInput = "y" ]; then 
+					replacePathHome $path
+					break
+				elif [ $userInput = "n" ]; then 
+					echo "Skipping..."
+					break
+				else 
+					echo "Invalid input!!"
+				fi
+			done
+		else 
+			echo -e "$HOME/.zshrc" 
+			ln -s $(pwd)/$1 ~/.zshrc
+			echo "$1 configuration set :)"
+		fi
+		echo "------------------"
+		echo ""
+		return
+	fi
+
 	if [ -e "$HOME/.config/$path" ]; then 
 		while [ true ]; do
 			read -p "Config for $path already exists. Do you want to replace the existing configuration? [Y/n]: " userInput
@@ -222,6 +258,10 @@ installPackages(){
 		verifyPath "zathura"
 		echo "zathura"
 	fi
+	if [ $zshrc = "x" ]; then 
+		verifyPath ".zshrc"
+		echo "zshrc"
+	fi
 }
 
 verifyPackages(){
@@ -276,6 +316,9 @@ verifyPackages(){
 	if [ $zathura = "x" ]; then 
 		echo "zathura"
 	fi
+	if [ $zshrc = "x" ]; then 
+		echo "zshrc"
+	fi
 }
 
 unmarkAll() {
@@ -296,6 +339,7 @@ unmarkAll() {
 	wlogout="."
 	wofi="."
 	zathura="."
+	zshrc="."
 }
 
 markAll() {
@@ -316,6 +360,7 @@ markAll() {
 	wlogout="x"
 	wofi="x"
 	zathura="x"
+	zshrc="x"
 }
 
 switchInputOptions(){
@@ -464,6 +509,13 @@ switchInputOptions(){
 			fi 
 			;;
 
+		"18")
+			if [ $zshrc = "." ]; then 
+				zshrc="x"
+			else
+				zshrc="."
+			fi 
+			;;
 		*)
 			echo "Invalid input"
 			read
