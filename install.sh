@@ -86,6 +86,8 @@ to the correct path.
 			exit
 		elif [ $userInput = "Y" ]; then 
 			break
+		elif [ $userInput = "y" ]; then 
+			break
 		else 
 			echo "Invalid input!!"
 		fi
@@ -94,56 +96,130 @@ to the correct path.
 
 }
 
+replacePath(){
+	local path=$1
+	rm -rf ~/.config/$path
+	echo "REMOVED PATH TO $path"
+	ln -s $(pwd)/$path ~/.config/$path
+	echo "$path configuration set :)"
+}
+
+verifyPath(){
+	local path=$1
+	if ! [ -e "$path" ]; then 
+		echo "
+		????????????????????????
+
+                          
+		  ___ _ __ _ __ ___  _ __ 
+		 / _ \ '__| '__/ _ \| '__|
+		|  __/ |  | | | (_) | |   
+		 \___|_|  |_|  \___/|_|   
+								  
+		INTERNAL ERROR ON THE INSTALLER
+		????????????????????????
+
+		error trying to install $path. Please check if the path is correct and try again.
+		"
+		
+
+		exit
+	fi
+	echo ""
+	echo "===================="
+	echo "Installing $path"
+	echo "===================="
+	echo "$HOME/.config/$path" 
+	if [ -e "$HOME/.config/$path" ]; then 
+		while [ true ]; do
+			read -p "Config for $path already exists. Do you want to replace the existing configuration? [Y/n]: " userInput
+			if [ $userInput = "Y" ]; then 
+				replacePath $path
+				break
+			elif [ $userInput = "y" ]; then 
+				replacePath $path
+				break
+			elif [ $userInput = "n" ]; then 
+				echo "Skipping..."
+				break
+			else 
+				echo "Invalid input!!"
+			fi
+		done
+
+	else 
+		echo -e "$HOME/.config/$path" 
+		ln -s $(pwd)/$1 ~/.config/$1
+		echo "$1 configuration set :)"
+	fi
+	echo "------------------"
+	echo ""
+}
+
+
 installPackages(){
 	if [ $ags = "x" ]; then 
-		echo "ags"
+		verifyPath "ags"
 	fi
 	if [ $btop = "x" ]; then 
-		echo "btop"
+		verifyPath "btop"
 	fi
 	if [ $cava = "x" ]; then 
-		echo "cava"
+		verifyPath "cava"
 	fi
 	if [ $dunst = "x" ]; then 
-		echo "dunst"
+		verifyPath "dunst"
 	fi
 	if [ $hypr = "x" ]; then 
+		verifyPath "hypr"
 		echo "hypr"
 	fi
 	if [ $kitty = "x" ]; then 
+		verifyPath "kitty"
 		echo "kitty"
 	fi
 	if [ $nvim = "x" ]; then 
+		verifyPath "nvim"
 		echo "nvim"
 	fi
 	if [ $pipes = "x" ]; then 
+		verifyPath "pipes"
 		echo "pipes"
 	fi
 	if [ $ranger = "x" ]; then 
+		verifyPath "ranger"
 		echo "ranger"
 	fi
 	if [ $rofi = "x" ]; then 
+		verifyPath "rofi"
 		echo "rofi"
 	fi
 	if [ $sway = "x" ]; then 
+		verifyPath "sway"
 		echo "sway"
 	fi
 	if [ $tty_clock = "x" ]; then 
+		verifyPath "tty-clock"
 		echo "tty_clock"
 	fi
 	if [ $wal = "x" ]; then 
+		verifyPath "wal"
 		echo "wal"
 	fi
 	if [ $waybar = "x" ]; then 
+		verifyPath "waybar"
 		echo "waybar"
 	fi
 	if [ $wlogout = "x" ]; then 
+		verifyPath "wlogout"
 		echo "wlogout"
 	fi
 	if [ $wofi = "x" ]; then 
+		verifyPath "wofi"
 		echo "wofi"
 	fi
 	if [ $zathura = "x" ]; then 
+		verifyPath "zathura"
 		echo "zathura"
 	fi
 }
@@ -435,7 +511,9 @@ main() {
 		read -p "Do you want to install the selected packages?
 	1. Yes
 	2. No
-	3. Return to menu: " userInput
+	3. Return to menu
+
+	What you want to do? " userInput
 
 		if [ $userInput = "1" ]; then 
 			install
