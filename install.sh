@@ -22,6 +22,7 @@ wlogout="."
 wofi="."
 zathura="."
 zshrc="."
+alacritty="."
 
 menu=1
 userInput=0
@@ -49,15 +50,25 @@ list_funcions(){
 echo "
 A. Mark All               	
 Z. Unmark All             	
-1. [$ags] ags             	10. [$rofi] rofi
-2. [$btop] btop           	11. [$sway] sway
-3. [$cava] cava           	12. [$tty_clock] tty_clock
-4. [$dunst] dunst         	13. [$wal] wal
-5. [$hypr] hypr           	14. [$waybar] waybar
-6. [$kitty] kitty         	15. [$wlogout] wlogout
-7. [$nvim] nvim           	16. [$wofi] wofi
-8. [$pipes] pipes         	17. [$zathura] zathura
-9. [$ranger] ranger       	18. [$zshrc] zshrc
+1. [$ags] ags             	
+2. [$btop] btop           	
+3. [$cava] cava           	
+4. [$dunst] dunst         	
+5. [$hypr] hypr           	
+6. [$kitty] kitty         	
+7. [$nvim] nvim           	
+8. [$pipes] pipes         	
+9. [$ranger] ranger       	
+10. [$rofi] rofi
+11. [$sway] sway
+12. [$tty_clock] tty_clock
+13. [$wal] wal
+14. [$waybar] waybar
+15. [$wlogout] wlogout
+16. [$wofi] wofi
+17. [$zathura] zathura
+18. [$zshrc] zshrc
+19. [$alacritty] alacritty
 
 0. Quit Menu
 "
@@ -262,6 +273,10 @@ installPackages(){
 		verifyPath ".zshrc"
 		echo "zshrc"
 	fi
+	if [ $alacritty = "x" ]; then 
+		verifyPath "alacritty"
+		echo "alacritty"
+	fi
 }
 
 verifyPackages(){
@@ -319,6 +334,9 @@ verifyPackages(){
 	if [ $zshrc = "x" ]; then 
 		echo "zshrc"
 	fi
+	if [ $alacritty = "x" ]; then 
+		echo "alacritty"
+	fi
 }
 
 unmarkAll() {
@@ -340,6 +358,7 @@ unmarkAll() {
 	wofi="."
 	zathura="."
 	zshrc="."
+	alacritty="."
 }
 
 markAll() {
@@ -361,6 +380,7 @@ markAll() {
 	wofi="x"
 	zathura="x"
 	zshrc="x"
+	alacritty="x"
 }
 
 switchInputOptions(){
@@ -514,6 +534,13 @@ switchInputOptions(){
 				zshrc="x"
 			else
 				zshrc="."
+			fi 
+			;;
+		"19")
+			if [ $alacritty = "." ]; then 
+				alacritty="x"
+			else
+				alacritty="."
 			fi 
 			;;
 		*)

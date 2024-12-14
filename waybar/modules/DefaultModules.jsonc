@@ -137,7 +137,7 @@
         "interval": 30,
         "format-alt": "",
         "tooltip": true,
-        "format": "\n{percentage_used}",
+        "format": "\n{percentage_used}",
     },
     "temperature": {
         // "thermal-zone": 2,

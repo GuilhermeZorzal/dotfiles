@@ -46,7 +46,7 @@ set_wallpaper() {
 }
 
 # Main logic
-folder_path="$HOME/Documents/git/dotfiles//"  # Folder where images are located
+folder_path="$HOME/Documents/git/dotfiles/"  # Folder where images are located
 file_with_image_name="$HOME/.config/waybar/scripts/currentWall.txt"  # File that contains the current image name
 
 # Load images from the folder

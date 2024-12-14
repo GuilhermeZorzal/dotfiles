@@ -21,10 +21,10 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 # client.urgent             $background  $background  $color7      $foreground  $foreground
 # Window borders
 
-default_border pixel 0
+default_border pixel 2
 default_floating_border normal
 hide_edge_borders smart
 
 smart_gaps on
-gaps inner 2
-gaps outer 0
+gaps inner 8
+gaps outer 4
