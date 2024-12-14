@@ -358,11 +358,11 @@ alias gwtls='git worktree list'
 alias gwtmv='git worktree move'
 alias gwtrm='git worktree remove'
 alias history=omz_history
-alias l='ls -lah'
-alias la='ls -lAh'
-alias ll='ls -lh'
-alias ls='ls --color=tty'
-alias lsa='ls -lah'
+alias l='eza -lah'
+alias la='eza -lAh'
+alias ls='eza'
+alias ll='eza -lh'
+alias lsa='eza -lah'
 alias md='mkdir -p'
 alias rd=rmdir
 alias which-command=whence
@@ -378,7 +378,7 @@ alias which-command=whence
 #  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 # |_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
 
-alias clock="~/.config/tty-clock-master/tty-clock -sc"
+alias clock="~/.config/tty-clock/tty-clock"
 alias change_version_java='update-alternatives --config java'
 alias fv='nvim $(fzf --preview "bat {}")'
 alias conf="cd ~/Documents/git/dotfiles/ && nvim ."
