@@ -1,0 +1,38 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    "position": "right", // Waybar position (top|bottom|left|right)
+    "reload_style_on_change": true,
+    // "position": "top", // Waybar position (top|bottom|left|right)
+    //"height": 30, // Waybar height (to be removed for auto height)
+    "width": 30, // Waybar width
+    //"spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "include": [
+        "$HOME/.config/waybar/modules/DefaultModules.jsonc",
+        "$HOME/.config/waybar/modules/CustomModules.jsonc",
+        "$HOME/.config/waybar/modules/CustomGroups.jsonc",
+        "$HOME/.config/waybar/modules/SwaySpecific.jsonc",
+    ],   // Choose the order of the modules
+    "modules-left": [
+        "clock#verticalSeconds",
+        "cpu#vertical",
+        //"mpd",
+        "bluetooth#vertical",
+        "custom/help",
+        "group/options#vertical2",
+        "custom/media",
+        "sway/scratchpad"
+    ],
+    //"modules-center": [
+    //    //"privacy",
+    //],
+    "modules-right": [
+        //"sway/workspaces#numberless",
+        "sway/workspaces",
+        "pulseaudio#vertical",
+        "battery#vertical",
+        "tray"
+        //"custom/power"
+    ],
+}

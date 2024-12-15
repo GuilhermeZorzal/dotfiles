@@ -52,7 +52,7 @@ fi
 if [ x"$@" = x"Wallpaper" ]
 then
 
-    kitty --detach -e ranger ~/.config/wallpapers/
+    kitty --detach -e ranger ~/Documents/git/dotfiles/wallpapers/
     exit 0
 fi
 if [ x"$@" = x"Waybar (fix, update)" ]

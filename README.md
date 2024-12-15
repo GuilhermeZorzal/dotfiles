@@ -91,6 +91,9 @@ Configs:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+IMPORTANT ADDITION:
+Use a colored man pages plugin for zsh. It is very useful. 
+
 ## Pywal
 
 using pip

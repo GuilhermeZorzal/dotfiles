@@ -53,6 +53,15 @@
         //"format":"{:%I}",
         "tooltip-format": "<big>{:%Y %B %d}</big>\n<tt><small>{calendar}</small></tt>"
     },
+    "clock#verticalSeconds": {
+        // "timezone": "America/New_York",
+        "interval":1,
+        "format":"\n{:%H\n%M\n%S}\n ",
+        "format-alt": "\n{:%d\n%b}",
+        //"format":"{:%H\n%M}",
+        //"format":"{:%I}",
+        "tooltip-format": "<big>{:%Y %B %d}</big>\n<tt><small>{calendar}</small></tt>"
+    },
     "clock#verticalSway": {
         // "timezone": "America/New_York",
         "format":"\n{:%H\n%M}\n ",

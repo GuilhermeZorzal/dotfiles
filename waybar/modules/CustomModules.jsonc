@@ -14,7 +14,7 @@
 	"custom/wallpaper": {
 		"format" : "󰸉",
 		"tooltip": false,
-		"on-click": "kitty -T 'wallpaper' -e ranger ~/.config/wallpapers"
+		"on-click": "kitty -T 'wallpaper' -e ranger ~/Documents/git/dotfiles/wallpapers/"
 		//"menu": "on-click",
 		//"menu-file": "$HOME/.config/waybar/menus/wallpaper.xml", // Menu file in resources folder
 		//"menu-actions": {

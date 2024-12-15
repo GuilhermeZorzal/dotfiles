@@ -15,6 +15,22 @@
         ]
 
     }, 
+    "group/options#vertical2": {
+        "orientation": "vertical",
+        "drawer": {
+            "transition-duration": 500,
+            "click-to-reveal": true,
+        },
+        "modules": [
+            "custom/hider#vertical",
+            "custom/wallpaper",
+            "custom/screenrecorder",
+            //"custom/fileManager",
+            //"custom/docker",
+            "idle_inhibitor",
+            "power-profiles-daemon"
+        ]
+    },
     "group/options#vertical": {
         "orientation": "vertical",
         "drawer": {
