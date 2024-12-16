@@ -12,6 +12,16 @@
 	  </object>
       </child>
 	<child>
+		<object class="GtkMenuItem" id="kill">
+			<property name="label">Mpd kill</property>
+        </object>
+	</child>
+      <child>
+	  <object class="GtkMenuItem" id="stop">
+			  <property name="label">Stop</property>
+	  </object>
+      </child>
+	<child>
 		<object class="GtkMenuItem" id="play">
 			<property name="label">Play</property>
         </object>
@@ -21,11 +31,6 @@
 			<property name="label">Pause</property>
         </object>
 	</child>
-    <child>
-        <object class="GtkMenuItem" id="stop">
-			<property name="label">Stop</property>
-        </object>
-    </child>
     <child>
       <object class="GtkSeparatorMenuItem" id="delimiter1"/>
     </child>

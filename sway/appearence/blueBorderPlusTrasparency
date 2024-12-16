@@ -22,7 +22,7 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 # Window borders
 
 default_border pixel 2
-default_floating_border normal
+default_floating_border pixel 2 
 hide_edge_borders smart
 
 smart_gaps on

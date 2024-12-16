@@ -62,6 +62,7 @@
                         "repeat": "mpc repeat",
                         "prev": "mpc prev",
                         "next": "mpc next",
+                        "kill": "killall mpd",
                         "ncmpcpp": "kitty -T 'ncmpcpp' -e ncmpcpp",
 		}
     },
@@ -164,7 +165,7 @@
     },
     "cpu#vertical": {
         "format-alt":  "",
-        "format":  "\n{usage}",
+        "format":  "<span>\r{usage}</span>",
         "tooltip": true,
     },
     "memory": {
@@ -294,12 +295,12 @@
     },
     "pulseaudio#vertical": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon}\n{volume}",
+        "format": "{icon}\r{volume}",
         /*        "format": "{volume}% {icon}  -  {format_source}",*/
-        "format-bluetooth": "{icon}\n{volume}",
-        "format-bluetooth-muted": "󰖁 \n{icon}\n{volume}",
+        "format-bluetooth": "{icon}\r{volume}",
+        "format-bluetooth-muted": "󰖁 \r{icon}\r{volume}",
         ///"format-muted": "󰖁  {format_source}",
-        "format-muted": "\n{volume}",
+        "format-muted": "\r{volume}",
         "format-source": "{volume}% ",
         "format-source-muted": "  " ,
         "format-icons": {

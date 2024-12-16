@@ -9,7 +9,6 @@
 */
 * {
     font-family: SauceCodePro, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    
 }
 
 window#waybar {
@@ -487,7 +486,7 @@ button:hover {
     background-color: rgba(0,0,0,0);
     color: @main_fg;
     padding: 4px 0px;
-    margin: 8px 0px;
+    margin: 4px 0px;
 }
 
 

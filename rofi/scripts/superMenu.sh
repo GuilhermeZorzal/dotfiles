@@ -4,6 +4,20 @@ if [ x"$@" = x"quit" ]
 then
     exit 0
 fi
+if [[ x"$@" = x"mpd" || x"$@" = x"ncmpcpp" || x"$@" = x"Music" ]]
+# if [ x"$@" = x"Music" ]
+then
+    if pgrep -x mpd > /dev/null
+    then
+        kitty -T "ncmpcpp" --detach -e ncmpcpp
+        pkill rofi
+    else 
+        mpd
+        kitty -T "ncmpcpp" --detach -e ncmpcpp
+        pkill rofi
+    fi
+    exit 0
+fi
 if [ x"$@" = x"ChatGPT" ]
 then
     firefox --new-window https://chatgpt.com/?temporary-chat=true &
@@ -95,6 +109,9 @@ echo "PI - Projeto Integrador"
 echo "Wallpaper"
 echo "Waybar (fix, update)"
 echo "Whatsapp"
+echo "mpd"
+echo "ncmpcpp"
+echo "Music"
 echo "Zathura"
 echo "quit"
 
