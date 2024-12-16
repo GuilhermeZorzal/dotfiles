@@ -62,7 +62,14 @@ hypridle \
 yt-dlp \
 wlsunset
 ```
-sudo dnf install -y neovim bat zsh waybar cava cmatrix hyprland hyprlock zathura wofi btop kitty fzf gnome-tweaks fastfetch python3-pip wlogout NetworkManager-tui
+
+
+Installing mpd and ncmpcpp
+```
+ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install mpd ncmpcpp
+```
+
 
 ## Not in dnf:
 ttyclock

@@ -23,6 +23,8 @@ wofi="."
 zathura="."
 zshrc="."
 alacritty="."
+mpd="."
+ncmpcpp="."
 
 menu=1
 userInput=0
@@ -69,6 +71,8 @@ Z. Unmark All
 17. [$zathura] zathura
 18. [$zshrc] zshrc
 19. [$alacritty] alacritty
+20. [$mpd] mpd
+21. [$ncmpcpp] ncmpcpp
 
 0. Quit Menu
 "
@@ -277,6 +281,14 @@ installPackages(){
 		verifyPath "alacritty"
 		echo "alacritty"
 	fi
+	if [ $mpd = "x" ]; then 
+		verifyPath "mpd"
+		echo "mpd"
+	fi
+	if [ $ncmpcpp = "x" ]; then 
+		verifyPath "ncmpcpp"
+		echo "ncmpcpp"
+	fi
 }
 
 verifyPackages(){
@@ -337,6 +349,12 @@ verifyPackages(){
 	if [ $alacritty = "x" ]; then 
 		echo "alacritty"
 	fi
+	if [ $mpd = "x" ]; then 
+		echo "mpd"
+	fi
+	if [ $ncmpcpp = "x" ]; then 
+		echo "ncmpcpp"
+	fi
 }
 
 unmarkAll() {
@@ -359,6 +377,8 @@ unmarkAll() {
 	zathura="."
 	zshrc="."
 	alacritty="."
+	mpd="."
+	ncmpcpp="."
 }
 
 markAll() {
@@ -381,6 +401,8 @@ markAll() {
 	zathura="x"
 	zshrc="x"
 	alacritty="x"
+	mpd="x"
+	ncmpcpp="x"
 }
 
 switchInputOptions(){
@@ -541,6 +563,20 @@ switchInputOptions(){
 				alacritty="x"
 			else
 				alacritty="."
+			fi 
+			;;
+		"20")
+			if [ $mpd = "." ]; then 
+				mpd="x"
+			else
+				mpd="."
+			fi 
+			;;
+		"21")
+			if [ $ncmpcpp = "." ]; then 
+				ncmpcpp="x"
+			else
+				ncmpcpp="."
 			fi 
 			;;
 		*)
