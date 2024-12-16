@@ -8,11 +8,11 @@ if [[ x"$@" = x"mpd" || x"$@" = x"ncmpcpp" || x"$@" = x"Music" ]]
 then
     if pgrep -x mpd > /dev/null
     then
-        kitty -T "ncmpcpp" --detach -e ncmpcpp
+        kitty -T "music-ncmpcpp" --detach -e ncmpcpp
         pkill rofi
     else 
         mpd
-        kitty -T "ncmpcpp" --detach -e ncmpcpp
+        kitty -T "music-ncmpcpp" --detach -e ncmpcpp
         pkill rofi
     fi
     exit 0
