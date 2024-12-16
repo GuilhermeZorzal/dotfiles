@@ -41,8 +41,7 @@ while true; do
         rm ~/.config/sway/config.d/appearence
         ln -s $dir/$selected_file ~/.config/sway/config.d/appearence
         nohup swaymsg reload
-        nohup sh ~/.config/sway/waybar.sh &
-
+        # nohup sh ~/.config/sway/waybar.sh &
         exit
     else
         echo "Invalid choice. Please select a valid number from the list."

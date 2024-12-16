@@ -31,6 +31,7 @@ bindsym $mod+shift+f fullscreen
 # bindsym $mod+Shift+Space exec sh ~/.config/scripts/launcher.sh 
 # bindsym $mod+Shift+space floating toggle
 bindsym $mod+f floating toggle
+bindsym $mod+Ctrl+m focus mode_toggle
 
 # Swap focus between the tiling area and the floating area
 # TODO: Arrumar

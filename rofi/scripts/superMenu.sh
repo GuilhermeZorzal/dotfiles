@@ -5,7 +5,6 @@ then
     exit 0
 fi
 if [[ x"$@" = x"mpd" || x"$@" = x"ncmpcpp" || x"$@" = x"Music" ]]
-# if [ x"$@" = x"Music" ]
 then
     if pgrep -x mpd > /dev/null
     then
