@@ -28,7 +28,7 @@
     "mpd#vertical": {
         "format": "󰝚",
         "format-disconnected": "󰝛",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "format-stopped": "",
         "unknown-tag": "N/A",
         "interval": 5,
         "consume-icons": {

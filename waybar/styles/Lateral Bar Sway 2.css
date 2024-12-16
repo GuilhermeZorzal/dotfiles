@@ -422,21 +422,21 @@ button:hover {
     color: #000000 ;
     border-radius: 25px;
     padding: 5px;
-    margin: 0px;
+    margin: 4px;
 }
 #mpd:hover {
     background-color: #64727D;
     color: #000000 ;
     border-radius: 25px;
     padding: 5px;
-    margin: 0px;
+    margin: 4px;
 }
 
 #mpd.disconnected {
     border-radius: 25px;
     background-color: #f53c3c;
     padding: 4px 0px;
-    margin: 8px 0px;
+    margin: 4px;
 }
 
 #mpd.stopped {
@@ -444,7 +444,7 @@ button:hover {
     background-color: #90b1b1;
     color: #000000 ;
     padding: 5px;
-    margin: 0px;
+    margin: 4px;
 }
 
 #mpd.paused {
@@ -452,7 +452,7 @@ button:hover {
     background-color: #51a37a;
     color: #000000 ;
     padding: 5px;
-    margin: 0px;
+    margin: 4px;
 }
 /*
 *
