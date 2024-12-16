@@ -42,4 +42,7 @@
             "default": ""
         }
     },
+    "sway/language": {
+	    "format": "{short} {variant}",
+    }
 }
