@@ -15,9 +15,9 @@
         "$HOME/.config/waybar/modules/SwaySpecific.jsonc",
     ],   // Choose the order of the modules
     "modules-left": [
+        "mpd#vertical",
         "clock#verticalSeconds",
         "cpu#vertical",
-        //"mpd",
         "bluetooth#vertical",
         "custom/help",
         "group/options#vertical2",

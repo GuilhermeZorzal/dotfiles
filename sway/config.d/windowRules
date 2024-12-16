@@ -18,6 +18,7 @@ for_window [title = "Administrator privileges required"] floating enable
 for_window [title = "^.*Zen Browser.*"] floating disable 
 for_window [title = "^.*Firefox.*"] floating disable 
 for_window [app_id = "blueman-manager"] floating enable 
+for_window [title = "ncmpcpp"] floating enable 
 for_window [title = "^.*Fazer login nas Contas do Google.*"] floating enable 
 
 

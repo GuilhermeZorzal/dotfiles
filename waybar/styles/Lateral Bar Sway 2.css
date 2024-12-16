@@ -416,35 +416,43 @@ button:hover {
     padding: 4px 0px;
     margin: 8px 0px;
 }
+
 #mpd {
-    background-color: rgba(0,0,0,0);
-    color: @main_fg ;
-    padding: 4px 0px;
-    margin: 8px 0px;
+    background-color: #ffffff;
+    color: #000000 ;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 0px;
 }
-#mpd {
-    background-color: rgba(0,0,0,0);
-    color: @main_fg ;
-    padding: 4px 0px;
-    margin: 8px 0px;
+#mpd:hover {
+    background-color: #64727D;
+    color: #000000 ;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 0px;
 }
 
 #mpd.disconnected {
+    border-radius: 25px;
     background-color: #f53c3c;
     padding: 4px 0px;
     margin: 8px 0px;
 }
 
 #mpd.stopped {
+    border-radius: 25px;
     background-color: #90b1b1;
-    padding: 4px 0px;
-    margin: 8px 0px;
+    color: #000000 ;
+    padding: 5px;
+    margin: 0px;
 }
 
 #mpd.paused {
+    border-radius: 25px;
     background-color: #51a37a;
-    padding: 4px 0px;
-    margin: 8px 0px;
+    color: #000000 ;
+    padding: 5px;
+    margin: 0px;
 }
 /*
 *
