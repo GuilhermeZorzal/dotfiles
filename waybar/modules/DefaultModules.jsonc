@@ -58,11 +58,11 @@
 			"toggle": "mpc toggle",
 			"pause": "mpc pause",
 			"stop": "mpc stop",
-            "random": "mpc random",
-            "repeat": "mpc repeat",
-            "prev": "mpc prev",
-            "next": "mpc next",
-
+                        "random": "mpc random",
+                        "repeat": "mpc repeat",
+                        "prev": "mpc prev",
+                        "next": "mpc next",
+                        "ncmpcpp": "kitty -T 'ncmpcpp' -e ncmpcpp",
 		}
     },
     "idle_inhibitor": {
