@@ -387,6 +387,7 @@ alias py='python3'
 alias wallpaperChange="sh ~/.config/scripts/iterative/wallpaper.sh"
 alias wal-r="wal --theme base16-google"
 alias neomini="fastfetch --config examples/14.jsonc"
+alias minineo="fastfetch --config examples/14.jsonc"
 alias neo="fastfetch"
 alias v="nvim ."
 alias va="nvim"

@@ -43,8 +43,6 @@ while true; do
         nohup swaymsg reload
         nohup sh ~/.config/sway/waybar.sh &
 
-
-
         exit
     else
         echo "Invalid choice. Please select a valid number from the list."
