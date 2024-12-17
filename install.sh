@@ -25,6 +25,7 @@ zshrc="."
 alacritty="."
 mpd="."
 ncmpcpp="."
+fzfrc="."
 
 menu=1
 userInput=0
@@ -73,6 +74,7 @@ Z. Unmark All
 19. [$alacritty] alacritty
 20. [$mpd] mpd
 21. [$ncmpcpp] ncmpcpp
+22. [$fzfrc] fzfrc
 
 0. Quit Menu
 "
@@ -289,6 +291,10 @@ installPackages(){
 		verifyPath "ncmpcpp"
 		echo "ncmpcpp"
 	fi
+	if [ $fzfrc = "x" ]; then 
+		verifyPath "fzfrc"
+		echo "fzfrc"
+	fi
 }
 
 verifyPackages(){
@@ -355,6 +361,9 @@ verifyPackages(){
 	if [ $ncmpcpp = "x" ]; then 
 		echo "ncmpcpp"
 	fi
+	if [ $fzfrc = "x" ]; then 
+		echo "fzfrc"
+	fi
 }
 
 unmarkAll() {
@@ -379,6 +388,7 @@ unmarkAll() {
 	alacritty="."
 	mpd="."
 	ncmpcpp="."
+	fzfrc="."
 }
 
 markAll() {
@@ -403,6 +413,7 @@ markAll() {
 	alacritty="x"
 	mpd="x"
 	ncmpcpp="x"
+	fzfrc="x"
 }
 
 switchInputOptions(){
@@ -577,6 +588,13 @@ switchInputOptions(){
 				ncmpcpp="x"
 			else
 				ncmpcpp="."
+			fi 
+			;;
+		"22")
+			if [ $fzfrc = "." ]; then 
+				fzfrc="x"
+			else
+				fzfrc="."
 			fi 
 			;;
 		*)
