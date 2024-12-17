@@ -50,7 +50,7 @@ ncmpcpp_directory = ~/.config/ncmpcpp
 #
 ## Needed for tag editor and file operations to work.
 ##
-#mpd_music_dir = ~/music
+mpd_music_dir = "~/Music/"
 #
 #mpd_crossfade_time = 5
 #
@@ -424,7 +424,7 @@ current_item_inactive_column_prefix = $(white)$r
 ##
 #default_find_mode = wrapped
 #
-#default_tag_editor_pattern = %n - %t
+# default_tag_editor_pattern = %n - %t - %y
 #
 #header_visibility = yes
 #
@@ -610,7 +610,7 @@ current_item_inactive_column_prefix = $(white)$r
 ## are used there is a possibility that you'll be able to use only colors with
 ## transparent background.
 #
-colors_enabled = yes
+# colors_enabled = yes
 #
 #empty_tag_color = cyan
 #
@@ -624,7 +624,7 @@ colors_enabled = yes
 #
 main_window_color = blue 
 #
-#color1 = white
+color1 = white
 #
 color2 = blue 
 #
