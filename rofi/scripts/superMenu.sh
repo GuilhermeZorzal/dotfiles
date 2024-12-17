@@ -17,6 +17,41 @@ then
     fi
     exit 0
 fi
+if [ x"$@" = x"
+
+    " ]
+then
+    exit 0
+fi
+if [ x"$@" = x"Music Pause" ]
+then
+    mpc pause
+    pkill rofi
+    exit 0
+fi
+if [ x"$@" = x"Music Play" ]
+then
+    mpc play
+    pkill rofi
+    exit 0
+fi
+if [ x"$@" = x"Music Play/Pause" ]
+then
+    mpc toggle
+    pkill rofi
+    exit 0
+fi
+if [ x"$@" = x"Music Stop" ]
+then
+    mpc stop
+    pkill rofi
+    exit 0
+fi
+if [ x"$@" = x"Music Kill" ]
+then
+    killall mpd
+    exit 0
+fi
 if [[ x"$@" = x"DuckDuckGo" || x"$@" = x"Browser" ]]
 then
     firefox --profile /home/guizo/.cache/mozilla/firefox/l0vai9ko.kioskMode --new-window  https://duckduckgo.com/ &
@@ -117,6 +152,11 @@ echo "Whatsapp"
 echo "mpd"
 echo "ncmpcpp"
 echo "Music"
+echo "Music Pause"
+echo "Music Play"
+echo "Music Play/Pause"
+echo "Music Stop"
+echo "Music Kill"
 echo "Zathura"
 echo "quit"
 
