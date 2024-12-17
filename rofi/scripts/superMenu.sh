@@ -17,10 +17,16 @@ then
     fi
     exit 0
 fi
+if [[ x"$@" = x"DuckDuckGo" || x"$@" = x"Browser" ]]
+then
+    firefox --profile /home/guizo/.cache/mozilla/firefox/l0vai9ko.kioskMode --new-window  https://duckduckgo.com/ &
+     pkill rofi
+    exit 0
+fi
 if [ x"$@" = x"ChatGPT" ]
 then
-    firefox --new-window https://chatgpt.com/?temporary-chat=true &
-    pkill rofi
+    firefox --profile /home/guizo/.cache/mozilla/firefox/l0vai9ko.kioskMode --new-window  https://chatgpt.com/?temporary-chat=true &
+     pkill rofi
     exit 0
 fi
 if [ x"$@" = x"IC - Backend" ]
