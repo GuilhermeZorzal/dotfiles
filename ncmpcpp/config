@@ -11,7 +11,9 @@ visualizer_output_name = Visualizer feed
 visualizer_in_stereo = yes
 #visualizer_sync_interval = 1 # This has been tested at the default value, 30, as well
 visualizer_type = spectrum
-visualizer_look = +|
+# visualizer_look = +|
+visualizer_look = ●▉ 
+
 
 ##############################################################
 ## This is an example configuration file. Copy it to        ##
@@ -273,11 +275,11 @@ visualizer_data_source = /tmp/mpd.fifo
 #
 #alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
 #
-#current_item_prefix = $(yellow)$r
+current_item_prefix = $(green)$r
 #
 #current_item_suffix = $/r$(end)
 #
-#current_item_inactive_column_prefix = $(white)$r
+current_item_inactive_column_prefix = $(white)$r
 #
 #current_item_inactive_column_suffix = $/r$(end)
 #
@@ -608,7 +610,7 @@ visualizer_data_source = /tmp/mpd.fifo
 ## are used there is a possibility that you'll be able to use only colors with
 ## transparent background.
 #
-#colors_enabled = yes
+colors_enabled = yes
 #
 #empty_tag_color = cyan
 #
@@ -620,11 +622,11 @@ visualizer_data_source = /tmp/mpd.fifo
 #
 #state_flags_color = default:b
 #
-#main_window_color = yellow
+main_window_color = blue 
 #
 #color1 = white
 #
-#color2 = green
+color2 = blue 
 #
 #progressbar_color = black:b
 #

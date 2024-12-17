@@ -111,6 +111,17 @@ more info in https://github.com/dylanaraps/pywal/wiki/Customization
 
 also, install colorthief by `pip install colorthief`
 
+Good themes:
+sexy-neon (normal)
+base16-solarflare
+
+sexy-material (a bit lighter)
+monokai
+
+base16-tube (darker)
+base16-seti
+
+
 ## Nerd Fonts
 
 Install a nerd font of the official site
@@ -165,5 +176,6 @@ Adicionar uma config de waybar dentro de cada config do tiling manager (uma conf
 
 O dispatcher abaixo troca os workspaces entre dois monitores. Muito útil. Precisa de ser testado 
 swapactiveworkspaces
+
 
 

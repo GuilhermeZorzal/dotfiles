@@ -385,7 +385,7 @@ alias conf="cd ~/Documents/git/dotfiles/ && nvim ."
 alias _docker='sudo service docker start'
 alias py='python3'
 alias wallpaperChange="sh ~/.config/scripts/iterative/wallpaper.sh"
-alias wal-r="wal --theme base16-google"
+alias wal-r="wal --theme base16-solarflare"
 alias neomini="fastfetch --config examples/14.jsonc"
 alias minineo="fastfetch --config examples/14.jsonc"
 alias neo="fastfetch"
@@ -409,6 +409,7 @@ alias cat="bat"
 alias pipes="sh ~/.config/pipes/pipes.sh"
 alias setapp="cd ~/Documents/git/TreinamentoSetApp/"
 alias game="cd ~/Documents/git/GameJam-Sol_Letras/"
+alias yt="yt-dlp -x"
 
 #  _____ _   _ _   _  ____ _____ ___ ___  _   _ ____  
 # |  ___| | | | \ | |/ ___|_   _|_ _/ _ \| \ | / ___| 
