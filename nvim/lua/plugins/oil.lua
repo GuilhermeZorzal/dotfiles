@@ -5,7 +5,9 @@ return {
 			view_options = {
 			  -- Show files and directories that start with "."
 				show_hidden = true,
-			  -- This function defines what is considered a "hidden" file
+			   is_always_hidden = function(name, bufnr)
+					return name == '..'
+				end,
 			},
 			 keymaps = {
 			    ["g?"] = "actions.show_help",
@@ -16,7 +18,8 @@ return {
 			    ["<C-p>"] = "actions.preview",
 			    ["<C-c>"] = "actions.close",
 			    ["<C-l>"] = "actions.refresh",
-			    ["-"] = "actions.parent",
+			    ["<A-h>"] = "actions.parent",
+			    ["<A-l>"] = "actions.select",
 			    ["_"] = "actions.open_cwd",
 			    ["`"] = "actions.cd",
 			    ["~"] = { "actions.cd", opts = { scope = "tab" }, desc = ":tcd to the current oil directory", mode = "n" },

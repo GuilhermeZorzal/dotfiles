@@ -26,6 +26,7 @@ alacritty="."
 mpd="."
 ncmpcpp="."
 fzfrc="."
+shell="."
 
 menu=1
 userInput=0
@@ -75,6 +76,7 @@ Z. Unmark All
 20. [$mpd] mpd
 21. [$ncmpcpp] ncmpcpp
 22. [$fzfrc] fzfrc
+23. [$shell] shell
 
 0. Quit Menu
 "
@@ -295,6 +297,10 @@ installPackages(){
 		verifyPath "fzfrc"
 		echo "fzfrc"
 	fi
+	if [ $shell = "x" ]; then 
+		verifyPath "shell"
+		echo "shell"
+	fi
 }
 
 verifyPackages(){
@@ -364,6 +370,9 @@ verifyPackages(){
 	if [ $fzfrc = "x" ]; then 
 		echo "fzfrc"
 	fi
+	if [ $shell = "x" ]; then 
+		echo "shell"
+	fi
 }
 
 unmarkAll() {
@@ -389,6 +398,7 @@ unmarkAll() {
 	mpd="."
 	ncmpcpp="."
 	fzfrc="."
+	shell="."
 }
 
 markAll() {
@@ -414,6 +424,7 @@ markAll() {
 	mpd="x"
 	ncmpcpp="x"
 	fzfrc="x"
+	shell="x"
 }
 
 switchInputOptions(){
@@ -596,6 +607,13 @@ switchInputOptions(){
 			else
 				fzfrc="."
 			fi 
+			;;
+		"23")
+			if [ $shell = "." ]; then 
+				shell="x"
+			else
+				shell="."
+			fi
 			;;
 		*)
 			echo "Invalid input"

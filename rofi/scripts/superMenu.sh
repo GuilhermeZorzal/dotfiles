@@ -4,6 +4,12 @@ if [ x"$@" = x"quit" ]
 then
     exit 0
 fi
+if [ x"$@" = x"Bluetooth off" ]
+then
+    bluetoothctl power off
+    pkill rofi
+    exit 0
+fi
 if [[ x"$@" = x"mpd" || x"$@" = x"ncmpcpp" || x"$@" = x"Music" ]]
 then
     if pgrep -x mpd > /dev/null
@@ -157,6 +163,7 @@ echo "Music Play"
 echo "Music Play/Pause"
 echo "Music Stop"
 echo "Music Kill"
+echo "Bluetooth off"
 echo "Zathura"
 echo "quit"
 

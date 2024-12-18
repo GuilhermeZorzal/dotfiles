@@ -364,7 +364,7 @@
         "format": "",
         //"format-alt": "bluetooth: {status}",
         "format-on": "",
-        "format-off": "!",
+        "format-off": "",
         "on-click": "blueman-manager",
         "format-connected-battery": " {device_alias} {device_battery_percentage}{icon}%",
         "format-connected": " {device_alias} {device_battery_percentage}",

@@ -1,2 +1,5 @@
 mpd/log
 mpd/pid
+mpd/playlists/*
+mpd/database
+
