@@ -26,7 +26,7 @@ set $term alacritty
 # set $menu dmenu_path | wmenu | xargs swaymsg exec --
 # set $menu wofi --show drun -i
 set $menu rofi -show drun | xargs swaymsg exec --
-set $superMenu rofi -show p -modi p:$HOME/.config/rofi/scripts/superMenu.sh | xargs swaymsg exec --
+set $superMenu rofi -show p -matching fuzzy -modi p:$HOME/.config/rofi/scripts/superMenu.sh | xargs swaymsg exec --
 
 # Start a terminal
 bindsym $mod+Return exec $term

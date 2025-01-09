@@ -15,6 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export EDITOR="/usr/bin/nvim"
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -106,6 +107,7 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
 fi
 export PATH
 export PATH="${PATH}:${HOME}/.local/bin/"
+export PATH="$HOME/.config/emacs/bin/:$PATH"
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"

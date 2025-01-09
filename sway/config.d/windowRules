@@ -4,7 +4,8 @@ for_window [title="TesteGodot (DEBUG)"] floating enable
 for_window [class="Godot_Engine"] floating enable
 for_window [title=".*Godot.*"] floating enable
 for_window [title="Please Confirm..."] floating enable
-for_window [title="zathura-launcher"] floating enable
+for_window [title="zathura-launcher"] floating enable, resize set width 1500px height 900px, border pixel 2
+
 for_window [title="wallpaper"] floating enable
 for_window [window_role = "pop-up"] floating enable
 for_window [window_role = "bubble"] floating enable
@@ -20,8 +21,11 @@ for_window [title = "^.*Zen Browser.*"] floating disable
 for_window [title = "^.*Firefox.*"] floating disable 
 for_window [app_id = "blueman-manager"] floating enable
 for_window [title = "music-ncmpcpp"] floating enable, resize set width 900px height 600px, border pixel 2
-for_window [title = "Clocks"] floating enable 
+for_window [title = "Clocks"] floating enable, resize set width 100px height 100px, move position 1400 750, border pixel 2
+
+
 for_window [title = "^.*Fazer login nas Contas do Google.*"] floating enable 
+
 
 for_window [floating] border pixel 2 
 

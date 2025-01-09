@@ -66,7 +66,7 @@ then
 fi
 if [ x"$@" = x"ChatGPT" ]
 then
-    firefox --profile /home/guizo/.cache/mozilla/firefox/l0vai9ko.kioskMode --new-window  https://chatgpt.com/?temporary-chat=true &
+    firefox  --new-window  https://chatgpt.com/?temporary-chat=true --profile /home/guizo/.cache/mozilla/firefox/l0vai9ko.kioskMode &
      pkill rofi
     exit 0
 fi
@@ -129,7 +129,7 @@ then
 fi
 if [ x"$@" = x"Zathura" ]
 then
-    kitty --detach -T "zathura-launcher" -e sh ~/.config/scripts/general/zathura_launcher.sh
+    kitty --detach -T "zathura-launcher" -e sh ~/Documents/git/dotfiles/scripts/general/zathura_launcher.sh
     exit 0
 fi
 if [ x"$@" = x"Configurations" ]

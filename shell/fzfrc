@@ -17,6 +17,37 @@
 
 # Key bindings
 # ------------
+export FZF_DEFAULT_OPTS="$FZF_MOVEMENT \
+  --bind='ctrl-h:execute(moreman {})' \
+  --bind='ctrl-p:toggle-preview' \
+  --bind='ctrl-v:execute(nvimpager {})' \
+  --tiebreak='length,index' \
+  --preview-window 'right:100:wrap:cycle' \
+  --height=100 \
+  --exact \
+  --info='inline' \
+  --cycle \
+   --reverse \
+  --multi \
+ --ansi"
+
+
+
+ if [[ -z "$DISPLAY" ]]; then
+   FZF_DEFAULT_OPTS+="
+  --color=info:1 \  
+        --color=prompt:2 \
+    --color=pointer:3 \
+  --color=hl+:4 \
+  --color=marker:6 \
+  --color=spinner:7 \
+  --color=header:8 \
+   --color=border:9 \
+      --color=hl:122 \
+        --color=preview-fg:11 \
+        --color=fg:13 \
+        --color=fg+:14"
+   fi
 
 # The code at the top and the bottom of this file is the same as in completion.zsh.
 # Refer to that file for explanation.
@@ -561,34 +592,3 @@ export FZF_DEFAULT_COMMAND="rg -uu \
   --files \
   -H"
 export FZF_ALT_COMMAND="fd -uu -t f"
-export FZF_DEFAULT_OPTS="$FZF_MOVEMENT \
-  --bind='ctrl-h:execute(moreman {})' \
-  --bind='ctrl-p:toggle-preview' \
-  --bind='ctrl-v:execute(nvimpager {})' \
-  --tiebreak='length,index' \
-  --preview-window 'right:100:wrap:cycle' \
-  --height=100 \
-  --exact \
-  --info='inline' \
-  --cycle \
-   --reverse \
-  --multi \
- --ansi"
-
-
-
- if [[ -z "$DISPLAY" ]]; then
-   FZF_DEFAULT_OPTS+="
-  --color=info:1 \  
-        --color=prompt:2 \
-    --color=pointer:3 \
-  --color=hl+:4 \
-  --color=marker:6 \
-  --color=spinner:7 \
-  --color=header:8 \
-   --color=border:9 \
-      --color=hl:122 \
-        --color=preview-fg:11 \
-        --color=fg:13 \
-        --color=fg+:14"
-   fi

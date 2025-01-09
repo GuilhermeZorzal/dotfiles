@@ -44,7 +44,8 @@ vim.keymap.set("n", "<leader>y", "\"+y<CR>", { desc = "" })
 vim.keymap.set("v", "<leader>y", "\"+y <CR>", { desc = "" })
 -- vim.keymap.set("i", "<C-u>", "<nop>", { desc = "" })
 
-vim.keymap.set("n", "<C-j>", "<C-u>", { desc = "" })
+vim.keymap.set("n", "<C-j>", "<C-f>", { desc = "" })
+vim.keymap.set("n", "<C-k>", "<C-u>", { desc = "" })
 vim.keymap.set("n", "<leader>h", "<C-w>h", { desc = "" })
 vim.keymap.set("n", "<leader>j", "<C-w>j", { desc = "" })
 vim.keymap.set("n", "<leader>k", "<C-w>k", { desc = "" })
@@ -95,5 +96,4 @@ vim.keymap.set('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', {desc = ""})
 vim.keymap.set('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', {desc = ""})
 vim.keymap.set('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', {desc = ""})
 
-
-vim.keymap.set('n', '<leader>yc', 'yygccp', {desc = ""})
+vim.keymap.set('n', 'yc', 'yygccp', {desc = ""})

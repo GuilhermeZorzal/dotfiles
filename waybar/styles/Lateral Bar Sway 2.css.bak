@@ -33,14 +33,12 @@ window#waybar.solo {
 
 window#waybar.termite {
     background-color: #3F3F3F;
-    padding: 0px;
     margin: 0px;
 }
 
 window#waybar.chromium {
     background-color: #000000;
     border: none;
-    padding: 0px;
     margin: 0px;
 }
 /*
@@ -128,8 +126,8 @@ button:hover {
 }
 #workspaces button {
     background-color: transparent;
-    padding: 0px;
-    margin: 6px;
+    padding: 3px 0px;
+    margin: 6px 0px 6px 6px;
     font-size: 11px;
     border-radius: 25px;
     border: 2px solid #545454;
@@ -138,29 +136,29 @@ button:hover {
 
 #workspaces button:hover {
     background-color: #a6a6a6;
-    padding: 0px;
-    margin: 6px;
     font-size: 11px;
     border-radius: 25px;
     border: 2px solid #a6a6a6;
+    padding: 3px 0px;
+    margin: 6px 0px 6px 6px;
 }
 
 #workspaces button.focused {
     background-color: #64727D;
-    padding: 0px;
-    margin: 6px;
     font-size: 11px;
     border-radius: 25px;
     border: 2px solid #a6a6a6;
+    padding: 3px 0px;
+    margin: 6px 0px 6px 6px;
 }
 
 #workspaces button.urgent {
     background-color: #eb4d4b;
-    padding: 0px;
-    margin: 6px;
     font-size: 11px;
     border-radius: 25px;
     border: 2px solid #a6a6a6;
+    padding: 3px 0px;
+    margin: 6px 0px 6px 6px;
 }
 
 #mode {
@@ -195,12 +193,11 @@ button:hover {
 ======================================================================
 */
 #battery {
-    padding: 0px 7px;
     background-color: rgba(0,0,0,0);
     font-size:13px;
     color: @main_fg ;
     padding: 0px;
-    margin: 0px;
+    margin: 0px 0px 0px 9px;
 }
 
 #battery.charging, #battery.plugged {
@@ -209,7 +206,8 @@ button:hover {
     font-size:13px;
     color: @main_fg ;
     padding: 0px;
-    margin: 0px;
+    margin: 0px 0px 0px 4px;
+    margin: 0px 0px 0px 9px;
 }
 
 @keyframes blink {
@@ -329,20 +327,20 @@ button:hover {
 #cpu {
     background-color: rgba(0,0,0,0);
     color: @font_color;
-    padding: 4px 0px;
+    padding: 4px 0px 4px 4px;
     margin: 8px 0px;
 }
 #cpu:hover {
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
-    padding: 4px 0px;
+    padding: 4px 0px 4px 4px;
     margin: 8px 0px;
 }
 
 #memory {
     background-color: rgba(0,0,0,0);
     color: @font_color ;
-    padding: 4px 0px;
+    padding: 4px 0px 4px 4px;
     margin: 8px 0px;
 }
 /*#memory:hover {*/
@@ -390,20 +388,21 @@ button:hover {
 
 #bluetooth {
     color: @main_fg ;
-    padding: 4px 0px;
-    margin: 5px 0px;
+    padding: 4px 0px 4px 4px;
+    margin: 5px 0px 5px 5px;
 }
 #bluetooth:hover {
     background-color: #64727D;
     box-shadow: inset 0px -3px #ffffff;
     padding: 4px 0px;
-    margin: 5px 0px;
+    margin: 5px 0px 5px 5px;
 }
 
 #pulseaudio {
     color: @main_fg ;
     padding: 4px 0px;
     margin: 8px 0px;
+    margin: 5px 0px 5px 5px;
 }
 
 #pulseaudio.muted {
@@ -411,12 +410,14 @@ button:hover {
     color: @main_fg;
     padding: 4px 0px;
     margin: 8px 0px;
+    margin: 5px 0px 5px 5px;
 }
 #pulseaudio:hover {
     background-color: rgba(0,0,0,0);
     color: @main_fg;
     padding: 4px 0px;
     margin: 8px 0px;
+    margin: 5px 0px 5px 5px;
 }
 
 #mpd {
@@ -426,8 +427,8 @@ button:hover {
     color: #ffffff ;
     border: 1px solid #ffffff;
     border-radius: 25px;
-    padding: 5px;
-    margin: 4px;
+    padding: 5px 0px;
+    margin: 4px 0px 4px 6px;
 }
 #mpd:hover {
     background-color: #64727D;
@@ -491,8 +492,8 @@ button:hover {
 #clock {
     background-color: rgba(0,0,0,0);
     color: @main_fg;
-    padding: 4px 0px;
-    margin: 4px 0px;
+    padding: 4px 0px 4px 4px;
+    margin: 0px 0px 4px 8px;
 }
 
 
@@ -537,7 +538,7 @@ label:focus {
 
 #tray {
     background-color: rgba(0,0,0,0);
-    padding: 4px 0px;
+    padding: 4px 0px 4px 4px;
     margin: 8px 0px;
 }
 
@@ -755,8 +756,8 @@ label:focus {
     font-size:18px;
     color: @font_color;
     background-color: #000000;
-    padding: 4px 0px;
-    margin: 4px 0px;
+    padding: 4px 0px 4px 4px;
+    margin: 4px 0px 4px 4px;
 }
 #custom-help:hover{
     background-color: #64727D;
@@ -767,6 +768,8 @@ label:focus {
     text-shadow: none;
     padding: 4px 0px;
     margin: 4px 0px;
+    padding: 4px 0px 4px 4px;
+    margin: 4px 0px 4px 4px;
 }
 #custom-screenrecorder.recording {
     background-color: #f53c3c;
@@ -817,6 +820,7 @@ label:focus {
     background-color: #000000;
     padding: 9px 0px;
     margin: 0px;
+    padding: 4px 0px 4px 6px;
 
 }
 #custom-hider:hover{

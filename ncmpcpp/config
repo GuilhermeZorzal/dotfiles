@@ -1,8 +1,6 @@
 
 # visualizer_output_name = "my_fifo"
 # visualizer_in_stereo = "yes"
-# visualizer_type = "spectrum"
-# visualizer_look = "+|"
 
 mpd_host = localhost
 mpd_port = 6600
@@ -10,8 +8,8 @@ mpd_connection_timeout = 5
 visualizer_output_name = Visualizer feed
 visualizer_in_stereo = yes
 #visualizer_sync_interval = 1 # This has been tested at the default value, 30, as well
-visualizer_type = spectrum
-# visualizer_look = +|
+#
+# visualizer_type = spectrum
 visualizer_look = ●▉ 
 
 
@@ -117,7 +115,7 @@ visualizer_data_source = /tmp/mpd.fifo
 #
 ## Available values: spectrum, wave, wave_filled, ellipse.
 ##
-#visualizer_type = spectrum
+visualizer_type = spectrum
 #
 #visualizer_fps = 60
 #
@@ -408,7 +406,7 @@ current_item_inactive_column_prefix = $(white)$r
 #
 ## Available values: classic, alternative.
 ##
-#user_interface = classic
+# user_interface = classic 
 #
 #data_fetching_delay = yes
 #
@@ -449,7 +447,7 @@ current_item_inactive_column_prefix = $(white)$r
 #
 #generate_win32_compatible_filenames = yes
 #
-#allow_for_physical_item_deletion = no
+allow_for_physical_item_deletion = yes 
 #
 ##
 ## Note: If you set this variable, ncmpcpp will try to get info from last.fm in
@@ -574,7 +572,7 @@ current_item_inactive_column_prefix = $(white)$r
 #
 #search_engine_default_search_mode = 1
 #
-#external_editor = nano
+external_editor = vim 
 #
 ## Note: set to yes if external editor is a console application.
 ##

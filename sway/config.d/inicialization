@@ -1,5 +1,6 @@
 exec nm-applet &
 exec blueman-applet &
+exec bluetoothctl power off &
 
 bar {
     swaybar_command waybar
