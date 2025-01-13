@@ -37,7 +37,7 @@ set_wallpaper() {
     
     # Set the background and update wallpaper
     echo 'Setting kitty colors'
-    wal -i "$image_path" --backend colorthief && \
+    #wal -i "$image_path" --backend colorthief && \
     echo 'Setting swaybg'
 
     nohup swaybg -i "$image_path" -m fill & # Quando o terminal for fechado a imagem será preservada
@@ -86,7 +86,7 @@ if [[ -n "$custom_image" ]]; then
     # Validate the custom image path
     if [[ -f "$custom_image" ]]; then
         echo 'kitty color'
-        wal -i $custom_image --backend colorthief && \
+        # wal -i $custom_image --backend colorthief && \
         echo 'waybg'
         pkill swaybg
         nohup swaybg -i $custom_image -m fill  &
@@ -114,7 +114,7 @@ else
     #waybar &
 
     echo 'kitty color'
-    wal -i $next_image_full_path --backend colorthief && \
+    # wal -i $next_image_full_path --backend colorthief && \
     echo 'waybg'
     pkill swaybg
     nohup swaybg -i $next_image_full_path -m fill  &

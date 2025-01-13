@@ -138,6 +138,20 @@ then
     kitty --detach -e nvim .
     exit 0
 fi
+if [ x"$@" = x"Configurations" ]
+then
+    exit 0
+fi
+if [ x"$@" = x"Wifi on" ]
+then
+    nmcli radio wifi on
+    exit 0
+fi
+if [ x"$@" = x"Wifi off" ]
+then
+    nmcli radio wifi off
+    exit 0
+fi
 if [ x"$@" = x"Appearence" ]
 then
     kitty --detach --hold -e sh ~/.config/sway/appearence.sh  2> /dev/null
@@ -164,6 +178,8 @@ echo "Music Play/Pause"
 echo "Music Stop"
 echo "Music Kill"
 echo "Bluetooth off"
+echo "Wifi on"
+echo "Wifi off"
 echo "Zathura"
 echo "quit"
 

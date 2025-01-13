@@ -90,10 +90,12 @@ vim.keymap.set('n', '<A-c>', '<Cmd>BufferClose<CR>', {desc = ""})
 -- Magic buffer-picking mode
 -- vim.keymap.set('n', '<C-p>', '<Cmd>BufferPick<CR>', {desc = ""})
 -- Sort automatically by...
-vim.keymap.set('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', {desc = ""})
+vim.keymap.set('n', '<Space>bm', '<Cmd>BufferOrderByBufferNumber<CR>', {desc = ""})
 vim.keymap.set('n', '<Space>bn', '<Cmd>BufferOrderByName<CR>', {desc = ""})
 vim.keymap.set('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', {desc = ""})
 vim.keymap.set('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', {desc = ""})
 vim.keymap.set('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', {desc = ""})
+vim.keymap.set('n', '<Space>bb', '<Cmd>split<CR>', {desc = ""})
+
 
 vim.keymap.set('n', 'yc', 'yygccp', {desc = ""})

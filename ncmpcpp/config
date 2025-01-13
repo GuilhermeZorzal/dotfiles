@@ -386,7 +386,7 @@ current_item_inactive_column_prefix = $(white)$r
 #
 #incremental_seeking = yes
 #
-#seek_time = 1
+seek_time = 5
 #
 #volume_change_step = 2
 #
@@ -398,7 +398,7 @@ current_item_inactive_column_prefix = $(white)$r
 ## Note: You can specify third character which will be used to build 'empty'
 ## part of progressbar.
 ##
-#progressbar_look = =>
+# progressbar_look = =>
 #
 ## Available values: database, playlist.
 ##
