@@ -92,7 +92,8 @@ if [[ -n "$custom_image" ]]; then
         nohup swaybg -i $custom_image -m fill  &
         echo 'waybar'
         # sh ~/.config/scripts/general/waybar_handler.sh
-        ln -sf $custom_image ~/.config/hypr/image
+        ln -sf $custom_image ~/.config/hypr/image  
+        convert $custom_image -blur 0x8 ~/.config/hypr/blur.png
         echo "$custom_image" > "$file_with_image_name"
     else
         echo "Error: The file '$custom_image' does not exist."
@@ -121,4 +122,5 @@ else
     echo 'waybar'
     # sh ~/.config/scripts/general/waybar_handler.sh
     ln -sf $next_image_full_path ~/.config/hypr/image
+    convert $next_image_full_path -blur 0x8 ~/.config/hypr/blur.png
 fi

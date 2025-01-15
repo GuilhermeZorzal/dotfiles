@@ -1,0 +1,5 @@
+2025-01-15 13:27:44 - [main.c:282] Found config * for output eDP-1 (Chimei Innolux Corporation 0x15E7)
+2025-01-15 13:27:44 - [background-image.c:30] Failed to load background image (Image file “/home/guizo/Documents/git/dotfiles/” contains no data).
+2025-01-15 13:27:44 - [main.c:610] Failed to load image: /home/guizo/Documents/git/dotfiles/
+2025-01-15 13:27:44 - [background-image.c:30] Failed to load background image (Image file “/home/guizo/Documents/git/dotfiles/” contains no data).
+2025-01-15 13:27:44 - [main.c:610] Failed to load image: /home/guizo/Documents/git/dotfiles/

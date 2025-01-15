@@ -98,7 +98,7 @@ then
 fi
 if [ x"$@" = x"LocalHost:8000" ]
 then
-    nohup firefox --new-window http://localhost:8000
+    nohup firefox --new-window http://localhost:8000 > /dev/null 2>&1  &
     pkill rofi
     exit 0
 fi
@@ -117,7 +117,7 @@ then
 fi
 if [ x"$@" = x"Waybar (fix, update)" ]
 then
-    nohup sh ~/.config/waybar/waybar.sh &
+    nohup sh ~/.config/waybar/waybar.sh > /dev/null 2>&1 &
     pkill rofi
     exit 0
 fi

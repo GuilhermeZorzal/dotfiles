@@ -242,10 +242,7 @@ def_key "2"
   change_browse_mode
 
 def_key "3"
-  show_search_engine
-
-def_key "3"
-  reset_search_engine
+  show_tag_editor
 
 def_key "4"
   show_media_library
@@ -257,7 +254,10 @@ def_key "5"
   show_playlist_editor
 
 def_key "6"
-  show_tag_editor
+  show_search_engine
+
+def_key "6"
+  reset_search_engine
 
 def_key "7"
   show_outputs
@@ -265,7 +265,7 @@ def_key "7"
 def_key "8"
   show_visualizer
 
-def_key "="
+def_key "0"
   show_clock
 
 def_key "@"
