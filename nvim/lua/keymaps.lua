@@ -101,3 +101,9 @@ vim.keymap.set('n', 'yc', 'yygccp', {desc = ""})
 
 vim.keymap.set('n', '<leader>cc', '<Cmd>CopilotChatOpen<CR>', {desc = ""})
 
+
+vim.keymap.set('i', '<A-y>', 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false
+})
+vim.g.copilot_no_tab_map = true
