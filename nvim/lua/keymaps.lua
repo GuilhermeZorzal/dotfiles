@@ -97,5 +97,7 @@ vim.keymap.set('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', {desc = ""})
 vim.keymap.set('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', {desc = ""})
 vim.keymap.set('n', '<Space>bb', '<Cmd>split<CR>', {desc = ""})
 
-
 vim.keymap.set('n', 'yc', 'yygccp', {desc = ""})
+
+vim.keymap.set('n', '<leader>cc', '<Cmd>CopilotChatOpen<CR>', {desc = ""})
+

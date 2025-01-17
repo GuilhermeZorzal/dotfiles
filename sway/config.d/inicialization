@@ -7,3 +7,5 @@ bar {
     # swaybar_command ./waybar.sh
 }
 
+assign [class="firefox"] workspace 1
+exec firefox

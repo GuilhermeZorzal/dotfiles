@@ -1,0 +1,9 @@
+color=000000
+show-failed-attempts
+image=~/.config/hypr/blur.png 
+inside-color=00000055
+ring-color=00000088
+# line-color=00000000
+key-hl-color=0000aa
+indicator-radius=70
+font-size=18
