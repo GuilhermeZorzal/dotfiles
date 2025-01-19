@@ -72,3 +72,7 @@ vim.opt.scrolloff = 17
 vim.opt.hlsearch = true
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
+--
+vim.o.cmdheight = 0
+vim.o.laststatus = 3
+vim.o.signcolumn = "number"
