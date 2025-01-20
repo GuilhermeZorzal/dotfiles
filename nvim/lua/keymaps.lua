@@ -40,7 +40,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "" })
 vim.keymap.set("n", "<C-f>", "<C-f>zz", { desc = "" })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "" })
 vim.keymap.set("n", "<leader>p", "\"+p<CR>", { desc = "" })
-vim.keymap.set("n", "<leader>y", "\"+y<CR>", { desc = "" })
+vim.keymap.set("n", "<leader>y", "V\"+y<CR>", { desc = "" })
 vim.keymap.set("v", "<leader>y", "\"+y <CR>", { desc = "" })
 -- vim.keymap.set("i", "<C-u>", "<nop>", { desc = "" })
 
@@ -101,9 +101,18 @@ vim.keymap.set('n', 'yc', 'yygccp', {desc = ""})
 
 vim.keymap.set('n', '<leader>cc', '<Cmd>CopilotChatOpen<CR>', {desc = ""})
 
-
 vim.keymap.set('i', '<A-y>', 'copilot#Accept("\\<CR>")', {
   expr = true,
   replace_keycodes = false
 })
 vim.g.copilot_no_tab_map = true
+
+vim.keymap.set("n", "<leader>H", "<C-w>H", { desc = "Move window to the left" })
+vim.keymap.set("n", "<leader>J", "<C-w>J", { desc = "Move window to the bottom" })
+vim.keymap.set("n", "<leader>K", "<C-w>K", { desc = "Move window to the top" })
+vim.keymap.set("n", "<leader>L", "<C-w>L", { desc = "Move window to the right" })
+
+vim.keymap.set("n", "<C-Right>", "<C-w>>", { desc = "resize window to the right" })
+vim.keymap.set("n", "<C-Left>", "<C-w><", { desc = "resize window to the left" })
+
+

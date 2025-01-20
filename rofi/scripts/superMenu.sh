@@ -10,6 +10,12 @@ then
     pkill rofi
     exit 0
 fi
+if [ x"$@" = x"Bluetooth" ]
+then
+    pkill rofi
+    ./rofi-bluetooth
+    exit 0
+fi
 if [[ x"$@" = x"mpd" || x"$@" = x"ncmpcpp" || x"$@" = x"Music" ]]
 then
     if pgrep -x mpd > /dev/null
@@ -181,5 +187,6 @@ echo "Bluetooth off"
 echo "Wifi on"
 echo "Wifi off"
 echo "Zathura"
+echo "Bluetooth"
 echo "quit"
 
