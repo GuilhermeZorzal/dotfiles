@@ -115,4 +115,4 @@ vim.keymap.set("n", "<leader>L", "<C-w>L", { desc = "Move window to the right" }
 vim.keymap.set("n", "<C-Right>", "<C-w>>", { desc = "resize window to the right" })
 vim.keymap.set("n", "<C-Left>", "<C-w><", { desc = "resize window to the left" })
 
-
+-- vim.keymap.set("i", "<c-v>", "<ESC>\"+p<CR>i", { desc = "" })
