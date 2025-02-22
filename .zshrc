@@ -136,32 +136,17 @@ export PATH="$HOME/.config/emacs/bin/:$PATH"
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias tree1="tree --gitignore -La 1"
-alias tree2="tree --gitignore -La 2"
-alias tree3="tree --gitignore -La 3"
-alias tree="tree --gitignore -a"
 
-# Alias zshconf
-alias ...=../..
-alias ....=../../..
-alias .....=../../../..
-alias ......=../../../../..
-alias 1='cd -1'
-alias 2='cd -2'
-alias 3='cd -3'
-alias 4='cd -4'
-alias 5='cd -5'
-alias 6='cd -6'
-alias 7='cd -7'
-alias 8='cd -8'
-alias 9='cd -9'
-alias _='sudo '
-alias alaconf='nvim ~/.config/alacritty/alacritty.toml'
-alias egrep='grep -E'
-alias fgrep='grep -F'
+#  _ _ _ _ _ _ _ _ _ _
+# |_|_|_|_|_|_|_|_|_|_
+#   ____ ___ _____ 
+#  / ___|_ _|_   _|
+# | |  _ | |  | |  
+# | |_| || |  | |  
+#  \____|___| |_|  
+#  _ _ _ _ _ _ _ _ _ _
+# |_|_|_|_|_|_|_|_|_|_
+
 alias g=git
 alias ga='git add'
 alias gaa='git add --all'
@@ -370,8 +355,7 @@ alias gwta='git worktree add'
 alias gwtls='git worktree list'
 alias gwtmv='git worktree move'
 alias gwtrm='git worktree remove'
-alias history=omz_history
-alias which-command=whence
+
 
 
 #  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
@@ -383,6 +367,35 @@ alias which-command=whence
 # |_|  |_| |_|    \____|\___/|____/ |_| \___/|_|  |_|
 #  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 # |_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|
+
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias tree1="tree --gitignore -La 1"
+alias tree2="tree --gitignore -La 2"
+alias tree3="tree --gitignore -La 3"
+alias tree="tree --gitignore -a"
+
+# Alias zshconf
+alias ...=../..
+alias ....=../../..
+alias .....=../../../..
+alias ......=../../../../..
+alias 1='cd -1'
+alias 2='cd -2'
+alias 3='cd -3'
+alias 4='cd -4'
+alias 5='cd -5'
+alias 6='cd -6'
+alias 7='cd -7'
+alias 8='cd -8'
+alias 9='cd -9'
+alias _='sudo '
+alias alaconf='nvim ~/.config/alacritty/alacritty.toml'
+alias egrep='grep -E'
+alias fgrep='grep -F'
+alias history=omz_history
+alias which-command=whence
 
 alias l='eza -lah'
 alias la='eza -lAh'
@@ -418,11 +431,8 @@ alias musicconf="cd ~/.ncmpcpp/"
 alias fcausal="cd ~/Documents/git/causal-inference-web-frontend/"
 alias img="kitty icat"
 alias termiconf="cd ~/.config/kitty/"
-alias fEquipe4="cd ~/Documents/git/Equipe-4Ano/digitovsky/frontend/"
 alias cat="bat"
 alias pipes="sh ~/.config/pipes/pipes.sh"
-alias ftime="cd ~/Documents/git/Time-2-Site-SetApp/SetApp/"
-alias game="cd ~/Documents/git/GameJam-Sol_Letras/"
 alias yt="yt-dlp -x"
 alias fzf="fzf --bind 'alt-j:down,alt-k:up,alt-h:backward-char,alt-l:forward-char,alt-q:abort,alt-a:select-all'"
 alias cmatrix="cmatrix -a"
@@ -439,6 +449,23 @@ fcd() {
 open () {
   xdg-open "$(find -type f | fzf)"
 }
+
+#  _____                                                  ____ ____  
+# |_   _|__ _ __ ___  _ __   ___  _ __ __ _ _ __ _   _   / ___|  _ \ 
+#   | |/ _ \ '_ ` _ \| '_ \ / _ \| '__/ _` | '__| | | | | |   | | | |
+#   | |  __/ | | | | | |_) | (_) | | | (_| | |  | |_| | | |___| |_| |
+#   |_|\___|_| |_| |_| .__/ \___/|_|  \__,_|_|   \__, |  \____|____/ 
+#                    |_|                         |___/               
+
+alias cds="echo 'cd1 -> IC frontend \ncd2 -> IC backend \ncd3 -> setapp \ncd4 -> PI frontend'"
+alias cd1="cd ~/Documents/git/causal-inference-web-frontend/"
+alias cd2="cd ~/Documents/git/causal-inference-web-backend/"
+alias cd3="cd ~/Documents/git/Time-2-Site-SetApp/SetApp/"
+alias cd4="cd ~/Documents/git/Equipe-4Ano/digitovsky/frontend/"
+
+
+
+
 #  ___       _      _       _ _          _   _             
 # |_ _|_ __ (_) ___(_) __ _| (_)______ _| |_(_) ___  _ __  
 #  | || '_ \| |/ __| |/ _` | | |_  / _` | __| |/ _ \| '_ \ 
@@ -448,4 +475,4 @@ open () {
 cd ~/Documents/
 neo
 
-
+eval "$(zoxide init zsh)"

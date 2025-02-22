@@ -75,4 +75,20 @@ vim.opt.hlsearch = true
 --
 vim.o.cmdheight = 0
 vim.o.laststatus = 3
-vim.o.signcolumn = "number"
+-- vim.o.signcolumn = "number"
+
+-- Set background transparency
+vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
+
+-- Additional transparency settings (optional)
+vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "LineNr", { bg = "NONE" })
+
+local gdproject = io.open(vim.fn.getcwd()..'/project.godot', 'r')
+if gdproject then
+    io.close(gdproject)
+    vim.fn.serverstart './godothost'
+end
+
+

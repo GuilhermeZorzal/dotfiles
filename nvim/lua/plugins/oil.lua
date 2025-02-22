@@ -5,7 +5,7 @@ return {
 			view_options = {
 			  -- Show files and directories that start with "."
 				show_hidden = true,
-			   is_always_hidden = function(name, bufnr)
+				is_always_hidden = function(name, bufnr)
 					return name == '..'
 				end,
 			},
@@ -28,7 +28,7 @@ return {
 			    ["g."] = "actions.toggle_hidden",
 			    ["g\\"] = "actions.toggle_trash",
 			  },
-			vim.keymap.set("n", "<A-Space>", "<cmd>Oil<CR>"),
+			vim.keymap.set("n", "<A-Space>", ":Oil<CR>"),
 			vim.api.nvim_set_keymap('n', '<C-Space>', ':vsplit<CR> :Oil<CR>', { noremap = true, silent = true })
 		}
 

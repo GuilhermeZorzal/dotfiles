@@ -16,6 +16,13 @@ then
     ./rofi-bluetooth
     exit 0
 fi
+if [ x"$@" = x"Setapp" ]
+then
+    cd ~/Documents/git/Time-2-Site-SetApp/SetApp/
+    pkill rofi
+    alacritty
+    exit 0
+fi
 if [[ x"$@" = x"mpd" || x"$@" = x"ncmpcpp" || x"$@" = x"Music" ]]
 then
     if pgrep -x mpd > /dev/null
@@ -92,7 +99,7 @@ then
 fi
 if [ x"$@" = x"LocalHost:3000" ]
 then
-    firefox --new-window http://localhost:3000 &
+    firefox --new-window http://localhost:3000 --profile /home/guizo/.cache/mozilla/firefox/l0vai9ko.kioskMode &
     pkill rofi
     exit 0
 fi
@@ -188,5 +195,6 @@ echo "Wifi on"
 echo "Wifi off"
 echo "Zathura"
 echo "Bluetooth"
+echo "Setapp"
 echo "quit"
 

@@ -31,17 +31,27 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 
 -- 
 -- Buffers
-vim.keymap.set("n", "<leader>bs", "<CMD>vsp<CR>", { desc = "[S]plit Windows" })
+vim.keymap.set("n", "<leader>bs", "<CMD>vsp<CR>", { desc = "Split Windows [V]ertical" })
+vim.keymap.set("n", "<leader>bv", "<CMD>split<CR>", { desc = "[S]plit Windows" })
+vim.keymap.set('n', '<leader>bb', '<Cmd>split<CR>', {desc = "[S]plit Windows"})
+
 vim.keymap.set("n", "<leader>bo", "<CMD>enew<CR><CMD>Oil<CR>", { desc = "[O]pen new buffer" })
-vim.keymap.set("n", "<leader>bn", "<CMD>bnext<CR>", { desc = "[N]ext buffer" })
-vim.keymap.set("n", "<leader>bp", "<CMD>bprev<CR>", { desc = "[P]revious buffer" })
-vim.keymap.set("n", "<leader>bd", "<CMD>bd<CR>", { desc = "[D]elete current buffer" })
+
+-- Sort automatically by...
+vim.keymap.set('n', '<leader>bm', '<Cmd>BufferOrderByBufferNumber<CR>', {desc = "order by buffer number"})
+vim.keymap.set('n', '<leader>bn', '<Cmd>BufferOrderByName<CR>', {desc = "order by buffer name"})
+vim.keymap.set('n', '<leader>bd', '<Cmd>BufferOrderByDirectory<CR>', {desc = "order by buffer directory"})
+vim.keymap.set('n', '<leader>bl', '<Cmd>BufferOrderByLanguage<CR>', {desc = "order by buffer language"})
+vim.keymap.set('n', '<leader>bw', '<Cmd>BufferOrderByWindowNumber<CR>', {desc = "order by window number"})
+
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "" })
 vim.keymap.set("n", "<C-f>", "<C-f>zz", { desc = "" })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "" })
+
 vim.keymap.set("n", "<leader>p", "\"+p<CR>", { desc = "" })
 vim.keymap.set("n", "<leader>y", "V\"+y<CR>", { desc = "" })
 vim.keymap.set("v", "<leader>y", "\"+y <CR>", { desc = "" })
+
 -- vim.keymap.set("i", "<C-u>", "<nop>", { desc = "" })
 
 vim.keymap.set("n", "<C-j>", "<C-f>", { desc = "" })
@@ -89,19 +99,16 @@ vim.keymap.set('n', '<A-c>', '<Cmd>BufferClose<CR>', {desc = ""})
 --                 :BufferCloseBuffersRight
 -- Magic buffer-picking mode
 -- vim.keymap.set('n', '<C-p>', '<Cmd>BufferPick<CR>', {desc = ""})
--- Sort automatically by...
-vim.keymap.set('n', '<Space>bm', '<Cmd>BufferOrderByBufferNumber<CR>', {desc = ""})
-vim.keymap.set('n', '<Space>bn', '<Cmd>BufferOrderByName<CR>', {desc = ""})
-vim.keymap.set('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', {desc = ""})
-vim.keymap.set('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', {desc = ""})
-vim.keymap.set('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', {desc = ""})
-vim.keymap.set('n', '<Space>bb', '<Cmd>split<CR>', {desc = ""})
 
 vim.keymap.set('n', 'yc', 'yygccp', {desc = ""})
 
 vim.keymap.set('n', '<leader>cc', '<Cmd>CopilotChatOpen<CR>', {desc = ""})
 
 vim.keymap.set('i', '<A-y>', 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false
+})
+vim.keymap.set('i', '<C-CR>', 'copilot#Accept("\\<CR>")', {
   expr = true,
   replace_keycodes = false
 })
@@ -116,3 +123,12 @@ vim.keymap.set("n", "<C-Right>", "<C-w>>", { desc = "resize window to the right"
 vim.keymap.set("n", "<C-Left>", "<C-w><", { desc = "resize window to the left" })
 
 -- vim.keymap.set("i", "<c-v>", "<ESC>\"+p<CR>i", { desc = "" })
+vim.keymap.set("n", "<leader>t", "<Cmd>terminal<CR>", { desc = "terminal" })
+
+-- vim.keymap.set("n","<C-o>",  "g[", { desc = "go back" })
+-- vim.keymap.set("n","<C-i>",  "g]", { desc = "go forward" })
+
+
+vim.api.nvim_create_user_command("Rf", function(opts)
+  vim.cmd("r !figlet " .. opts.args)
+end, { nargs = 1 })

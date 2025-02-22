@@ -12,9 +12,6 @@ If you experience any errors while trying to install kickstart, run `:checkhealt
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-require("options")
-require("keymaps")
-require("autosave_execute")
 -- Set <space> as the leader key
 -- See `:help mapleader`
 
@@ -80,18 +77,6 @@ require("lazy").setup("plugins", {
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
--- Set background transparency
-vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
-
--- Additional transparency settings (optional)
-vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
-vim.api.nvim_set_hl(0, "LineNr", { bg = "NONE" })
-
-local gdproject = io.open(vim.fn.getcwd()..'/project.godot', 'r')
-if gdproject then
-    io.close(gdproject)
-    vim.fn.serverstart './godothost'
-end
-
-
+require("options")
+require("keymaps")
+require("autosave_execute")

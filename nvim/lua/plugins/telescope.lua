@@ -82,7 +82,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
 			vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
 			vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
 			vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
-			vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
+			-- vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 			vim.keymap.set("n", "<leader>f", builtin.buffers, { desc = "[ ] Find existing buffers" })
 			-- Slightly advanced example of overriding default behavior and theme
 			-- vim.keymap.set("n", "<leader>/", function()
@@ -107,7 +107,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
 			  if w == "" then return end -- operação cancelada
 			  builtin.grep_string { search = w }
 			end)
-		 
+
 			-- Seleciona apenas os arquivos do diretório atual
 			local u = require("telescope.utils")
 			vim.keymap.set("n", "<leader>.", function ()
