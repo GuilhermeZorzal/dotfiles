@@ -80,3 +80,5 @@ require("lazy").setup("plugins", {
 require("options")
 require("keymaps")
 require("autosave_execute")
+require("lualine")
+require("lsp")

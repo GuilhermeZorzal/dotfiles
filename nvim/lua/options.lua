@@ -7,7 +7,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.expandtab = false  -- Use actual tab characters instead of spaces
+vim.opt.expandtab = true  -- Use actual tab characters instead of spaces
 
 
 -- Enable mouse mode, can be useful for resizing splits for example!
@@ -73,9 +73,9 @@ vim.opt.hlsearch = true
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 --
-vim.o.cmdheight = 0
 vim.o.laststatus = 3
 -- vim.o.signcolumn = "number"
+vim.opt.cmdheight = 0
 
 -- Set background transparency
 vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
@@ -85,10 +85,11 @@ vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "LineNr", { bg = "NONE" })
 
+vim.cmd [[ autocmd RecordingEnter * set cmdheight=1 ]]
+vim.cmd [[ autocmd RecordingLeave * set cmdheight=0 ]]
+
 local gdproject = io.open(vim.fn.getcwd()..'/project.godot', 'r')
 if gdproject then
     io.close(gdproject)
     vim.fn.serverstart './godothost'
 end
-
-
