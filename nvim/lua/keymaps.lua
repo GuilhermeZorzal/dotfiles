@@ -123,8 +123,20 @@ vim.keymap.set("n", "<C-Right>", "<C-w>>", { desc = "resize window to the right"
 vim.keymap.set("n", "<C-Left>", "<C-w><", { desc = "resize window to the left" })
 
 -- vim.keymap.set("i", "<c-v>", "<ESC>\"+p<CR>i", { desc = "" })
-vim.keymap.set("n", "<leader>t", "<Cmd>terminal<CR>", { desc = "terminal" })
 
+
+local function start_terminal_in_current_folder()
+    -- Change directory to the folder of the current file
+    -- vim.cmd("cd %:p:h")
+    vim.cmd("cd " .. vim.fn.getcwd())
+    -- Open terminal
+    vim.cmd("terminal")
+    -- Start insert mode
+    vim.cmd("startinsert")
+end
+
+-- Map the function to a key combination
+vim.keymap.set("n", "<leader>t", start_terminal_in_current_folder, { desc = "Open terminal in current folder" })
 -- vim.keymap.set("n","<C-o>",  "g[", { desc = "go back" })
 -- vim.keymap.set("n","<C-i>",  "g]", { desc = "go forward" })
 

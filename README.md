@@ -75,6 +75,11 @@ sudo dnf install mpd ncmpcpp mpc
 ## Not in dnf:
 ttyclock
 
+## Waypaper
+sudo dnf copr enable solopasha/hyprland
+sudo dnf install waypaper
+
+
 ## Obsidian
 
 Installed throught the gnome applications interface (gnome)

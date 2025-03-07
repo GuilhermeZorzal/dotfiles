@@ -90,7 +90,7 @@
 			/*		}*/
 	},
 	"custom/help": {
-		"format": "󰘥",
+		"format": " 󰘥 ",
 		"tooltip-format": "Keybinds",
 		//"on-click":"rofi -show p -modi p:$HOME/.config/rofi/scripts/SwayKeys.sh"
 		"on-click":"rofi -show p -modi p:$HOME/.config/rofi/scripts/system-shortcuts.sh"

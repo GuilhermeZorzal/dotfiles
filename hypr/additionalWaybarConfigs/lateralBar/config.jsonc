@@ -31,7 +31,7 @@
     ],
     "modules-center": [
         //"hyprland/window"
-        "group/wallpaper",
+        //"group/wallpaper",
         //"custom/wallpaperPrev",
         //"custom/wallpaperNext",
         //"group/hardware",

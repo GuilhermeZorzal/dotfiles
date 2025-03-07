@@ -40,7 +40,7 @@
     height = (0,300)
 
     # Position the notification in the top right corner
-    origin = top-center
+    origin = top-right
 
     # Offset from the origin
     offset = 30x30
@@ -71,7 +71,7 @@
     progress_bar_max_width = 300
 
     # Corner radius for the progress bar. 0 disables rounded corners.
-    progress_bar_corner_radius = 10
+    progress_bar_corner_radius = 5
 
     # Corner radius for the icon image.
     icon_corner_radius = 0
@@ -105,13 +105,13 @@
     frame_width = 1
 
     # Defines color of the frame around the notification window.
-    frame_color = "#ffffff"
+    frame_color = "#4f4f4f"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
     # of size frame_width will be drawn around each notification instead.
     # Click events on gaps do not currently propagate to applications below.
-    gap_size = 0
+    gap_size = 2
 
     # Define a color for the separator.
     # possible values are:
