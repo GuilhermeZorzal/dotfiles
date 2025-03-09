@@ -18,7 +18,7 @@ window#waybar {
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
-    background-color: rgba(0,0,0,0.8); /* IF THE TRANSPARENT BAR LOOKS AWFUL WITH SOME WALLPAPER, CHANGE THE COLOR OF THE FULL BAR*/ 
+    background-color: rgba(0,0,0,0.7); /* IF THE TRANSPARENT BAR LOOKS AWFUL WITH SOME WALLPAPER, CHANGE THE COLOR OF THE FULL BAR*/ 
     margin: 0px;
     padding: 0px;
 

@@ -23,6 +23,7 @@ for_window [app_id = "blueman-manager"] floating enable
 for_window [title = "music-ncmpcpp"] floating enable, resize set width 900px height 600px, border pixel 2
 for_window [title = "Clocks"] floating enable, resize set width 100px height 100px, move position 1400 750, border pixel 2
 
+for_window [app_id = "waypaper"] floating enable
 
 for_window [title = "^.*Fazer login nas Contas do Google.*"] floating enable 
 

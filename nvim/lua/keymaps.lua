@@ -124,19 +124,47 @@ vim.keymap.set("n", "<C-Left>", "<C-w><", { desc = "resize window to the left" }
 
 -- vim.keymap.set("i", "<c-v>", "<ESC>\"+p<CR>i", { desc = "" })
 
+-- Term Toggle Function
+local term_buf = nil
+local term_win = nil
 
-local function start_terminal_in_current_folder()
-    -- Change directory to the folder of the current file
-    -- vim.cmd("cd %:p:h")
-    vim.cmd("cd " .. vim.fn.getcwd())
-    -- Open terminal
-    vim.cmd("terminal")
-    -- Start insert mode
-    vim.cmd("startinsert")
+function TermToggle()
+    local width = vim.api.nvim_get_option("columns")
+    local height = vim.api.nvim_get_option("lines")
+    if term_win and vim.api.nvim_win_is_valid(term_win) then
+        vim.cmd("hide")
+    else
+        if width/3 > height then
+            vim.cmd("botright vnew")
+            vim.cmd("vertical-resize " .. width * 0.6)
+        else
+            vim.cmd("botright new")
+            vim.cmd("resize " .. height * 0.4)
+        end
+        -- vim.cmd("botright new")
+        local new_buf = vim.api.nvim_get_current_buf()
+        if term_buf and vim.api.nvim_buf_is_valid(term_buf) then
+            vim.cmd("buffer " .. term_buf) -- go to terminal buffer
+            vim.cmd("bd " .. new_buf) -- cleanup new buffer
+        else
+            vim.cmd("terminal")
+            term_buf = vim.api.nvim_get_current_buf()
+            vim.wo.number = false
+            vim.wo.relativenumber = false
+            vim.wo.signcolumn = "no"
+            vim.fn.chansend(vim.b.terminal_job_id, "cd " .. vim.fn.getcwd() .. " && clear\n")
+        end
+    vim.cmd("startinsert!")
+    term_win = vim.api.nvim_get_current_win()
+    end
 end
 
--- Map the function to a key combination
-vim.keymap.set("n", "<leader>t", start_terminal_in_current_folder, { desc = "Open terminal in current folder" })
+-- Term Toggle Keymaps
+vim.keymap.set("n", "<leader>t", ":lua TermToggle(20)<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>o", ":lua TermToggleRight(20)<CR>", { noremap = true, silent = true })
+vim.keymap.set("i", "<A-t>", "<Esc>:lua TermToggle(20)<CR>", { noremap = true, silent = true })
+vim.keymap.set("t", "<A-t>", "<C-\\><C-n>:lua TermToggle(20)<CR>", { noremap = true, silent = true })
+
 -- vim.keymap.set("n","<C-o>",  "g[", { desc = "go back" })
 -- vim.keymap.set("n","<C-i>",  "g]", { desc = "go forward" })
 
