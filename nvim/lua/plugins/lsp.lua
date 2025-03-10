@@ -133,38 +133,38 @@ return {
     opts = function(_, opts)
       table.insert(opts.sources, { name = "emoji" })
     end,
-    keys = {
-      -- add a keymap to browse plugin files
-      -- stylua: ignore
-      {
-        "<leader>fp",
-        function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
-        desc = "Find Plugin File",
-      },
-      {
-        "<A-j",
-        function()
-          require("cmp").mapping.select_next_item()
-        end,
-      },
-      {
-        "<A-k",
-        function()
-          require("cmp").mapping.select_prev_item()
-        end,
-      },
-      {
-        "<A-y>",
-        function()
-          require("cmp").mapping.confirm({ select = true })
-        end,
-      },
-      {
-        "C-Space",
-        function()
-          require("cmp").mapping.complete({})
-        end,
-      },
-    },
+    -- keys = {
+    --   -- add a keymap to browse plugin files
+    --   -- stylua: ignore
+    --   {
+    --     "<leader>fp",
+    --     function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
+    --     desc = "Find Plugin File",
+    --   },
+    --   {
+    --     "<tab>",
+    --     function()
+    --       require("cmp").mapping.select_next_item()
+    --     end,
+    --   },
+    --   {
+    --     "<A-k>",
+    --     function()
+    --       require("cmp").mapping.select_prev_item()
+    --     end,
+    --   },
+    --   {
+    --     "<A-y>",
+    --     function()
+    --       require("cmp").mapping.confirm({ select = true })
+    --     end,
+    --   },
+    --   {
+    --     "C-Space",
+    --     function()
+    --       require("cmp").mapping.complete({})
+    --     end,
+    --   },
+    -- },
   },
 }
