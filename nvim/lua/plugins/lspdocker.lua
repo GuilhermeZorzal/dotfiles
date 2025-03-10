@@ -1,3 +1,3 @@
 return {
-  'lspcontainers/lspcontainers.nvim'
+  "lspcontainers/lspcontainers.nvim",
 }
