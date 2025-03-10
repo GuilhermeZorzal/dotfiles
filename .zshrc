@@ -408,7 +408,7 @@ alias rd=rmdir
 alias clock="~/.config/tty-clock/tty-clock"
 alias change_version_java='update-alternatives --config java'
 alias fv='nvim $(fzf --preview "bat {}")'
-alias conf="cd ~/Documents/git/dotfiles/ && nvim ."
+alias conf="cd ~/Documents/git/dotfiles/ && nvim"
 alias _docker='sudo service docker start'
 alias py='python3'
 alias wallpaperChange="sh ~/.config/scripts/iterative/wallpaper.sh"
@@ -416,7 +416,7 @@ alias wal-r="wal --theme base16-seti"
 alias neomini="fastfetch --config examples/14.jsonc"
 alias minineo="fastfetch --config examples/14.jsonc"
 alias neo="fastfetch"
-alias v="nvim ."
+alias v="nvim"
 alias va="nvim"
 alias wmconf="cd ~/.config/hypr/"
 alias waybarconf="cd ~/.config/waybar/"
@@ -436,6 +436,7 @@ alias pipes="sh ~/.config/pipes/pipes.sh"
 alias yt="yt-dlp -x"
 alias fzf="fzf --bind 'alt-j:down,alt-k:up,alt-h:backward-char,alt-l:forward-char,alt-q:abort,alt-a:select-all'"
 alias cmatrix="cmatrix -a"
+alias cd="z"
 
 #  _____ _   _ _   _  ____ _____ ___ ___  _   _ ____  
 # |  ___| | | | \ | |/ ___|_   _|_ _/ _ \| \ | / ___| 
