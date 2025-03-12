@@ -43,3 +43,8 @@ end
 
 -- Term Toggle Keymaps
 -- vim.keymap.set("n", "<leader>t", ":lua TermToggle(20)<CR>", { noremap = true, silent = true })
+vim.keymap.del("n", "<leader>l")
+
+vim.keymap.set("n", "<leader>p", '"+p<CR>', { desc = "Paste from clipBoard" })
+vim.keymap.set("n", "<leader>y", 'V"+y<CR>', { desc = "Copy to clipBoard" })
+vim.keymap.set("v", "<leader>y", '"+y <CR>', { desc = "Copy to clipBoard" })

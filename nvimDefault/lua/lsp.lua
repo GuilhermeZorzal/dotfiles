@@ -1,16 +1,170 @@
-local lspconfig = require("lspconfig")
-local lspcontainers = require("lspcontainers")
+return {
+  -- tools
+  {
+    "williamboman/mason.nvim",
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
+        "luacheck",
+        "shellcheck",
+        "shfmt",
+        "tailwindcss-language-server",
+        "typescript-language-server",
+        "css-lsp",
+      })
+    end,
+  },
 
--- Configure Python LSP (pylsp)
-lspconfig.pylsp.setup({
-  -- Use the Dockerized LSP command
-  cmd = lspcontainers.command("pyright"),
-  -- Ensure the LSP can find your project files
-  root_dir = lspconfig.util.root_pattern(".git", "requirements.txt"),
-  -- Other LSP settings (e.g., keymaps, capabilities)
-  capabilities = require("cmp_nvim_lsp").default_capabilities(),
-})
-
--- require'lspconfig'.pylsp.setup {
---   cmd = require'lspcontainers'.command('pylsp'),
--- }
+  -- lsp servers
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      inlay_hints = { enabled = true },
+      ---@type lspconfig.options
+      servers = {
+        cssls = {},
+        tailwindcss = {
+          root_dir = function(...)
+            return require("lspconfig.util").root_pattern(".git")(...)
+          end,
+        },
+        tsserver = {
+          root_dir = function(...)
+            return require("lspconfig.util").root_pattern(".git")(...)
+          end,
+          single_file_support = false,
+          settings = {
+            typescript = {
+              inlayHints = {
+                includeInlayParameterNameHints = "literal",
+                includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+                includeInlayFunctionParameterTypeHints = true,
+                includeInlayVariableTypeHints = false,
+                includeInlayPropertyDeclarationTypeHints = true,
+                includeInlayFunctionLikeReturnTypeHints = true,
+                includeInlayEnumMemberValueHints = true,
+              },
+            },
+            javascript = {
+              inlayHints = {
+                includeInlayParameterNameHints = "all",
+                includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+                includeInlayFunctionParameterTypeHints = true,
+                includeInlayVariableTypeHints = true,
+                includeInlayPropertyDeclarationTypeHints = true,
+                includeInlayFunctionLikeReturnTypeHints = true,
+                includeInlayEnumMemberValueHints = true,
+              },
+            },
+          },
+        },
+        html = {},
+        lua_ls = {
+          -- enabled = false,
+          single_file_support = true,
+          settings = {
+            Lua = {
+              workspace = {
+                checkThirdParty = false,
+              },
+              completion = {
+                workspaceWord = true,
+                callSnippet = "Both",
+              },
+              misc = {
+                parameters = {
+                  -- "--log-level=trace",
+                },
+              },
+              hint = {
+                enable = true,
+                setType = false,
+                paramType = true,
+                paramName = "Disable",
+                semicolon = "Disable",
+                arrayIndex = "Disable",
+              },
+              doc = {
+                privateName = { "^_" },
+              },
+              type = {
+                castNumberToInteger = true,
+              },
+              diagnostics = {
+                disable = { "incomplete-signature-doc", "trailing-space" },
+                -- enable = false,
+                groupSeverity = {
+                  strong = "Warning",
+                  strict = "Warning",
+                },
+                groupFileStatus = {
+                  ["ambiguity"] = "Opened",
+                  ["await"] = "Opened",
+                  ["codestyle"] = "None",
+                  ["duplicate"] = "Opened",
+                  ["global"] = "Opened",
+                  ["luadoc"] = "Opened",
+                  ["redefined"] = "Opened",
+                  ["strict"] = "Opened",
+                  ["strong"] = "Opened",
+                  ["type-check"] = "Opened",
+                  ["unbalanced"] = "Opened",
+                  ["unused"] = "Opened",
+                },
+                unusedLocalExclude = { "_*" },
+              },
+              format = {
+                enable = false,
+                defaultConfig = {
+                  indent_style = "space",
+                  indent_size = "2",
+                  continuation_indent_size = "2",
+                },
+              },
+            },
+          },
+        },
+      },
+      setup = {},
+    },
+  },
+  {
+    "nvim-cmp",
+    dependencies = { "hrsh7th/cmp-emoji" },
+    opts = function(_, opts)
+      table.insert(opts.sources, { name = "emoji" })
+    end,
+    -- keys = {
+    --   -- add a keymap to browse plugin files
+    --   -- stylua: ignore
+    --   {
+    --     "<leader>fp",
+    --     function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
+    --     desc = "Find Plugin File",
+    --   },
+    --   {
+    --     "<tab>",
+    --     function()
+    --       require("cmp").mapping.select_next_item()
+    --     end,
+    --   },
+    --   {
+    --     "<A-k>",
+    --     function()
+    --       require("cmp").mapping.select_prev_item()
+    --     end,
+    --   },
+    --   {
+    --     "<A-y>",
+    --     function()
+    --       require("cmp").mapping.confirm({ select = true })
+    --     end,
+    --   },
+    --   {
+    --     "C-Space",
+    --     function()
+    --       require("cmp").mapping.complete({})
+    --     end,
+    --   },
+    -- },
+  },
+}

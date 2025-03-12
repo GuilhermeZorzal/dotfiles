@@ -4,3 +4,15 @@
 vim.g.snacks_animate = false
 
 vim.g.ai_cmp = false
+
+local opt = vim.opt
+
+opt.autowrite = false -- Enable auto write
+-- only set clipboard if not in ssh, to make sure the OSC 52
+-- integration works automatically. Requires Neovim >= 0.10.0
+-- opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system
+opt.clipboard = ""
+
+vim.opt.scrolloff = 17
+vim.wo.linebreak = true
+vim.wo.wrap = true

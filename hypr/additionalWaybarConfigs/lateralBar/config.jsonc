@@ -14,7 +14,7 @@
   "margin-bottom": 4,
   "modules-left": [
     "hyprland/workspaces",
-    "mpd",
+    // "mpd",
     "hyprland/mode",
     "hyprland/scratchpad",
     "hyprland/submap",
@@ -73,7 +73,7 @@
   "custom/help": {
     "format": "󰘥",
     "tooltip-format": "Keybinds",
-    "on-click": "rofi -show p -modi p:$HOME/.config/rofi/scripts/key.sh"
+    "on-click": "rofi -show p -modi p:$HOME/.config/rofi/scripts/key.sh",
   },
   "keyboard-state": {
     "numlock": true,
@@ -81,22 +81,22 @@
     "format": "{name}{icon}",
     "format-icons": {
       "locked": "",
-      "unlocked": ""
+      "unlocked": "",
     },
   },
   "hyprland/mode": {
-    "format": "<span style=\"italic\">{}</span>"
+    "format": "<span style=\"italic\">{}</span>",
   },
   "hyprland/submap": {
     "rotate": 90,
-    "format": "<span style=\"italic\">{}</span>"
+    "format": "<span style=\"italic\">{}</span>",
   },
   "hyprland/scratchpad": {
     "format": "{icon} {count}",
     "show-empty": false,
     "format-icons": ["", ""],
     "tooltip": true,
-    "tooltip-format": "{app}: {title}"
+    "tooltip-format": "{app}: {title}",
   },
   "mpd": {
     "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
