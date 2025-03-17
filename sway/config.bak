@@ -262,7 +262,6 @@ bindsym $mod+y exec "sh ~/.config/scripts/general/waybar_handler.sh"
 
 exec nm-applet &
 exec blueman-applet &
-exec_always ~/.config/waybar/scripts/updateWall.sh
 
 bar {
     # swaybar_command waybar

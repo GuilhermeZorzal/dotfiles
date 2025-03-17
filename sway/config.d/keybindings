@@ -13,6 +13,7 @@ bindsym $mod+Backspace exec "wlogout -C ~/.config/wlogout/wlogoutSway/style.css 
 bindsym $mod+Ctrl+f exec kitty -T "zathura-launcher" -e sh /home/guizo/Documents/git/dotfiles/scripts/general/zathura_launcher.sh
 bindsym $mod+z exec kitty -T "zathura-launcher" -e sh /home/guizo/Documents/git/dotfiles/scripts/general/zathura_launcher.sh
 bindsym $mod+e exec kitty -T "float_ranger" -e ranger
+bindsym $mod+w exec kitty -T "FILE" -e vi ~/Documents/ideas/FILE.md
 
 # You can "split" the current object of your focus with
 # $mod+b or $mod+v, for horizontal and vertical splits
@@ -21,7 +22,7 @@ bindsym $mod+v splith
 bindsym $mod+b splitv
 
 # Switch the current container between different layout styles
-#bindsym $mod+s layout stacking
+bindsym $mod+t layout stacking
 bindsym $mod+g layout tabbed
 bindsym $mod+s layout toggle split
 
@@ -44,5 +45,3 @@ bindsym $mod+p sticky toggle
 
 # Shortcuts
 bindsym $mod+shift+s exec rofi -show p -modi p:$HOME/.config/rofi/scripts/system-shortcuts.sh 
-
-

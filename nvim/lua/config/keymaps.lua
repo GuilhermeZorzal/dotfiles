@@ -41,10 +41,22 @@ function TermToggle()
   end
 end
 
--- Term Toggle Keymaps
--- vim.keymap.set("n", "<leader>t", ":lua TermToggle(20)<CR>", { noremap = true, silent = true })
-vim.keymap.del("n", "<leader>l")
-
 vim.keymap.set("n", "<leader>p", '"+p<CR>', { desc = "Paste from clipBoard" })
 vim.keymap.set("n", "<leader>y", 'V"+y<CR>', { desc = "Copy to clipBoard" })
 vim.keymap.set("v", "<leader>y", '"+y <CR>', { desc = "Copy to clipBoard" })
+
+-- toggle copilot suggestions
+vim.keymap.set("n", "<leader>at", function()
+  vim.g.copilot_enabled = not vim.g.copilot_enabled
+end, { desc = "Toggle copilot" })
+
+--  ____       _      _           _   _
+-- |  _ \  ___| | ___| |_ ___  __| | | | _____ _   _ _ __ ___   __ _ _ __  ___
+-- | | | |/ _ \ |/ _ \ __/ _ \/ _` | | |/ / _ \ | | | '_ ` _ \ / _` | '_ \/ __|
+-- | |_| |  __/ |  __/ ||  __/ (_| | |   <  __/ |_| | | | | | | (_| | |_) \__ \
+-- |____/ \___|_|\___|\__\___|\__,_| |_|\_\___|\__, |_| |_| |_|\__,_| .__/|___/
+--                                             |___/                |_|
+vim.keymap.del("n", "<leader>l")
+
+
+vim.keymap.set("n", "ç",":")

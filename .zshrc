@@ -102,6 +102,8 @@ setopt autocd
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git colored-man-pages zsh-autosuggestions vi-mode)
 
+# bindkey '^I' autosuggest-accept
+
 source $ZSH/oh-my-zsh.sh
 
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
@@ -113,7 +115,7 @@ export PATH="$HOME/.config/emacs/bin/:$PATH"
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-(cat ~/.cache/wal/sequences &)
+# (cat ~/.cache/wal/sequences &)
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -417,7 +419,6 @@ alias neomini="fastfetch --config examples/14.jsonc"
 alias minineo="fastfetch --config examples/14.jsonc"
 alias neo="fastfetch"
 alias v="nvim"
-alias va="nvim"
 alias wmconf="cd ~/.config/hypr/"
 alias waybarconf="cd ~/.config/waybar/"
 alias nvimconf="cd ~/.config/nvim/"

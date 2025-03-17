@@ -33,3 +33,5 @@ for_window [floating] border pixel 2
 # Inhibit Idle if a window is fullscreen
 for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen
+
+for_window [title = "FILE"] floating enable, workspace number 2, resize set width 900px height 600px, border pixel 2

@@ -22,8 +22,11 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 # Window borders
 
 default_border pixel 1
-default_floating_border normal
+default_floating_border pixel 1 
 hide_edge_borders smart
+
+font pango:KanitMedium 1
+titlebar_border_thickness 0
 
 smart_gaps on
 gaps inner 8

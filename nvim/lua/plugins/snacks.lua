@@ -12,5 +12,21 @@ return {
         },
       },
     },
+    keys = {
+      {
+        "<leader>sf",
+        function()
+          Snacks.picker.files()
+        end,
+        desc = "Find File",
+      },
+      {
+        "<leader>sb",
+        function()
+          Snacks.picker.buffers()
+        end,
+        desc = "Find Buffer",
+      },
+    },
   },
 }
