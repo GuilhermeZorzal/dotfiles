@@ -37,7 +37,8 @@ return {
     event = "BufReadPost",
     opts = {
       suggestion = {
-        enabled = not vim.g.ai_cmp,
+        -- enabled = not vim.g.ai_cmp,
+        enabled = false,
         auto_trigger = true,
         hide_during_completion = vim.g.ai_cmp,
         keymap = {

@@ -60,3 +60,5 @@ vim.keymap.del("n", "<leader>l")
 
 
 vim.keymap.set("n", "ç",":")
+-- vim.keymap.set("n", ":", "<Nop>")
+
