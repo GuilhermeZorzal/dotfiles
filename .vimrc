@@ -1,5 +1,8 @@
 syntax on 
 set number relativenumber
+set wrap
+set linebreak
+set breakindent
 
 " Set shift width to 4 spaces.
 set shiftwidth=4
@@ -15,9 +18,6 @@ set nobackup
 
 " Do not let cursor scroll below or above N number of lines when scrolling.
 set scrolloff=20
-
-" Do not wrap lines. Allow long lines to extend as far as the line goes.
-set nowrap
 
 " While searching though a file incrementally highlight matching characters as you type.
 set incsearch
@@ -71,4 +71,6 @@ map <S-H> :bprevious<CR>
 nnoremap <Leader>f :buffers<CR>:buffer
 nnoremap <A-Space> :e .<CR>
 
+inoremap <C-BS> <C-W>
 
+autocmd VimResized * wincmd =
