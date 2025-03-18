@@ -13,7 +13,8 @@ bindsym $mod+Backspace exec "wlogout -C ~/.config/wlogout/wlogoutSway/style.css 
 bindsym $mod+Ctrl+f exec kitty -T "zathura-launcher" -e sh /home/guizo/Documents/git/dotfiles/scripts/general/zathura_launcher.sh
 bindsym $mod+z exec kitty -T "zathura-launcher" -e sh /home/guizo/Documents/git/dotfiles/scripts/general/zathura_launcher.sh
 bindsym $mod+e exec kitty -T "float_ranger" -e ranger
-bindsym $mod+w exec kitty -T "FILE" -e vi ~/Documents/ideas/FILE.md
+bindsym $mod+n exec kitty -T "FILE" -e vi ~/Documents/ideas/FILE.md
+bindsym $mod+w exec waypaper
 
 # You can "split" the current object of your focus with
 # $mod+b or $mod+v, for horizontal and vertical splits

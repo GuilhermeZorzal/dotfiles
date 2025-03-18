@@ -14,3 +14,4 @@ assign [title="FILE"] workspace 2
 exec kitty -T "FILE" -e vi ~/Documents/ideas/FILE.md
 
 exec swaymsg workspace number 2
+exec sh ~/.config/sway/scripts/blurImage.sh &
