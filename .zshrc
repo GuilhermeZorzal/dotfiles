@@ -12,7 +12,6 @@ source "$HOME/.config/shell/fzfrc"
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export EDITOR="/usr/bin/nvim"
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 
 bindkey -v
@@ -473,7 +472,9 @@ alias cd4="cd ~/Documents/git/Equipe-4Ano/digitovsky/frontend/"
 #  | || | | | | (__| | (_| | | |/ / (_| | |_| | (_) | | | |
 # |___|_| |_|_|\___|_|\__,_|_|_/___\__,_|\__|_|\___/|_| |_|
 #                                                          
-cd ~/Documents/
 neo
 
 eval "$(zoxide init zsh)"
+
+export EDITOR="/usr/bin/nvim"
+# export EDITOR="nvim"

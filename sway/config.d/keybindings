@@ -12,8 +12,10 @@ bindsym $mod+d exec $superMenu
 bindsym $mod+Backspace exec "wlogout -C ~/.config/wlogout/wlogoutSway/style.css -l ~/.config/wlogout/wlogoutSway/layout"
 bindsym $mod+Ctrl+f exec kitty -T "zathura-launcher" -e sh /home/guizo/Documents/git/dotfiles/scripts/general/zathura_launcher.sh
 bindsym $mod+z exec kitty -T "zathura-launcher" -e sh /home/guizo/Documents/git/dotfiles/scripts/general/zathura_launcher.sh
-bindsym $mod+e exec kitty -T "float_ranger" -e ranger
-bindsym $mod+n exec kitty -T "FILE" -e vi ~/Documents/ideas/FILE.md
+# bindsym $mod+e exec kitty -T "float_ranger" -e lf 
+
+bindsym $mod+e exec kitty -e sh ~/.config/sway/teste.sh
+
 bindsym $mod+w exec waypaper
 
 # You can "split" the current object of your focus with
@@ -46,3 +48,4 @@ bindsym $mod+p sticky toggle
 
 # Shortcuts
 bindsym $mod+shift+s exec rofi -show p -modi p:$HOME/.config/rofi/scripts/system-shortcuts.sh 
+bindsym $mod+n exec kitty -T "FILE" -e vi ~/Documents/ideas/FILE.md

@@ -40,6 +40,7 @@ set showmatch
 
 " Use highlighting when doing a search.
 set hlsearch
+nnoremap <CR> :noh<CR><CR>
 
 " Set the commands to save in history default number is 20.
 set history=1000
@@ -69,8 +70,17 @@ map <S-L> :bnext<CR>
 map <S-H> :bprevious<CR>
 
 nnoremap <Leader>f :buffers<CR>:buffer
-nnoremap <A-Space> :e .<CR>
 
 inoremap <C-BS> <C-W>
+
+" Using lfvim as default file explorer
+let lfvim = "~/.config/lf/lf.vim"
+if filereadable(lfvim)
+    exec "source " . lfvim
+endif
+
+nnoremap <A-Space> :LF<CR>
+nnoremap <A-j> ddp
+nnoremap <A-k> ddkP
 
 autocmd VimResized * wincmd =

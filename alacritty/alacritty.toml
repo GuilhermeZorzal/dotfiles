@@ -9,3 +9,5 @@ normal = {family = "monospace", style = "Regular"}
 # normal = {family = "Nimbus Mono PS", style = "Regular"}
 # normal = {family = "Liberation Mono", style = "Regular"}
 
+[terminal]
+shell = "bash"
