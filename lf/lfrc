@@ -76,6 +76,8 @@ map çt openTerminal
 cmd openTerminal &{{
   # get file or dir path: 
   path=$(realpath $f)
+  # removing the last part of the path
+  path=${path%/*}
   kitty --directory $path
 }}
 
