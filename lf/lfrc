@@ -68,8 +68,17 @@ cmd vim &{{
 }}
 
 # mkdir command. See wiki if you want it to select created dir
-map a :push %mkdir<space>
-map t :push %touch<space>
+map ça :push %mkdir<space>
+map çd :push %touch<space>
+
+map çt openTerminal
+
+cmd openTerminal &{{
+  # get file or dir path: 
+  path=$(realpath $f)
+  kitty --directory $path
+}}
+
 
 # define a custom 'rename' command without prompt for overwrite
 # cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
@@ -166,6 +175,54 @@ map sf $$EDITOR $(fzf)
 cmd on-select &{{
     lf -remote "send $id set statfmt \"$(eza -ld --color=always "$f" | sed 's/\\/\\\\/g;s/"/\\"/g')\""
 }}
+
+cmd on-cd &{{
+    # display repository status in your prompt
+    if [ -d .git ] || [ -f .git ]; then
+        branch="$(git branch --show-current 2>/dev/null)" || true
+        remote="$(git config --get "branch.$branch.remote" 2>/dev/null)" || true
+        url="$(git remote get-url "$remote" 2>/dev/null)" || true
+        # fmt="\033[32;1m%u@%h\033[0m:\033[34;1m%w\033[0m\033[33;1m [GIT BRANCH:> $branch >> $url]\033[0m"
+        fmt="\033[32;1m%u@%h\033[0m:\033[34;1m%w\033[0m\033[33;1m <$branch>\033[0m"
+    elif [ -d .hg ]; then
+        hg="$(hg branch 2>/dev/null)" || true
+        fmt="\033[32;1m%u@%h\033[0m:\033[34;1m%w\033[0m\033[33;1m [HG BRANCH:> $hg]\033[0m"
+    elif [ -d .svn ]; then
+        svn="$(svn info 2>/dev/null | awk '/^URL: /{print $2}')" || true
+        fmt="\033[32;1m%u@%h\033[0m:\033[34;1m%w\033[0m\033[33;1m [SVN URL:> $svn]\033[0m"
+    else
+        fmt="\033[32;1m%u@%h\033[0m:\033[34;1m%d\033[0m\033[1m%f\033[0m"
+    fi
+    lf -remote "send $id set promptfmt \"$fmt\""
+}}
+
+cmd git_branch ${{
+    git branch | fzf | xargs git checkout
+    pwd_shell="$(pwd | sed 's/\\/\\\\/g;s/"/\\"/g')"
+    lf -remote "send $id updir; cd \"$pwd_shell\""
+}}
+
+cmd git_pull ${{
+    git pull --rebase || true
+    echo "press ENTER"
+    read ENTER
+}}
+
+cmd git_status ${{
+    git status
+    echo "press ENTER"
+    read ENTER
+}}
+
+cmd git_log ${{
+    git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+}}
+
+map gb :git_branch
+map gp $clear; git pull --rebase || true; echo "press ENTER"; read ENTER
+map gst $clear; git status; echo "press ENTER"; read ENTER
+map gl $clear; git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
 
 set previewer ~/.config/lf/previewer
 set cleaner ~/.config/lf/cleaner
