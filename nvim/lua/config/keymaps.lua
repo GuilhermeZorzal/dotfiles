@@ -60,6 +60,7 @@ vim.keymap.del("n", "<leader>l")
 
 vim.keymap.set("n", "<C-S-J>", "<C-d>", { desc = "Hald page down" })
 vim.keymap.set("n", "<C-S-K>", "<C-u>", { desc = "Half page up" })
+vim.keymap.set("n", "@q", "Q", { desc = "Execute fast macro" })
 
 vim.keymap.set("n", "ç", ":")
 -- vim.keymap.set("n", ":", "<Nop>")

@@ -68,8 +68,14 @@ cmd vim &{{
 }}
 
 # mkdir command. See wiki if you want it to select created dir
-map ça :push %mkdir<space>
-map çd :push %touch<space>
+cmd create ${{
+    if [[ "$@" == */ ]]; then
+        mkdir -p "$@"
+    else
+        touch "$@"
+    fi
+}}
+map a push :create<space>
 
 map çt openTerminal
 
@@ -104,6 +110,7 @@ cmd trash %set -f; mv -t ~/.trash $fx
 
 # use '<delete>' key for either 'trash' or 'delete' command
 map <delete> trash
+map D trash
 # map <delete> delete
 
 # extract the current file with the right command
