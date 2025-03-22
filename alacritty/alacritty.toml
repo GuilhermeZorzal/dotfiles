@@ -1,5 +1,5 @@
 [window]
-opacity = 0.9
+opacity = 0.8
 padding.x = 8
 padding.y = 3
 
@@ -10,4 +10,17 @@ normal = {family = "monospace", style = "Regular"}
 # normal = {family = "Liberation Mono", style = "Regular"}
 
 [terminal]
-shell = "bash"
+shell = "zsh"
+
+[colors]
+[colors.primary]
+foreground = "#dddddd"
+background = "#000000"
+
+[general]
+# campbell
+# ayu_dark
+# github_dark
+import = [
+    "~/.config/alacritty/themes/themes/github_dark.toml"
+]
