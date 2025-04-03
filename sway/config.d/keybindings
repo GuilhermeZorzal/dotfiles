@@ -17,7 +17,7 @@ bindsym $mod+z exec kitty -T "zathura-launcher" -e sh /home/guizo/Documents/git/
 # bindsym $mod+e exec kitty -e sh ~/.config/sway/teste.sh
 bindsym $mod+e exec alacritty -e sh ~/.config/sway/teste.sh
 
-bindsym $mod+w exec waypaper
+# bindsym $mod+w exec waypaper
 
 # You can "split" the current object of your focus with
 # $mod+b or $mod+v, for horizontal and vertical splits
@@ -26,7 +26,7 @@ bindsym $mod+v splith
 bindsym $mod+b splitv
 
 # Switch the current container between different layout styles
-bindsym $mod+t layout stacking
+# bindsym $mod+t layout stacking
 bindsym $mod+g layout tabbed
 bindsym $mod+s layout toggle split
 
@@ -49,4 +49,3 @@ bindsym $mod+p sticky toggle
 
 # Shortcuts
 bindsym $mod+shift+s exec rofi -show p -modi p:$HOME/.config/rofi/scripts/system-shortcuts.sh 
-bindsym $mod+n exec kitty -T "FILE" -e vi ~/Documents/ideas/FILE.md

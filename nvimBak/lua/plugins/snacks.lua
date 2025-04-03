@@ -14,7 +14,14 @@ return {
     },
     keys = {
       {
-        "<leader>sf",
+        "<leader>fa",
+        function()
+          Snacks.picker.files()
+        end,
+        desc = "Find File",
+      },
+      {
+        "ç",
         function()
           Snacks.picker.files()
         end,

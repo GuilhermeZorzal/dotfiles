@@ -29,7 +29,7 @@ set $menu rofi -show drun | xargs swaymsg exec --
 set $superMenu rofi -show p -matching fuzzy -modi p:$HOME/.config/rofi/scripts/superMenu.sh | xargs swaymsg exec --
 
 # Start a terminal
-bindsym $mod+Return exec $term
+bindsym $mod+n exec $term
 
 # Kill focused window
 bindsym $mod+q kill

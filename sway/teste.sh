@@ -1,3 +1,4 @@
 export EDITOR=nvim
-cd ~/Documents/
+cd ~/Documents/git/
+export PATH=$PATH:/usr/local/go/bin
 lf

@@ -123,7 +123,7 @@ handle_mime() {
 }
 
 handle_fallback() {
-  printf "=====================\n==  file type  ==\n=====================\n\n" && file --dereference --brief -n -- "${FILE_PATH}" | sed 's/,\ /\n/g' | fold -w "${PV_WIDTH}"
+  printf "=====================\n==  file type  ==\n=====================\n\n" && file --dereference --brief -n -- "${file}" | sed 's/,\ /\n/g' | fold -w "${PV_WIDTH}"
   exit 0
 }
 

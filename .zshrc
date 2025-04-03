@@ -436,6 +436,7 @@ alias pipes="sh ~/.config/pipes/pipes.sh"
 alias yt="yt-dlp -x"
 alias fzf="fzf --bind 'alt-j:down,alt-k:up,alt-h:backward-char,alt-l:forward-char,alt-q:abort,alt-a:select-all'"
 alias cmatrix="cmatrix -a"
+alias figlet="figlet -f ansiShadow"
 
 #  _____ _   _ _   _  ____ _____ ___ ___  _   _ ____  
 # |  ___| | | | \ | |/ ___|_   _|_ _/ _ \| \ | / ___| 
@@ -477,4 +478,5 @@ neo
 eval "$(zoxide init zsh)"
 
 export EDITOR="/usr/bin/nvim"
-# export EDITOR="nvim"
+export PATH=$PATH:/usr/local/go/bin
+

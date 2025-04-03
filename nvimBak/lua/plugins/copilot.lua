@@ -38,7 +38,8 @@ return {
     opts = {
       suggestion = {
         -- enabled = not vim.g.ai_cmp,
-        enabled = true,
+        -- enabled = true,
+        enabled = false,
         auto_trigger = true,
         hide_during_completion = vim.g.ai_cmp,
         keymap = {
