@@ -21,4 +21,5 @@ bindsym $mod+XF86MonBrightnessDown exec pkill wlsunset
 bindsym $mod+XF86MonBrightnessUp exec wlsunset
 
 bindsym Print exec grim -g "$(slurp -d)" - | wl-copy && notify-send "Screenshot taken"
+bindsym Shift+Print exec grim -g "$(slurp -d)" && notify-send "Screenshot saved"
 bindsym $mod+Print exec grim - | wl-copy && notify-send "Screenshot taken"
