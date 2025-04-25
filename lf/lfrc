@@ -118,7 +118,8 @@ cmd delete ${{
     printf "$fx\n"
       printf "delete?[y/n]"
     read ans
-    [ "$ans" = "y" ] && rm -rf $fx
+    # [ "$ans" = "y" ] && rm -rf $fx
+    [ "$ans" = "y" ] && mv $fx ~/.trash/
 }}
 
 # use '<delete>' key for either 'trash' or 'delete' command
