@@ -357,6 +357,12 @@ button:hover {
     padding: 4px 0px;
     margin: 8px 0px;
 }
+#temperature {
+    background-color: rgba(0,0,0,0);
+    color: @main_fg ;
+    padding: 0px 0px;
+    margin: 8px 0px;
+}
 #backlight:hover {
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;

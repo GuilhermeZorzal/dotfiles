@@ -1,40 +1,41 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
-    "position": "right", // Waybar position (top|bottom|left|right)
-    "reload_style_on_change": true,
-    // "position": "top", // Waybar position (top|bottom|left|right)
-    //"height": 30, // Waybar height (to be removed for auto height)
-    "width": 10, // Waybar width
-    //"spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
-    "include": [
-        "$HOME/.config/waybar/modules/DefaultModules.jsonc",
-        "$HOME/.config/waybar/modules/CustomModules.jsonc",
-        "$HOME/.config/waybar/modules/CustomGroups.jsonc",
-        "$HOME/.config/waybar/modules/SwaySpecific.jsonc",
-    ],   // Choose the order of the modules
-    "modules-left": [
+  // "layer": "top", // Waybar at top layer
+  "position": "right", // Waybar position (top|bottom|left|right)
+  "reload_style_on_change": true,
+  // "position": "top", // Waybar position (top|bottom|left|right)
+  //"height": 30, // Waybar height (to be removed for auto height)
+  "width": 10, // Waybar width
+  //"spacing": 4, // Gaps between modules (4px)
+  // Choose the order of the modules
+  "include": [
+    "$HOME/.config/waybar/modules/DefaultModules.jsonc",
+    "$HOME/.config/waybar/modules/CustomModules.jsonc",
+    "$HOME/.config/waybar/modules/CustomGroups.jsonc",
+    "$HOME/.config/waybar/modules/SwaySpecific.jsonc",
+  ], // Choose the order of the modules
+  "modules-left": [
     //    //"mpd#vertical",
-        "clock#verticalSeconds",
-        "cpu#vertical",
-        "memory#vertical",
-        "disk#vertical",
-        "bluetooth#vertical",
-        //"custom/help",
-        "group/options#vertical2",
+    "clock#verticalSeconds",
+    "cpu#vertical",
+    "memory#vertical",
+    "disk#vertical",
+    "bluetooth#vertical",
+    //"custom/help",
+    "group/options#vertical2",
     //    "custom/media",
-        "sway/scratchpad"
-    ],
-    "modules-center": [
-        "custom/power"
-        //"privacy",
-    ],
-    "modules-right": [
-        //"sway/workspaces#numberless",
-        "sway/workspaces",
-        "pulseaudio#vertical",
-        "battery#vertical",
-        "tray"
-    ],
+    "sway/scratchpad"
+  ],
+  "modules-center": [
+    "temperature#vertical",
+    "custom/power"
+    //"privacy",
+  ],
+  "modules-right": [
+    //"sway/workspaces#numberless",
+    "sway/workspaces",
+    "pulseaudio#vertical",
+    "battery#vertical",
+    "tray"
+  ],
 }

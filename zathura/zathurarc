@@ -1,5 +1,6 @@
 set selection-clipboard clipboard
 map <C-a> set recolor true
+
 # set recolor true
 # map j feedkeys "<C-Down>"
 # map k feedkeys "<C-Up>"
@@ -10,65 +11,66 @@ map <C-a> set recolor true
 # # See man `man zathurarc'
 # 
 # # Open document in fit-width mode by default
-set adjust-open "best-fit"
-# 
-# # One page per row by default
-set pages-per-row 1
-# 
-# #stop at page boundries
-set scroll-page-aware "true"
-set smooth-scroll "true"
-set scroll-full-overlap 0.01
-set scroll-step 100
-# 
-# #zoom settings
-set zoom-min 10
-set guioptions ""
+# set adjust-open "best-fit"
+# # 
+# # # One page per row by default
+# set pages-per-row 1
+#
+# # 
+# # #stop at page boundries
+# set scroll-page-aware "true"
+# # set smooth-scroll "true"
+# set scroll-full-overlap 0.01
+# set scroll-step 100
+# # 
+# # #zoom settings
+# set zoom-min 10
+# set guioptions ""
+#
+# # zathurarc-dark
+#
+# set font "inconsolata 15"
+# #set default-bg "#0a1429"  # "#142952"  #"#2f4c6b" "#00 "#000000"
+# #set default-bg "#242424"  # "#142952"  #"#2f4c6b" "#00 "#000000"
+# set default-bg "#04070a"  # "#142952"  #"#2f4c6b" "#00 "#000000"
+# set default-fg "#F7F7F6" #01
 
-# zathurarc-dark
+# set statusbar-fg "#B0B0B0" #04
+# set statusbar-bg "#202020" #01
 
-set font "inconsolata 15"
-#set default-bg "#0a1429"  # "#142952"  #"#2f4c6b" "#00 "#000000"
-#set default-bg "#242424"  # "#142952"  #"#2f4c6b" "#00 "#000000"
-set default-bg "#04070a"  # "#142952"  #"#2f4c6b" "#00 "#000000"
-set default-fg "#F7F7F6" #01
-
-set statusbar-fg "#B0B0B0" #04
-set statusbar-bg "#202020" #01
-
-set inputbar-bg "#151515" #00 currently not used
-set inputbar-fg "#FFFFFF" #02
-
-set notification-error-bg "#AC4142" #08
-set notification-error-fg "#151515" #00
-
-set notification-warning-bg "#AC4142" #08
-set notification-warning-fg "#151515" #00
-
-set highlight-color "#F4BF75" #0A
-set highlight-active-color "#6A9FB5" #0D
-
-set completion-highlight-fg "#151515" #02
-set completion-highlight-bg "#90A959" #0C
-
-set notification-bg "#000000"
-set notification-fg "#ffffff"
-
-set completion-bg "#303030" #02
-set completion-fg "#E0E0E0" #0C
-
-set notification-bg "#000000" #0B
-set notification-fg "#ffffff" #00
-
-# set recolor "true"
-#set recolor-lightcolor "#1a1a1a" # "#2f4c6b"  # "#000000" #00
-set recolor-lightcolor "#04070a" # "#2f4c6b"  # "#000000" #00
-set recolor-darkcolor "#E0E0E0" #06
-set recolor-reverse-video "true"
-set recolor-keephue "true"
-
-
-set render-loading "false"
+# set inputbar-bg "#151515" #00 currently not used
+# set inputbar-fg "#FFFFFF" #02
+#
+# set notification-error-bg "#AC4142" #08
+# set notification-error-fg "#151515" #00
+#
+# set notification-warning-bg "#AC4142" #08
+# set notification-warning-fg "#151515" #00
+#
+# set highlight-color "#F4BF75" #0A
+# set highlight-active-color "#6A9FB5" #0D
+#
+# set completion-highlight-fg "#151515" #02
+# set completion-highlight-bg "#90A959" #0C
+#
+# set notification-bg "#000000"
+# set notification-fg "#ffffff"
+#
+# set completion-bg "#303030" #02
+# set completion-fg "#E0E0E0" #0C
+#
+# set notification-bg "#000000" #0B
+# set notification-fg "#ffffff" #00
+#
+# # set recolor "true"
+# #set recolor-lightcolor "#1a1a1a" # "#2f4c6b"  # "#000000" #00
+# set recolor-lightcolor "#04070a" # "#2f4c6b"  # "#000000" #00
+# set recolor-darkcolor "#E0E0E0" #06
+# set recolor-reverse-video "true"
+# set recolor-keephue "true"
+#
+#
+# set render-loading "false"
 # 
 
 #  _   _                          _   _                              
@@ -111,10 +113,7 @@ set render-loading "false"
 # # set render-loading-bg "$background"
 # # set render-loading-fg "$foreground"
 # 
-# # set window-title-home-tilde true
-# # set statusbar-basename true
-# set selection-clipboard clipboard
-# 
-# set recolor-offset 0
-# set page-padding 0
-# CONF
+set window-title-home-tilde true
+set statusbar-basename true
+
+

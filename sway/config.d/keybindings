@@ -14,8 +14,8 @@ bindsym $mod+Ctrl+f exec kitty -T "zathura-launcher" -e sh /home/guizo/Documents
 bindsym $mod+z exec kitty -T "zathura-launcher" -e sh /home/guizo/Documents/git/dotfiles/scripts/general/zathura_launcher.sh
 # bindsym $mod+e exec kitty -T "float_ranger" -e lf 
 
-# bindsym $mod+e exec kitty -e sh ~/.config/sway/teste.sh
-bindsym $mod+e exec alacritty -e sh ~/.config/sway/teste.sh
+bindsym $mod+e exec kitty -e sh ~/.config/sway/teste.sh
+# bindsym $mod+e exec alacritty -e sh ~/.config/sway/teste.sh
 
 # bindsym $mod+w exec waypaper
 
@@ -49,3 +49,14 @@ bindsym $mod+p sticky toggle
 
 # Shortcuts
 bindsym $mod+shift+s exec rofi -show p -modi p:$HOME/.config/rofi/scripts/system-shortcuts.sh 
+
+
+bindsym $mod+Shift+Left resize shrink width 10px
+bindsym $mod+Shift+Down resize grow height 10px
+bindsym $mod+Shift+Up resize shrink height 10px
+bindsym $mod+Shift+Right resize grow width 10px
+
+bindsym $mod+Left resize shrink width 25px
+bindsym $mod+Down resize grow height 25px
+bindsym $mod+Up resize shrink height 25px
+bindsym $mod+Right resize grow width 25px

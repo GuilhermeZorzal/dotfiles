@@ -4,13 +4,17 @@ bindsym Shift+XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 10
 bindsym Shift+XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioPrev exec playerctl previous
-bindsym XF86AudioNext exec playerctl next
+# bindsym XF86AudioPlay exec playerctl play-pause
+# bindsym XF86AudioPrev exec playerctl previous
+# bindsym XF86AudioNext exec playerctl next
 
-bindsym Shift+XF86AudioPlay exec mpc toggle
-bindsym Shift+XF86AudioPrev exec mpc prev
-bindsym Shift+XF86AudioNext exec mpc next
+bindsym XF86AudioPlay exec sh ~/.config/sway/media_control.sh play-pause
+bindsym XF86AudioPrev exec sh ~/.config/sway/media_control.sh previous
+bindsym XF86AudioNext exec sh ~/.config/sway/media_control.sh next
+
+# bindsym Shift+XF86AudioPlay exec mpc toggle
+# bindsym Shift+XF86AudioPrev exec mpc prev
+# bindsym Shift+XF86AudioNext exec mpc next
 
 bindsym XF86MonBrightnessDown exec brightnessctl s 1%-
 bindsym XF86MonBrightnessUp exec brightnessctl s +1% 

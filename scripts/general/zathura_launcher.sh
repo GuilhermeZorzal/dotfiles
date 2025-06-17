@@ -2,7 +2,7 @@
 
 # Find all PDF files in the home directory
 file=$(
-  find ~/Documents/ -path ~/.local -prune -o -type f -name "*.pdf" | fzf --prompt="Select a PDF: "
+  find ~/Documents/ArquivosFaculdade/ -path ~/.local -prune -o -type f -name "*.pdf" | fzf --prompt="Select a PDF: "
   #    --preview 'pdftotext -l 3 -nopgbrk {} - | head -n 30'
 )
 # Define the directory where PDF files are located

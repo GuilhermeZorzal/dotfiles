@@ -110,22 +110,54 @@ cmd openTerminal &{{
 
 # move current file or selected files to trash folder
 # (also see 'man mv' for backup/overwrite options)
-cmd trash %set -f; mv -t ~/.trash $fx
 
-# define a custom 'delete' command
 cmd delete ${{
     set -f
     printf "$fx\n"
-      printf "delete?[y/n]"
+    printf "delete PERMANENTLY?[y/n]"
     read ans
-    # [ "$ans" = "y" ] && rm -rf $fx
-    [ "$ans" = "y" ] && mv $fx ~/.trash/
+    [ "$ans" = "y" ] && rm -rf $fx
+}}
+
+# define a custom 'delete' command
+# cmd trash ${{
+#     set -f
+#     printf "$fx\n"
+#       printf "delete?[y/n]"
+#     read ans
+#     [ "$ans" = "y" ] && mv $fx ~/.trash/
+# }}
+cmd trash ${{
+    set -f
+    printf "$fx\n"
+    printf "Move to Trash? [y/n] "
+    read ans
+    if [ "$ans" = "y" ]; then
+        dest="$HOME/.trash"
+        base=$(basename "$fx")
+        target="$dest/$base"
+
+        # If the target exists, find a new name
+        if [ -e "$target" ]; then
+            i=1
+            while [ -e "$dest/${base%%.*}-$i.${base##*.}" ]; do
+                i=$((i + 1))
+            done
+            # Reconstruct the name depending on presence of extension
+            if [[ "$base" == *.* ]]; then
+                target="$dest/${base%%.*}-$i.${base##*.}"
+            else
+                target="$dest/${base}-$i"
+            fi
+        fi
+
+        mv "$fx" "$target"
+    fi
 }}
 
 # use '<delete>' key for either 'trash' or 'delete' command
-map D delete
-map <delete> trash
-# map <delete> delete
+map D trash 
+map <delete> delete
 
 # extract the current file with the right command
 # (xkcd link: https://xkcd.com/1168/)
@@ -219,6 +251,20 @@ cmd on-cd &{{
     lf -remote "send $id set promptfmt \"$fmt\""
 }}
 
+cmd fzf_jump ${{
+    res="$(find . -maxdepth 10 | fzf --reverse --header="Jump to location")"
+    if [ -n "$res" ]; then
+        if [ -d "$res" ]; then
+            cmd="cd"
+        else
+            cmd="select"
+        fi
+        res="$(printf '%s' "$res" | sed 's/\\/\\\\/g;s/"/\\"/g')"
+        lf -remote "send $id $cmd \"$res\""
+    fi
+}}
+map <c-f> :fzf_jump
+
 cmd git_branch ${{
     git branch | fzf | xargs git checkout
     pwd_shell="$(pwd | sed 's/\\/\\\\/g;s/"/\\"/g')"
@@ -252,4 +298,4 @@ map K :updir; up; open
 
 set previewer ~/.config/lf/previewer
 set cleaner ~/.config/lf/cleaner
-
+map <esc> :quit
