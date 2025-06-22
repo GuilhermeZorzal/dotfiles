@@ -298,4 +298,4 @@ map K :updir; up; open
 
 set previewer ~/.config/lf/previewer
 set cleaner ~/.config/lf/cleaner
-map <esc> :quit
+map <c-c> :quit
