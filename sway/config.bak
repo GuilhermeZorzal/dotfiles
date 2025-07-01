@@ -305,8 +305,8 @@ hide_edge_borders smart
 focus_follows_mouse always
 
 # smart_gaps on
-gaps inner 5
-gaps outer 5
+gaps inner 3
+gaps outer 3
 
 for_window [title="Firefox"] floating disable 
 for_window [title="Calculator"] floating enable 

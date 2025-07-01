@@ -2,4 +2,4 @@ mpd/log
 mpd/pid
 mpd/playlists/*
 mpd/database
-
+__pycache__/
