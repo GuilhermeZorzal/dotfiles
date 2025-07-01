@@ -12,11 +12,12 @@
     blue:	    #268bd2;
     cyan:	    #2aa198;
     green:	    #859900;
-    fg:         #abb2bfaa;
-    bg:         #282c3466;
+    fg:         #000000aa;
+    /*bg:         #282c3466;*/
+    bg:         #00000033;
     selected-bg: #285577aa;
     selected-fg: #abb2bf;
-    win-bg : #282c34cc;
+    win-bg : #00000033;
     highlight-bg: #4F576999;
     urgent:	    #E06C7555;
     separatorcolor:    #abb2bfaa;

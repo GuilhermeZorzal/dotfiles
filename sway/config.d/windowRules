@@ -19,7 +19,7 @@ for_window [class = "(?i)pinentry"] floating enable
 for_window [title = "Administrator privileges required"] floating enable
 for_window [title = "^.*Zen Browser.*"] floating disable 
 for_window [title = "^.*Firefox.*"] floating disable 
-for_window [app_id = "blueman-manager"] floating enable
+for_window [app_id = "blueman-manager"] floating enable, resize set width 600px height 450px
 for_window [title = "music-ncmpcpp"] floating enable, resize set width 900px height 600px, border pixel 2
 for_window [title = "Clocks"] floating enable, resize set width 100px height 100px, move position 1400 750, border pixel 2
 
@@ -33,5 +33,7 @@ for_window [floating] border pixel 2
 # Inhibit Idle if a window is fullscreen
 for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen
+
+for_window [class="discord"] floating enable, resize set width 1400px height 800px, border pixel 2
 
 for_window [title = "FILE"] floating enable, workspace number 2, resize set width 900px height 600px, border pixel 2

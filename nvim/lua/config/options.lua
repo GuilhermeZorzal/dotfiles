@@ -13,7 +13,10 @@ opt.autowrite = false -- Enable auto write
 -- opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system
 opt.clipboard = ""
 
-vim.opt.scrolloff = 25
+vim.opt.scrolloff = 40
 vim.wo.linebreak = true
 vim.wo.wrap = true
-vim.g.autoformat = false
+-- vim.g.autoformat = false
+--
+vim.g.lazyvim_rust_diagnostics = "rust-analyzer"
+opt.cursorline = false -- Enable highlighting of the current line

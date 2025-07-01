@@ -29,4 +29,4 @@ font pango:KanitMedium 1
 titlebar_border_thickness 0
 
 smart_gaps on
-gaps inner 8
+gaps inner 5

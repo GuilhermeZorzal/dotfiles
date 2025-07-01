@@ -17,19 +17,22 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term kitty 
+set $term kitty
 # set $term alacritty
 
 
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-# set $menu dmenu_path | wmenu | xargs swaymsg exec --
-# set $menu wofi --show drun -i
-set $menu rofi -show drun | xargs swaymsg exec --
-set $superMenu rofi -show p -matching fuzzy -modi p:$HOME/.config/rofi/scripts/superMenu.sh | xargs swaymsg exec --
+set $menuWofi dmenu_path | wmenu 
+# set $menuWofi wofi --show drun -i
+# set $menu rofi -show drun | xargs swaymsg exec --
+set $menu rofi -show drun 
+set $superMenu rofi -show p -modi p:$HOME/.config/rofi/scripts/superMenu.sh
+
+bindsym $mod+x exec $menuWofi
 
 # Start a terminal
-bindsym $mod+Return exec $term
+bindsym $mod+n exec $term
 
 # Kill focused window
 bindsym $mod+q kill
@@ -40,7 +43,13 @@ bindsym $mod+Shift+c reload
 
 focus_wrapping no
 
+blur enable
+blur_radius 5
+
+corner_radius 10
+
+layer_effects "waybar" blur enable; 
+layer_effects "rofi" blur enable; 
 
 include /etc/sway/config.d/*
 include ~/.config/sway/config.d/*
-

@@ -13,17 +13,28 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
+-- ai.copilot-chat
+-- coding.blink
+-- editor.harpoon2
+-- editor.snacks_explorer
+-- editor.snacks_picker
+-- util.mini-hipatterns
+-- lang.clangd
+-- lang.docker
+-- lang.go
+-- lang.json
+-- lang.markdown
+-- lang.python
+-- lang.rust
+-- lang.sql
+-- lang.tailwind
+-- lang.toml
+-- lang.typescript
 
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    { import = "lazyvim.plugins.extras.linting.eslint" },
-    { import = "lazyvim.plugins.extras.formatting.prettier" },
-    { import = "lazyvim.plugins.extras.lang.typescript" },
-    { import = "lazyvim.plugins.extras.lang.json" },
-    { import = "lazyvim.plugins.extras.lang.tailwind" },
-    { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
     -- import/override with your plugins
     { import = "plugins" },
   },

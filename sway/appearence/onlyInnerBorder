@@ -26,5 +26,5 @@ default_floating_border normal
 hide_edge_borders smart
 
 smart_gaps on
-gaps inner 2
+gaps inner 1
 gaps outer 0

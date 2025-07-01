@@ -238,7 +238,6 @@ element selected.active {
 
 element selected.normal {
     background-color: @selected-bg;
-
 }
 
 element-icon {
