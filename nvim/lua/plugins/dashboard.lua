@@ -1,3 +1,11 @@
+-- Headers generated with : https://505e06b2.github.io/Image-to-Braille/
+-- To generate the Braille characters in python:
+--
+-- for code in range(0x2800, 0x2900):
+--     print(f"{chr(code)} U+{code:04X}", end="  ")
+--     if (code - 0x2800 + 1) % 8 == 0:
+--         print()
+
 local headers = {}
 
 headers.lazyvim = [[
