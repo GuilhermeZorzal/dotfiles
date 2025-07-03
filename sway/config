@@ -23,13 +23,11 @@ set $term kitty
 
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menuWofi dmenu_path | wmenu 
+# set $menuWofi dmenu_path | wmenu | xargs swaymsg exec --
 # set $menuWofi wofi --show drun -i
 # set $menu rofi -show drun | xargs swaymsg exec --
 set $menu rofi -show drun 
 set $superMenu rofi -show p -modi p:$HOME/.config/rofi/scripts/superMenu.sh
-
-bindsym $mod+x exec $menuWofi
 
 # Start a terminal
 bindsym $mod+n exec $term
