@@ -1,0 +1,22 @@
+[mgr]
+show_hidden = true
+ratio = [2, 3, 3]
+linemode = "none"
+show_symlink = false # do not display the symbolic link path
+scrolloff = 10
+
+[plugin]
+prepend_previewers = [
+  # HEIC previewer
+  { mime = "*.json", run = "bat" },
+]
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*/"
+run = "git"

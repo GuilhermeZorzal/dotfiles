@@ -480,6 +480,13 @@ alias cd4="cd ~/Documents/git/Equipe-4Ano/digitovsky/frontend/"
 # |___|_| |_|_|\___|_|\__,_|_|_/___\__,_|\__|_|\___/|_| |_|
 #                                                          
 # neo
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
 
 eval "$(zoxide init zsh)"
 
