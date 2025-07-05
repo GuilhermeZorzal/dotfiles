@@ -457,22 +457,6 @@ open () {
   xdg-open "$(find -type f | fzf)"
 }
 
-#  _____                                                  ____ ____  
-# |_   _|__ _ __ ___  _ __   ___  _ __ __ _ _ __ _   _   / ___|  _ \ 
-#   | |/ _ \ '_ ` _ \| '_ \ / _ \| '__/ _` | '__| | | | | |   | | | |
-#   | |  __/ | | | | | |_) | (_) | | | (_| | |  | |_| | | |___| |_| |
-#   |_|\___|_| |_| |_| .__/ \___/|_|  \__,_|_|   \__, |  \____|____/ 
-#                    |_|                         |___/               
-
-alias cds="echo 'cd1 -> IC frontend \ncd2 -> IC backend \ncd3 -> setapp \ncd4 -> PI frontend'"
-alias cd1="cd ~/Documents/git/causal-inference-web-frontend/"
-alias cd2="cd ~/Documents/git/causal-inference-web-backend/"
-alias cd3="cd ~/Documents/git/Time-2-Site-SetApp/SetApp/"
-alias cd4="cd ~/Documents/git/Equipe-4Ano/digitovsky/frontend/"
-
-
-
-
 #  ___       _      _       _ _          _   _             
 # |_ _|_ __ (_) ___(_) __ _| (_)______ _| |_(_) ___  _ __  
 #  | || '_ \| |/ __| |/ _` | | |_  / _` | __| |/ _ \| '_ \ 

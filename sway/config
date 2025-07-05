@@ -1,12 +1,4 @@
-# __     ___    ____  ___    _    ____  _     _____ ____  
-# \ \   / / \  |  _ \|_ _|  / \  | __ )| |   | ____/ ___| 
-#  \ \ / / _ \ | |_) || |  / _ \ |  _ \| |   |  _| \___ \ 
-#   \ V / ___ \|  _ < | | / ___ \| |_) | |___| |___ ___) |
-#    \_/_/   \_\_| \_\___/_/   \_\____/|_____|_____|____/ 
-#       
-### Variables
-
-# Logo key. Use Mod1 for Alt.
+# mods
 set $mod Mod4
 set $mod2 Mod1
 
@@ -18,14 +10,8 @@ set $right l
 
 # Your preferred terminal emulator
 set $term kitty
-# set $term alacritty
 
-
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-# set $menuWofi dmenu_path | wmenu | xargs swaymsg exec --
-# set $menuWofi wofi --show drun -i
-# set $menu rofi -show drun | xargs swaymsg exec --
+# Launchers
 set $menu rofi -show drun 
 set $superMenu rofi -show p -modi p:$HOME/.config/rofi/scripts/superMenu.sh
 
@@ -35,12 +21,15 @@ bindsym $mod+n exec $term
 # Kill focused window
 bindsym $mod+q kill
 
+# Explorer
+bindsym $mod+e exec kitty -e sh ~/.config/sway/teste.sh
+
 # Reload the configuration file
 bindsym $mod+Shift+c reload
 
-
 focus_wrapping no
 
+# Swayfx specific
 blur enable
 blur_radius 5
 
@@ -49,5 +38,6 @@ corner_radius 10
 layer_effects "waybar" blur enable; 
 layer_effects "rofi" blur enable; 
 
+# Imports
 include /etc/sway/config.d/*
 include ~/.config/sway/config.d/*

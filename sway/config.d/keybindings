@@ -12,10 +12,7 @@ bindsym $mod+d exec $superMenu
 bindsym $mod+Backspace exec "wlogout -C ~/.config/wlogout/wlogoutSway/style.css -l ~/.config/wlogout/wlogoutSway/layout"
 bindsym $mod+Ctrl+f exec kitty -T "zathura-launcher" -e sh /home/guizo/Documents/git/dotfiles/scripts/general/zathura_launcher.sh
 bindsym $mod+z exec kitty -T "zathura-launcher" -e sh /home/guizo/Documents/git/dotfiles/scripts/general/zathura_launcher.sh
-# bindsym $mod+e exec kitty -T "float_ranger" -e lf 
 
-bindsym $mod+e exec kitty -e sh ~/.config/sway/teste.sh
-# bindsym $mod+e exec alacritty -e sh ~/.config/sway/teste.sh
 
 # bindsym $mod+w exec waypaper
 
