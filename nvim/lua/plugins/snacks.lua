@@ -36,7 +36,7 @@ return {
     { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
     { "<leader>fB", function() Snacks.picker.buffers({ hidden = true, nofile = true }) end, desc = "Buffers (all)" },
     { "<leader>fc", LazyVim.pick.config_files(), desc = "Find Config File" },
-    { "<leader>ff", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
+    { "<leader>ff", LazyVim.pick("files", { root = false, hidden = true }), desc = "Find Files (Root Dir)" },
     { "<leader>fF", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
     { "<leader>fg", function() Snacks.picker.git_files() end, desc = "Find Files (git-files)" },
     { "<leader>fr", LazyVim.pick("oldfiles"), desc = "Recent" },
