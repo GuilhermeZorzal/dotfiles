@@ -22,7 +22,7 @@ bindsym $mod+n exec $term
 bindsym $mod+q kill
 
 # Explorer
-bindsym $mod+e exec kitty -e sh ~/.config/sway/teste.sh
+bindsym $mod+e exec $term -- zsh -c 'cd ~/Documents/git/ && yazi; exec zsh'
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
