@@ -15,7 +15,7 @@ return {
     }
   end,
   keys = {
-    { "<C-l>", false },
+    { "<c-l>", false },
     {
       "<c-c>",
       function()

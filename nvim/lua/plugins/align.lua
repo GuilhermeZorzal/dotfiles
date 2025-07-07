@@ -22,6 +22,6 @@ return {
     -- Expande o sistema de preenchimento ("completion") nativo do vim,
     -- tornando-o automático e integrando com LSP. Muito leve e simples
     -- quando comparado a alternativas como o nvim-cmp, e já me atende bem
-    require("mini.completion").setup()
+    -- require("mini.completion").setup()
   end,
 }
