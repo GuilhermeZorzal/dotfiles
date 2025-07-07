@@ -22,7 +22,8 @@ bindsym $mod+n exec $term
 bindsym $mod+q kill
 
 # Explorer
-bindsym $mod+e exec $term -- zsh -c 'cd ~/Documents/git/ && yazi; exec zsh'
+# The -i flag loads the zsh config
+bindsym $mod+e exec $term -- zsh -ic 'cd ~/Documents/git/ && y; exec zsh'
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload

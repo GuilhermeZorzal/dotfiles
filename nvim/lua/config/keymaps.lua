@@ -37,4 +37,4 @@ vim.keymap.set("v", "<leader><space>", "<cmd>w<CR>", { desc = "Copy to clipBoard
 vim.keymap.set("n", "<c-p>", "<CMD>Oil<CR>", { desc = "Oil" })
 -- vim.keymap.set("n", "ci'", 'ci"', { desc = "change" })
 
--- vim.keymap.set("n", "gaf", "ggVG", { desc = "Select [A]ll [F]ile" })
+vim.keymap.set("n", "<leader>gaf", "ggVG", { desc = "Select [A]ll [F]ile" })
