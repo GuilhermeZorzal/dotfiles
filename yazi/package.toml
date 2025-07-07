@@ -43,6 +43,11 @@ use = "KKV9/compress"
 rev = "9fc8fe0"
 hash = "2ad086899bf368fba211a33d8f68c39d"
 
+[[plugin.deps]]
+use = "llanosrocas/githead"
+rev = "9e9e224"
+hash = "4a3cbda9a0cd90c2682e497dcea4910e"
+
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
 rev = "5f56364"
