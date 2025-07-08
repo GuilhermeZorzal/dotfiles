@@ -32,7 +32,11 @@ c.colors.tabs.bar.bg = "#00000000"
 c.colors.tabs.even.fg = "#ffffff"  # font color inactive tabs
 c.colors.tabs.odd.fg = "#ffffff"
 
+# make new tabs appear on the right side:
+c.tabs.new_position.related = "next"  # new tabs appear next to the current tab
+
 # selected Tabs
+c.fonts.tabs.selected = "bold 10pt monospace"  # make tabs bold
 c.colors.tabs.selected.even.bg = "#ffffff"
 c.colors.tabs.selected.odd.bg = "#ffffff"
 c.colors.tabs.selected.even.fg = "#000000"
@@ -40,7 +44,8 @@ c.colors.tabs.selected.odd.fg = "#000000"
 
 c.colors.hints.bg = "#1e1e1e"
 c.colors.hints.fg = "#ffffff"
-c.tabs.show = "multiple"  # if theres only one tab, hide it
+c.tabs.show = "always"  # show tabs always, even if there is only one tab
+# c.tabs.show = "multiple"  # if theres only one tab, hide it
 
 c.colors.completion.item.selected.match.fg = "#00ffff"
 c.colors.completion.match.fg = "#00ffff"
@@ -157,23 +162,24 @@ config.set("content.cookies.store", True)
 # You can also watch yt vids directly in mpv, see qutebrowser FAQ for how to do that.
 # If you want additional blocklists, you can get the python-adblock package, or you can uncomment the ublock lists here.
 c.content.blocking.enabled = True
-# c.content.blocking.method = 'adblock' # uncomment this if you install python-adblock
-# c.content.blocking.adblock.lists = [
-#         "https://github.com/ewpratten/youtube_ad_blocklist/blob/master/blocklist.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/legacy.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-2020.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-2021.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-2022.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-2023.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-2024.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/badware.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/privacy.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/badlists.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances-cookies.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances-others.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/badlists.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/quick-fixes.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/resource-abuse.txt",
-#         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/unbreak.txt"]
+c.content.blocking.method = "adblock"  # uncomment this if you install python-adblock
+c.content.blocking.adblock.lists = [
+    # "https://github.com/ewpratten/youtube_ad_blocklist/blob/master/blocklist.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/legacy.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-2020.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-2021.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-2022.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-2023.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-2024.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/badware.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/privacy.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/badlists.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances-cookies.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances-others.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/badlists.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/quick-fixes.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/resource-abuse.txt",
+    "https://github.com/uBlockOrigin/uAssets/raw/master/filters/unbreak.txt",
+]
