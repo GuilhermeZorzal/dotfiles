@@ -1,6 +1,9 @@
 # pylint: disable=C0111
 c = c  # noqa: F821 pylint: disable=E0602,C0103
 config = config  # noqa: F821 pylint: disable=E0602,C0103
+terminal = "kitty"  # terminal to use for commands like :open -t, :open -p, etc.
+
+# INFO: The colors use ##AARRGGBB, where AA is the transparency (not RRGGBBAA as you might expect)
 
 # Load default browser configs
 config.load_autoconfig()
@@ -26,14 +29,27 @@ c.colors.statusbar.url.hover.fg = "#87afaf"
 
 # unfocused Tabs
 c.colors.tabs.even.bg = "#00000000"  # colors of inactive tabs are alternated
-c.colors.tabs.odd.bg = "#00000000"
+c.colors.tabs.odd.bg = "#22000000"
 c.colors.tabs.bar.bg = "#00000000"
 
 c.colors.tabs.even.fg = "#ffffff"  # font color inactive tabs
 c.colors.tabs.odd.fg = "#ffffff"
 
-# make new tabs appear on the right side:
-c.tabs.new_position.related = "next"  # new tabs appear next to the current tab
+c.colors.tabs.pinned.even.fg = "#ffffff"
+c.colors.tabs.pinned.odd.fg = "#ffffff"
+c.colors.tabs.pinned.even.bg = "#88000000"
+c.colors.tabs.pinned.odd.bg = "#88000000"
+
+c.colors.tabs.pinned.selected.even.bg = "black"
+c.colors.tabs.pinned.selected.odd.bg = "black"
+c.colors.tabs.pinned.selected.even.fg = "white"
+c.colors.tabs.pinned.selected.odd.fg = "white"
+
+
+c.colors.tooltip.bg = "#991e1e1e"  # tooltip background color
+c.colors.tooltip.fg = "#ffffff"  # tooltip foreground color
+c.fonts.tooltip = "bold 10pt monospace"
+
 
 # selected Tabs
 c.fonts.tabs.selected = "bold 10pt monospace"  # make tabs bold
@@ -74,21 +90,24 @@ c.colors.downloads.stop.bg = "#ff5f5f"
 c.colors.downloads.stop.fg = "#ffffff"
 
 c.colors.tooltip.bg = "#1e1e1e"
-c.colors.webpage.bg = "#1e1e1e"
 c.hints.border = "#ffffff"
 
-#                                  _
-#   __ _  ___ _ __   ___ _ __ __ _| |
-#  / _` |/ _ \ '_ \ / _ \ '__/ _` | |
-# | (_| |  __/ | | |  __/ | | (_| | |
-#  \__, |\___|_| |_|\___|_|  \__,_|_|
-#  |___/
-#
 
+#  _____     _
+# |_   _|_ _| |__  ___
+#   | |/ _` | '_ \/ __|
+#   | | (_| | |_) \__ \
+#   |_|\__,_|_.__/|___/
+#
 # Tabs
 c.tabs.padding = {"top": 3, "bottom": 3, "left": 9, "right": 9}
 c.tabs.indicator.width = 0  # no tab indicators
 c.tabs.width = "7%"
+
+# J and K to me only make sense to me if its a stack with top on the left (j = going down the stack, k = going up the stack)
+c.tabs.new_position.unrelated = "first"
+c.tabs.new_position.stacking = True
+c.tabs.new_position.related = "prev"
 
 c.url.searchengines = {
     # note - if you use duckduckgo, you can make use of its built in bangs, of which there are many! https://duckduckgo.com/bangs
@@ -107,8 +126,10 @@ c.completion.open_categories = [
     "filesystem",
 ]
 
-c.tabs.title.format = "{audio}{current_title}"
 
+# Show the index, so its faster to jump
+c.tabs.title.format = "{relative_index} - {current_title}"
+c.tabs.title.format_pinned = "{relative_index}"
 
 c.auto_save.session = True  # save tabs on quit/restart
 
@@ -128,13 +149,21 @@ config.bind("tT", "config-cycle tabs.position top left")
 config.bind("gJ", "tab-move +")
 config.bind("gK", "tab-move -")
 config.bind("gm", "tab-move")
+config.bind("<ctrl-shift-c", "config-source")
+# config.bind("<ctrl-d>", "config-cycle colors.webpage.darkmode.enabled True False")
+config.bind(
+    "<ctrl-d>",
+    "config-cycle colors.webpage.darkmode.enabled True False",
+    # ;; config-cycle colors.webpage.bg "#00000000" "#ffffff"',
+)
 
 # dark mode setup
 c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.darkmode.algorithm = "lightness-cielab"
 c.colors.webpage.darkmode.policy.images = "never"
-config.set("colors.webpage.darkmode.enabled", False, "file://*")
+c.colors.webpage.bg = "#ffffff"
 
+config.set("colors.webpage.darkmode.enabled", False, "file://*")
 # fonts
 c.fonts.default_family = []
 c.fonts.default_size = "10pt"  # browser font
@@ -143,6 +172,8 @@ c.fonts.web.family.sans_serif = "monospace"
 c.fonts.web.family.serif = "monospace"
 c.fonts.web.family.standard = "monospace"
 c.fonts.web.size.default = 14  # content font
+
+c.editor.command = [terminal, "-e", "nvim", "{file}", "-c", "normal {line}G{column0}l"]
 
 # privacy - adjust these settings based on your preference
 # config.set("completion.cmd_history_max_items", 0)

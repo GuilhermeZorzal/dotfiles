@@ -6,7 +6,30 @@
 
 config_version: 2
 settings:
+  colors.webpage.bg:
+    global: '#ffffff'
+  colors.webpage.darkmode.enabled:
+    global: true
   content.javascript.clipboard:
     https://pypi.org: access-paste
+  editor.command:
+    global:
+    - nvim
+    - '{file}'
+    - -c
+    - normal {line}G{column0}l
+  statusbar.widgets:
+    global:
+    - keypress
+    - search_match
+    - url
+    - scroll
+    - history
+    - tabs
+    - progress
+  tabs.new_position.related:
+    global: prev
+  tabs.new_position.unrelated:
+    global: first
   window.transparent:
     global: true
