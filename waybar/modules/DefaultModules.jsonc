@@ -251,6 +251,7 @@
       "warning": 30,
       "critical": 15
     },
+    "interval": 1,
     "format": "{icon}\n{capacity}",
     "format-full": "{icon}\n{capacity}",
     "format-charging": "󱐋\n{capacity}",

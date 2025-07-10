@@ -38,3 +38,9 @@ vim.keymap.set("n", "<c-p>", "<CMD>Oil<CR>", { desc = "Oil" })
 -- vim.keymap.set("n", "ci'", 'ci"', { desc = "change" })
 
 vim.keymap.set("n", "<leader>ga", "ggVG", { desc = "Select [A]ll [F]ile" })
+
+vim.keymap.set("v", "<M-h>", "<gv")
+vim.keymap.set("v", "<M-l>", ">gv")
+
+vim.keymap.set("n", "<M-h>", "<<")
+vim.keymap.set("n", "<M-l>", ">>")
