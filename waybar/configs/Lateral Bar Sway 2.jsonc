@@ -15,7 +15,6 @@
     "$HOME/.config/waybar/modules/SwaySpecific.jsonc",
   ], // Choose the order of the modules
   "modules-left": [
-    //    //"mpd#vertical",
     "clock#verticalSeconds",
     "cpu#vertical",
     "memory#vertical",
@@ -24,18 +23,16 @@
     //"custom/help",
     "group/options#vertical2",
     "hyprland/scratchpad",
-    //    "custom/media",
-    "sway/scratchpad"
+    "sway/scratchpad",
+    "sway/mode",
   ],
   "modules-center": [
     "cava",
     "custom/cava",
     "temperature#vertical",
     "custom/power"
-    //"privacy",
   ],
   "modules-right": [
-    //"sway/workspaces#numberless",
     "hyprland/workspaces",
     "sway/workspaces",
     "pulseaudio#vertical",

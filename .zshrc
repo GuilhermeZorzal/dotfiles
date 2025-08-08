@@ -441,7 +441,7 @@ alias figlet="figlet -f ansiShadow"
 # alias e="emacs -nw"
 alias doc="docker compose up"
 alias docb="docker compose up --build"
-alias sdoc="sudo service docker start && sudo docker compose up"
+alias sdoc="sudo service docker start && sudo docker compose up --remove-orphans"
 alias gs="echo 'Tu digitou errado :)'"
 
 #  _____ _   _ _   _  ____ _____ ___ ___  _   _ ____  

@@ -20,3 +20,5 @@ vim.wo.wrap = true
 --
 vim.g.lazyvim_rust_diagnostics = "rust-analyzer"
 opt.cursorline = false -- Enable highlighting of the current line
+
+vim.g.autoformat = false -- Do not auto format (sometimes it's terrible)

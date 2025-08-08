@@ -406,7 +406,7 @@ seek_time = 5
 #
 ## Available values: classic, alternative.
 ##
-# user_interface = classic 
+user_interface = alternative
 #
 #data_fetching_delay = yes
 #
@@ -477,7 +477,7 @@ allow_for_physical_item_deletion = yes
 ##
 ## Note: You can define startup screen by choosing screen from the list above.
 ##
-#startup_screen = playlist
+startup_screen = browser
 #
 ##
 ## Note: You can define startup slave screen by choosing screen from the list
