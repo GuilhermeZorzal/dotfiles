@@ -3,9 +3,10 @@ return {
   opts = {
     keymap = {
       -- set to 'none' to disable the 'default' preset
-      ["<A-k>"] = { "select_prev", "fallback" },
-      ["<A-j>"] = { "select_next", "fallback" },
-      ["<A-y>"] = { "accept", "fallback" },
+      ["<S-k>"] = { "select_prev", "fallback" },
+      ["<S-j>"] = { "select_next", "fallback" },
+      ["<S-y>"] = { "accept", "fallback" },
+      ["<S-CR>"] = { "accept", "fallback" },
 
       -- show with a list of providers
       ["<C-space>"] = {

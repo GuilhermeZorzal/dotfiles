@@ -1,4 +1,4 @@
 return {
   "zbirenbaum/copilot.lua",
-  enabled = true,
+  enabled = false,
 }
