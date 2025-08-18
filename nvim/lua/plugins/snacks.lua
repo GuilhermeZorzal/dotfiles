@@ -2,6 +2,16 @@ return {
   "folke/snacks.nvim",
   opts = {
     picker = {
+      win = {
+        input = {
+          keys = {
+            ["<M-k>"] = {"preview_scroll_up", mode = { "i", "n" }},
+            ["<M-j>"] = {"preview_scroll_down", mode = { "i", "n"}},
+            ["<a-k>"] = {"preview_scroll_up", mode = { "i", "n"}},
+            ["<a-j>"] = {"preview_scroll_down", mode = { "i", "n"}},
+          },
+        },
+      },
       hidden = true,
     },
     actions = {

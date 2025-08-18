@@ -32,15 +32,17 @@ vim.keymap.set("n", "<M-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 -- Fast save
 vim.keymap.set("v", "<leader><space>", "<cmd>w<CR>", { desc = "Copy to clipBoard" })
 
+-- Disabling ESC on CapsLock
 -- vim.keymap.set("i", "ç", "<ESC>", { desc = "Escape" })
+-- vim.keymap.set({"i", "v", "V" }, "<ESC>", "<nop>", { desc = "Removing esc"})
 
 vim.keymap.set("n", "<c-p>", "<CMD>Oil<CR>", { desc = "Oil" })
 -- vim.keymap.set("n", "ci'", 'ci"', { desc = "change" })
 
 vim.keymap.set("n", "<leader>ga", "ggVG", { desc = "Select [A]ll [F]ile" })
 
-vim.keymap.set("v", "<M-h>", "<gv")
-vim.keymap.set("v", "<M-l>", ">gv")
+vim.keymap.set("v", "<S-h>", "<gv")
+vim.keymap.set("v", "<S-l>", ">gv")
 
-vim.keymap.set("n", "<M-h>", "<<")
-vim.keymap.set("n", "<M-l>", ">>")
+vim.keymap.set("n", "<S-h>", "<<")
+vim.keymap.set("n", "<S-l>", ">>")
